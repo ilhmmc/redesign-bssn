@@ -113,8 +113,8 @@ const HeroCarousel = () => {
         </CarouselContent>
 
         {/* Navigation Arrows */}
-        <CarouselPrevious className="left-4 bg-white/90 hover:bg-white border-0 shadow-lg" />
-        <CarouselNext className="right-4 bg-white/90 hover:bg-white border-0 shadow-lg" />
+        <CarouselPrevious className="left-4 bg-white/90 hover:bg-white border-0 shadow-lg backdrop-blur-sm hover:scale-110 transition-all duration-200" />
+        <CarouselNext className="right-4 bg-white/90 hover:bg-white border-0 shadow-lg backdrop-blur-sm hover:scale-110 transition-all duration-200" />
 
         {/* Dot Navigation */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-black/30 backdrop-blur-sm rounded-full px-4 py-2">
