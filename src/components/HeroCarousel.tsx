@@ -117,16 +117,16 @@ const HeroCarousel = () => {
         <CarouselNext className="right-4 bg-white/90 hover:bg-white border-0 shadow-lg" />
 
         {/* Dot Navigation */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-black/30 backdrop-blur-sm rounded-full px-4 py-2">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => scrollTo(index)}
               className={cn(
-                "w-3 h-3 rounded-full transition-all duration-300",
+                "w-3 h-3 rounded-full transition-all duration-300 hover:scale-125",
                 current === index
-                  ? "bg-white scale-110 shadow-lg"
-                  : "bg-white/50 hover:bg-white/75",
+                  ? "bg-white scale-125 shadow-lg ring-2 ring-white/50"
+                  : "bg-white/60 hover:bg-white/80",
               )}
               aria-label={`Go to slide ${index + 1}`}
             />
