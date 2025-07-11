@@ -153,7 +153,7 @@ const KeamananSiber = () => {
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Badge className="bg-red-100 text-red-700 border-red-200">
                 <Shield className="mr-2 h-4 w-4" />
-                Keamanan Siber 24/7
+                Keamanan BELA 24/7
               </Badge>
 
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">

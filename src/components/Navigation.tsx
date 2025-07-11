@@ -119,7 +119,7 @@ const Navigation = () => {
           <div className="flex flex-col">
             <span className="font-bold text-lg text-primary">BSSN</span>
             <span className="text-xs text-muted-foreground hidden sm:block">
-              Badan Siber & Sandi Negara
+              Bela Selamanya & SelamaNya
             </span>
           </div>
         </Link>
