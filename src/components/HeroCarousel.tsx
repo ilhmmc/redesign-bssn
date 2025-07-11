@@ -83,7 +83,11 @@ const HeroCarousel = () => {
   const handleMouseLeave = () => setIsPlaying(true);
 
   return (
-    <div className="relative w-full">
+    <div
+      className="relative w-full"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Carousel
         setApi={setApi}
         className="w-full"
