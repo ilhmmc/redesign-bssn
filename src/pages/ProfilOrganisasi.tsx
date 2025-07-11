@@ -34,7 +34,7 @@ const ProfilOrganisasi = () => {
     },
     {
       icon: Building,
-      value: "34",
+      value: "3",
       label: "Kantor Regional",
       description: "Di seluruh Indonesia",
     },
@@ -120,7 +120,7 @@ const ProfilOrganisasi = () => {
                 <Badge className="bg-government-100 text-government-700 border-government-200">
                   Profil Organisasi
                 </Badge>
-                <Badge variant="outline">Est. 2017</Badge>
+                <Badge variant="outline">Est. 1946</Badge>
               </div>
 
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">

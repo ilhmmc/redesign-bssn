@@ -157,14 +157,12 @@ const KeamananSiber = () => {
               </Badge>
 
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                Pusat <span className="text-red-600">Keamanan Siber</span>{" "}
-                Nasional
+                I <span className="text-red-600">Love</span> Bela
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Melindungi infrastruktur digital Indonesia dengan teknologi
-                canggih, tim ahli berpengalaman, dan respons 24/7 terhadap
-                ancaman keamanan siber.
+                Melindungi Bela dengan teknologi canggih, tim ahli
+                berpengalaman, dan respons 24/7 terhadap ancaman cowo lain.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">

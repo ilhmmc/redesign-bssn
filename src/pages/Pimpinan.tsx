@@ -462,7 +462,7 @@ const Pimpinan = () => {
                 <Card className="text-center">
                   <CardContent className="p-6">
                     <Building className="h-8 w-8 text-green-600 mx-auto mb-2" />
-                    <div className="text-2xl font-bold">34</div>
+                    <div className="text-2xl font-bold">3</div>
                     <div className="text-sm text-muted-foreground">
                       Kantor Regional
                     </div>
