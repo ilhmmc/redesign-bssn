@@ -72,6 +72,66 @@ const Index = () => {
           <HeroCarousel />
         </section>
 
+        {/* Content Section */}
+        <section className="relative bg-gradient-to-br from-blue-50 via-background to-cyan-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <div className="space-y-4">
+                <Badge className="bg-blue-100 text-blue-700 border-blue-200">
+                  <Shield className="mr-2 h-4 w-4" />
+                  Badan Siber dan Sandi Negara
+                </Badge>
+
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                  Melindungi <span className="text-blue-600">Indonesia</span>
+                  <br />
+                  di Era Digital
+                </h1>
+
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  BSSN berkomitmen menjaga keamanan siber Indonesia dengan
+                  layanan proteksi, monitoring, dan edukasi untuk masyarakat,
+                  pemerintah, dan dunia usaha.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90"
+                >
+                  <Link to="/layanan">Jelajahi Layanan</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/tentang-bssn/profil-organisasi">
+                    Profil Organisasi
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
+                {stats.map((stat, index) => (
+                  <Card key={index} className="border-white/20">
+                    <CardContent className="p-4 text-center">
+                      <stat.icon
+                        className={`h-6 w-6 mx-auto mb-2 ${stat.color}`}
+                      />
+                      <div className="text-2xl font-bold text-foreground">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {stat.label}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
         <section className="py-20 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto px-4">
