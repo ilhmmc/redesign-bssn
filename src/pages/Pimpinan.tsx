@@ -20,74 +20,87 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Pimpinan = () => {
+  const [imageErrors, setImageErrors] = useState(new Set());
+
+  const handleImageError = (leaderId) => {
+    setImageErrors(prev => new Set(prev).add(leaderId));
+  };
   const leadership = [
     {
+      id: 1,
       name: "NUGROHO SULISTYO BUDI",
       position: "Kepala Badan Siber dan Sandi Negara",
       icon: Crown,
       level: "Kepala",
-      image: "/placeholder.svg",
+      image: "/KA-BSSN-.jpg",
       description:
         "Memimpin pelaksanaan tugas dan fungsi BSSN secara keseluruhan",
       color: "blue",
     },
     {
+      id: 2,
       name: "A. RACHMAD WIBOWO",
       position: "Wakil Kepala Badan Siber dan Sandi Negara",
       icon: User,
       level: "Wakil Kepala",
-      image: "/placeholder.svg",
+      image: "/WAKA-ACMAD-3-1.jpg",
       description:
         "Membantu Kepala BSSN dalam pelaksanaan tugas dan fungsi organisasi",
       color: "cyan",
     },
     {
+      id: 3,
       name: "Y.B. SUSILO WIBOWO",
       position: "Sekretaris Utama Badan Siber dan Sandi Negara",
       icon: FileText,
       level: "Sekretaris Utama",
-      image: "/placeholder.svg",
+      image: "/YBSES-scaled.jpg",
       description:
         "Mengkoordinasikan penyelenggaraan tugas dan administrasi BSSN",
       color: "green",
     },
     {
+      id: 4,
       name: "R. TJAHJO KHURNIAWAN",
       position: "Deputi Bidang Strategi dan Kebijakan Keamanan Siber dan Sandi",
       icon: Settings,
       level: "Deputi",
-      image: "/placeholder.svg",
+      image: "/Pejabat-BSSN-01_REV.jpg",
       description: "Mengelola strategi dan kebijakan keamanan siber dan sandi",
       color: "purple",
     },
     {
+      id: 5,
       name: "DOMINGGUS PAKEL",
       position: "Deputi Bidang Operasi Keamanan Siber dan Sandi",
       icon: Shield,
       level: "Deputi",
-      image: "/placeholder.svg",
+      image: "/BW.jpg",
       description: "Mengawasi operasional keamanan siber dan sandi",
       color: "red",
     },
     {
+      id: 6,
       name: "SULISTYO",
       position:
         "Deputi Bidang Keamanan Siber dan Sandi Pemerintahan dan Pembangunan Manusia",
       icon: Building,
       level: "Deputi",
-      image: "/placeholder.svg",
+      image: "/D3-BG-Putih.jpg",
       description:
         "Mengelola keamanan siber untuk sektor pemerintahan dan pembangunan manusia",
       color: "orange",
     },
     {
+      id: 7,
       name: "SLAMET AJI PAMUNGKAS",
       position: "Deputi Bidang Keamanan Siber dan Sandi Perekonomian",
       icon: TrendingUp,
       level: "Deputi",
-      image: "/placeholder.svg",
+      image: "/DEP-4-scaled.jpg",
       description: "Mengelola keamanan siber untuk sektor perekonomian",
       color: "indigo",
     },
@@ -231,14 +244,25 @@ const Pimpinan = () => {
                       <CardContent className="p-8">
                         <div className="flex items-start space-x-6">
                           <div className="relative flex-shrink-0">
-                            <div
-                              className={`w-24 h-24 rounded-full bg-gradient-to-br ${getImageColorClasses(leader.color)} flex items-center justify-center text-white font-bold text-2xl group-hover:scale-105 transition-transform duration-300`}
-                            >
-                              {leader.name
-                                .split(" ")
-                                .map((n) => n[0])
-                                .join("")
-                                .slice(0, 2)}
+                            <div className="w-24 h-24 rounded-full overflow-hidden group-hover:scale-105 transition-transform duration-300 ring-2 ring-offset-2 ring-gray-200">
+                              {!imageErrors.has(leader.id) ? (
+                                <img
+                                  src={leader.image}
+                                  alt={leader.name}
+                                  className="w-full h-full object-cover"
+                                  onError={() => handleImageError(leader.id)}
+                                />
+                              ) : (
+                                <div
+                                  className={`w-full h-full rounded-full bg-gradient-to-br ${getImageColorClasses(leader.color)} flex items-center justify-center text-white font-bold text-2xl`}
+                                >
+                                  {leader.name
+                                    .split(" ")
+                                    .map((n) => n[0])
+                                    .join("")
+                                    .slice(0, 2)}
+                                </div>
+                              )}
                             </div>
                             <div
                               className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full ${getColorClasses(leader.color)} flex items-center justify-center`}
@@ -282,14 +306,25 @@ const Pimpinan = () => {
                         <CardContent className="p-8">
                           <div className="flex items-start space-x-6">
                             <div className="relative flex-shrink-0">
-                              <div
-                                className={`w-24 h-24 rounded-full bg-gradient-to-br ${getImageColorClasses(leader.color)} flex items-center justify-center text-white font-bold text-2xl group-hover:scale-105 transition-transform duration-300`}
-                              >
-                                {leader.name
-                                  .split(" ")
-                                  .map((n) => n[0])
-                                  .join("")
-                                  .slice(0, 2)}
+                              <div className="w-24 h-24 rounded-full overflow-hidden group-hover:scale-105 transition-transform duration-300 ring-2 ring-offset-2 ring-gray-200">
+                                {!imageErrors.has(leader.id) ? (
+                                  <img
+                                    src={leader.image}
+                                    alt={leader.name}
+                                    className="w-full h-full object-cover"
+                                    onError={() => handleImageError(leader.id)}
+                                  />
+                                ) : (
+                                  <div
+                                    className={`w-full h-full rounded-full bg-gradient-to-br ${getImageColorClasses(leader.color)} flex items-center justify-center text-white font-bold text-2xl`}
+                                  >
+                                    {leader.name
+                                      .split(" ")
+                                      .map((n) => n[0])
+                                      .join("")
+                                      .slice(0, 2)}
+                                  </div>
+                                )}
                               </div>
                               <div
                                 className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full ${getColorClasses(leader.color)} flex items-center justify-center`}
@@ -337,14 +372,25 @@ const Pimpinan = () => {
                         <CardContent className="p-6">
                           <div className="flex items-start space-x-4">
                             <div className="relative flex-shrink-0">
-                              <div
-                                className={`w-16 h-16 rounded-full bg-gradient-to-br ${getImageColorClasses(leader.color)} flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform duration-300`}
-                              >
-                                {leader.name
-                                  .split(" ")
-                                  .map((n) => n[0])
-                                  .join("")
-                                  .slice(0, 2)}
+                              <div className="w-16 h-16 rounded-full overflow-hidden group-hover:scale-105 transition-transform duration-300 ring-2 ring-offset-2 ring-gray-200">
+                                {!imageErrors.has(leader.id) ? (
+                                  <img
+                                    src={leader.image}
+                                    alt={leader.name}
+                                    className="w-full h-full object-cover"
+                                    onError={() => handleImageError(leader.id)}
+                                  />
+                                ) : (
+                                  <div
+                                    className={`w-full h-full rounded-full bg-gradient-to-br ${getImageColorClasses(leader.color)} flex items-center justify-center text-white font-bold text-lg`}
+                                  >
+                                    {leader.name
+                                      .split(" ")
+                                      .map((n) => n[0])
+                                      .join("")
+                                      .slice(0, 2)}
+                                  </div>
+                                )}
                               </div>
                               <div
                                 className={`absolute -bottom-1 -right-1 w-6 h-6 rounded-full ${getColorClasses(leader.color)} flex items-center justify-center`}
