@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 const HeroCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const images = [
     {
