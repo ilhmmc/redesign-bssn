@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import {
   Card,
