@@ -37,6 +37,12 @@ const HeroCarousel = () => {
     },
   ];
 
+  const scrollNext = useCallback(() => {
+    if (api) {
+      api.scrollNext();
+    }
+  }, [api]);
+
   React.useEffect(() => {
     if (!api) {
       return;
@@ -54,11 +60,27 @@ const HeroCarousel = () => {
     };
   }, [api]);
 
+  // Auto-play functionality
+  useEffect(() => {
+    if (!api || !isPlaying) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      scrollNext();
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [api, isPlaying, scrollNext]);
+
   const scrollTo = (index: number) => {
     if (api) {
       api.scrollTo(index);
     }
   };
+
+  const handleMouseEnter = () => setIsPlaying(false);
+  const handleMouseLeave = () => setIsPlaying(true);
 
   return (
     <div className="relative w-full">
