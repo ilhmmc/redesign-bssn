@@ -130,7 +130,7 @@ const ProfilOrganisasi = () => {
 
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Lembaga pemerintah non-kementerian yang bertanggung jawab atas
-                keamanan siber dan persandian nasional Indonesia sejak 2017.
+                keamanan siber dan persandian nasional Indonesia sejak 1946.
               </p>
             </div>
           </div>
