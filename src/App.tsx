@@ -14,6 +14,7 @@ import PanduanTips from "./pages/PanduanTips";
 import Sertifikasi from "./pages/Sertifikasi";
 import KeamananSiber from "./pages/KeamananSiber";
 import Konsultasi from "./pages/Konsultasi";
+import PPID from "./pages/PPID";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
