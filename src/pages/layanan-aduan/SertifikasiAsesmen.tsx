@@ -446,7 +446,7 @@ const SertifikasiAsesmen = () => {
                           </div>
                           <div className="flex items-center space-x-2">
                             <Phone className="h-4 w-4 text-green-600" />
-                            <span>+62 821-2223-0970</span>
+                            <span>+62 856-789-1754</span>
                           </div>
                           <div className="flex items-center space-x-2">
                             <ExternalLink className="h-4 w-4 text-green-600" />
