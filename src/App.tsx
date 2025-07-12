@@ -18,7 +18,7 @@ import PPID from "./pages/PPID";
 import StrategiKeamanan from "./pages/StrategiKeamanan";
 import NotFound from "./pages/NotFound";
 import GovCSIRTIndonesia from "./pages/layanan-aduan/GovCSIRTIndonesia";
-import AduanSiberWhistleblowing from "./pages/layanan-aduan/AduanSiberWhistleblowing";
+import AduanSiber from "./pages/layanan-aduan/AduanSiber";
 import SertifikasiAsesmen from "./pages/layanan-aduan/SertifikasiAsesmen";
 import AlatDirektoriProfesional from "./pages/layanan-aduan/AlatDirektoriProfesional";
 import LayananAduan from "./pages/layanan-aduan/LayananAduan";
@@ -61,10 +61,7 @@ const App = () => (
             path="/layanan-aduan/gov-csirt-indonesia"
             element={<GovCSIRTIndonesia />}
           />
-          <Route
-            path="/layanan-aduan/aduan-siber-whistleblowing"
-            element={<AduanSiberWhistleblowing />}
-          />
+          <Route path="/layanan-aduan/aduan-siber" element={<AduanSiber />} />
           <Route
             path="/layanan-aduan/sertifikasi-asesmen"
             element={<SertifikasiAsesmen />}

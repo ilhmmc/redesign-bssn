@@ -49,18 +49,18 @@ const LayananAduan = () => {
     },
     {
       icon: AlertTriangle,
-      title: "Aduan Siber & Whistleblowing",
+      title: "Aduan Siber",
       description:
-        "Laporkan konten negatif, insiden keamanan siber, atau pelanggaran yang Anda ketahui secara anonim dan aman.",
+        "Layanan Pusat Kontak Siber Nasional untuk melaporkan insiden keamanan siber dan mendapatkan bantuan teknis keamanan informasi.",
       features: [
         "Laporan Insiden Siber",
-        "Whistleblowing System",
-        "Pelaporan Anonim",
-        "Tindak Lanjut Cepat",
+        "Diseminasi Informasi",
+        "Analisis Kerentanan",
+        "Dukungan Teknis 24/7",
       ],
-      href: "/layanan-aduan/aduan-siber-whistleblowing",
+      href: "/layanan-aduan/aduan-siber",
       color: "destructive",
-      badge: "Rahasia",
+      badge: "Terpercaya",
     },
     {
       icon: Users,
