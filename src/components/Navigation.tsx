@@ -5,11 +5,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Menu,
   Shield,
-  Home,
   Info,
-  Settings,
-  FileText,
-  Phone,
+  Newspaper,
+  Briefcase,
+  Contact,
+  Home,
 } from "lucide-react";
 import {
   NavigationMenu,
@@ -21,87 +21,121 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
+// =======================================================================
+// STRUKTUR NAVIGASI BARU (DENGAN KOREKSI)
+// =======================================================================
 const navigationItems = [
   {
-    title: "Beranda",
-    href: "/",
-    icon: Home,
-  },
-  {
-    title: "Tentang BSSN",
-    href: "/tentang-bssn",
+    title: "Profil",
     icon: Info,
     children: [
       {
-        title: "Profil Organisasi",
+        title: "Tentang BSSN",
         href: "/tentang-bssn/profil-organisasi",
-        description: "Sejarah, visi, misi, dan struktur organisasi BSSN",
+        description: "Visi, Misi, Sejarah, dan informasi dasar lembaga.",
       },
       {
-        title: "Tugas & Fungsi",
-        href: "/tentang-bssn/tugas-fungsi",
-        description: "Tugas pokok dan fungsi BSSN dalam keamanan siber",
-      },
-      {
-        title: "Pimpinan",
+        title: "Struktur & Pejabat",
         href: "/tentang-bssn/pimpinan",
-        description: "Struktur kepemimpinan dan jajaran direksi",
+        description: "Bagan organisasi dan profil pimpinan BSSN.",
+      },
+      {
+        title: "Tugas, Fungsi & Strategi",
+        href: "/tentang-bssn/tugas-fungsi",
+        description: "Tugas pokok, fungsi, dan arah kebijakan siber nasional.",
+      },
+      {
+        title: "Akuntabilitas & Kinerja",
+        href: "/informasi-publik/kinerja", // Halaman baru
+        description: "Laporan kinerja, E-LHKPN, dan survei kepuasan.",
       },
     ],
   },
   {
-    title: "Layanan",
-    href: "/layanan",
-    icon: Settings,
+    title: "Layanan & Aduan",
+    icon: Shield,
     children: [
       {
-        title: "PPID",
-        href: "/layanan/ppid",
-        description: "Pejabat Pengelola Informasi dan Dokumentasi BSSN",
-      },
-      {
-        title: "Keamanan Siber",
+        title: "Gov-CSIRT Indonesia",
         href: "/layanan/keamanan-siber",
-        description: "Layanan proteksi dan monitoring keamanan siber",
+        description: "Pusat Tanggap Insiden Siber Sektor Pemerintah.",
       },
       {
-        title: "Sertifikasi",
+        title: "Sertifikasi & Asesmen",
         href: "/layanan/sertifikasi",
-        description: "Program sertifikasi keamanan informasi",
+        description: "Layanan Sertifikat Elektronik, LSPro, dan IT Security Assessment.",
       },
       {
-        title: "Konsultasi",
-        href: "/layanan/konsultasi",
-        description: "Layanan konsultasi keamanan siber untuk institusi",
+        title: "Aduan Siber & Whistleblowing",
+        href: "/kontak", // Diarahkan ke kontak untuk melapor
+        description: "Laporkan konten negatif, insiden, atau pelanggaran (WBS).",
+      },
+      {
+        title: "Alat & Direktori Profesional",
+        href: "/layanan/direktori", // Halaman baru
+        description:
+          "Daftar auditor, lembaga konsultan, dan instrumen kematangan siber.",
       },
     ],
   },
   {
-    title: "Informasi",
-    href: "/informasi",
-    icon: FileText,
+    title: "Informasi & Regulasi",
+    icon: Newspaper,
     children: [
       {
-        title: "Berita",
+        title: "Berita & Siaran Pers",
         href: "/informasi/berita",
-        description: "Berita terkini seputar keamanan siber Indonesia",
+        description: "Informasi kegiatan dan pernyataan resmi untuk media.",
       },
       {
-        title: "Peringatan Keamanan",
-        href: "/informasi/peringatan-keamanan",
-        description: "Alert dan peringatan ancaman keamanan siber",
+        title: "Publikasi & Dokumen",
+        href: "/publikasi/laporan-tahunan", // Halaman baru
+        description: "Laporan tahunan, jurnal, dan dokumen resmi lainnya.",
       },
       {
-        title: "Panduan & Tips",
+        title: "Edukasi & Imbauan Keamanan",
         href: "/informasi/panduan-tips",
-        description: "Panduan praktis keamanan siber untuk masyarakat",
+        description: "Panduan praktis, tips, dan peringatan keamanan untuk publik.",
+      },
+      {
+        title: "Pusat Informasi Hukum (JDIH)",
+        href: "/regulasi/jdih", // Halaman baru
+        description:
+          "Jaringan Dokumentasi dan Informasi Hukum terkait keamanan siber.",
+      },
+      {
+        title: "Agenda & Penghargaan", // <-- ITEM YANG DIPERBAIKI/DITAMBAHKAN
+        href: "/pusat-media/agenda", // Halaman baru
+        description: "Informasi jadwal kegiatan dan penghargaan yang diterima BSSN.",
       },
     ],
   },
   {
-    title: "Kontak",
-    href: "/kontak",
-    icon: Phone,
+    title: "Karir & Pengadaan",
+    icon: Briefcase,
+    children: [
+      {
+        title: "Penerimaan ASN (CPNS & PPPK)",
+        href: "/partisipasi/karir", // Halaman baru
+        description: "Informasi seleksi aparatur sipil negara.",
+      },
+      {
+        title: "Penerimaan Poltek SSN",
+        href: "/partisipasi/karir/poltek-ssn", // Halaman baru
+        description: "Seleksi Penerimaan Taruna Baru Poltek SSN.",
+      },
+       {
+        title: "Seleksi Jabatan Pimpinan (JPT)",
+        href: "/partisipasi/karir/jpt", // Halaman baru
+        description: "Informasi seleksi Jabatan Pimpinan Tinggi.",
+      },
+      {
+        title: "LPSE (Layanan Pengadaan)",
+        href: "/partisipasi/lpse", // Halaman baru
+        description:
+          "Pusat informasi untuk semua proses pengadaan barang dan jasa.",
+      },
+    ],
   },
 ];
 
@@ -133,56 +167,53 @@ const Navigation = () => {
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList>
             {navigationItems.map((item) => (
-              <NavigationMenuItem key={item.href}>
-                {item.children ? (
-                  <>
-                    <NavigationMenuTrigger className="h-10">
-                      <item.icon className="mr-2 h-4 w-4" />
-                      {item.title}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
-                        {item.children.map((child) => (
-                          <li key={child.href}>
-                            <NavigationMenuLink asChild>
-                              <Link
-                                to={child.href}
-                                className={cn(
-                                  "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                                  location.pathname === child.href &&
-                                    "bg-accent text-accent-foreground",
-                                )}
-                              >
-                                <div className="text-sm font-medium leading-none">
-                                  {child.title}
-                                </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                  {child.description}
-                                </p>
-                              </Link>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </>
-                ) : (
-                  <NavigationMenuLink asChild>
-                    <Link
-                      to={item.href}
-                      className={cn(
-                        "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50",
-                        location.pathname === item.href &&
-                          "bg-accent text-accent-foreground",
-                      )}
-                    >
-                      <item.icon className="mr-2 h-4 w-4" />
-                      {item.title}
-                    </Link>
-                  </NavigationMenuLink>
-                )}
+              <NavigationMenuItem key={item.title}>
+                <NavigationMenuTrigger className="h-10">
+                  <item.icon className="mr-2 h-4 w-4" />
+                  {item.title}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {item.children.map((child) => (
+                      <li key={child.title}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to={child.href}
+                            className={cn(
+                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                              location.pathname === child.href &&
+                                "bg-accent text-accent-foreground",
+                            )}
+                          >
+                            <div className="text-sm font-medium leading-none">
+                              {child.title}
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              {child.description}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
             ))}
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  to="/kontak"
+                  className={cn(
+                    "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                    location.pathname === "/kontak" &&
+                      "bg-accent text-accent-foreground",
+                  )}
+                >
+                  <Contact className="mr-2 h-4 w-4" />
+                  Hubungi Kami
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 
@@ -194,42 +225,41 @@ const Navigation = () => {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <div className="flex flex-col space-y-4 py-4">
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] overflow-y-auto">
+            <div className="flex flex-col space-y-2 py-4">
               {navigationItems.map((item) => (
-                <div key={item.href}>
-                  <Link
-                    to={item.href}
-                    className={cn(
-                      "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-                      location.pathname === item.href &&
-                        "bg-accent text-accent-foreground",
-                    )}
-                    onClick={() => setIsOpen(false)}
-                  >
+                <div key={item.title}>
+                  <div className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-foreground">
                     <item.icon className="h-5 w-5" />
                     <span>{item.title}</span>
-                  </Link>
-                  {item.children && (
-                    <div className="ml-8 mt-2 space-y-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          to={child.href}
-                          className={cn(
-                            "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
-                            location.pathname === child.href &&
-                              "bg-accent text-accent-foreground",
-                          )}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {child.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  </div>
+                  <div className="ml-6 mt-2 flex flex-col space-y-1 border-l pl-4">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.title}
+                        to={child.href}
+                        className={cn(
+                          "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
+                          location.pathname === child.href
+                            ? "bg-accent text-accent-foreground"
+                            : "text-muted-foreground",
+                        )}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {child.title}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               ))}
+              <Link
+                to="/kontak"
+                className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                <Contact className="h-5 w-5" />
+                <span>Hubungi Kami</span>
+              </Link>
             </div>
           </SheetContent>
         </Sheet>

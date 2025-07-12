@@ -15,6 +15,7 @@ import Sertifikasi from "./pages/Sertifikasi";
 import KeamananSiber from "./pages/KeamananSiber";
 import Konsultasi from "./pages/Konsultasi";
 import PPID from "./pages/PPID";
+import StrategiKeamanan from "./pages/StrategiKeamanan";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,9 +33,10 @@ const App = () => (
             element={<ProfilOrganisasi />}
           />
           <Route path="/tentang-bssn/tugas-fungsi" element={<TugasFungsi />} />
+          <Route path="/tentang-bssn/strategi-keamanan" element={<StrategiKeamanan />} />
           <Route path="/tentang-bssn/pimpinan" element={<Pimpinan />} />
           <Route path="/kontak" element={<Kontak />} />
-          <Route path="/informasi/berita" element={<Berita />} />
+          <Route path="/informasi/berita" element={<Berita />} /><Route path="/informasi/berita" element={<Berita />} />
           <Route
             path="/informasi/peringatan-keamanan"
             element={<PeringatanKeamanan />}
