@@ -41,7 +41,7 @@ const SertifikasiAsesmen = () => {
     },
     {
       id: "itsa",
-      title: "ITSA (IT Security Assessment)",
+      title: "ITSA (Information Technology Security Assessment)",
       description:
         "Pengujian kerentanan dan asesmen keamanan sistem informasi pemerintah",
       icon: Shield,
