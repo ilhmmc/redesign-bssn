@@ -67,10 +67,10 @@ const navigationItems = [
           "Layanan Sertifikat Elektronik, LSPro, dan IT Security Assessment.",
       },
       {
-        title: "Aduan Siber & Whistleblowing",
-        href: "/layanan-aduan/aduan-siber-whistleblowing",
+        title: "Aduan Siber",
+        href: "/layanan-aduan/aduan-siber",
         description:
-          "Laporkan konten negatif, insiden, atau pelanggaran (WBS).",
+          "Laporkan insiden keamanan siber dan dapatkan bantuan teknis.",
       },
       {
         title: "Alat & Direktori Profesional",
