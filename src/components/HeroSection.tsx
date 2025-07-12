@@ -64,7 +64,7 @@ const HeroSection = () => {
                 size="lg"
                 className="bg-primary hover:bg-primary/90"
               >
-                <Link to="/layanan">Jelajahi Layanan</Link>
+                <Link to="/layanan-aduan">Jelajahi Layanan</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link to="/informasi/peringatan-keamanan">

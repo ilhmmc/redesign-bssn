@@ -17,6 +17,11 @@ import Konsultasi from "./pages/Konsultasi";
 import PPID from "./pages/PPID";
 import StrategiKeamanan from "./pages/StrategiKeamanan";
 import NotFound from "./pages/NotFound";
+import GovCSIRTIndonesia from "./pages/layanan-aduan/GovCSIRTIndonesia";
+import AduanSiberWhistleblowing from "./pages/layanan-aduan/AduanSiberWhistleblowing";
+import SertifikasiAsesmen from "./pages/layanan-aduan/SertifikasiAsesmen";
+import AlatDirektoriProfesional from "./pages/layanan-aduan/AlatDirektoriProfesional";
+import LayananAduan from "./pages/layanan-aduan/LayananAduan";
 
 const queryClient = new QueryClient();
 
@@ -33,10 +38,14 @@ const App = () => (
             element={<ProfilOrganisasi />}
           />
           <Route path="/tentang-bssn/tugas-fungsi" element={<TugasFungsi />} />
-          <Route path="/tentang-bssn/strategi-keamanan" element={<StrategiKeamanan />} />
+          <Route
+            path="/tentang-bssn/strategi-keamanan"
+            element={<StrategiKeamanan />}
+          />
           <Route path="/tentang-bssn/pimpinan" element={<Pimpinan />} />
           <Route path="/kontak" element={<Kontak />} />
-          <Route path="/informasi/berita" element={<Berita />} /><Route path="/informasi/berita" element={<Berita />} />
+          <Route path="/informasi/berita" element={<Berita />} />
+          <Route path="/informasi/berita" element={<Berita />} />
           <Route
             path="/informasi/peringatan-keamanan"
             element={<PeringatanKeamanan />}
@@ -46,6 +55,24 @@ const App = () => (
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
           <Route path="/layanan/konsultasi" element={<Konsultasi />} />
+          {/* New Layanan & Aduan routes */}
+          <Route path="/layanan-aduan" element={<LayananAduan />} />
+          <Route
+            path="/layanan-aduan/gov-csirt-indonesia"
+            element={<GovCSIRTIndonesia />}
+          />
+          <Route
+            path="/layanan-aduan/aduan-siber-whistleblowing"
+            element={<AduanSiberWhistleblowing />}
+          />
+          <Route
+            path="/layanan-aduan/sertifikasi-asesmen"
+            element={<SertifikasiAsesmen />}
+          />
+          <Route
+            path="/layanan-aduan/alat-direktori-profesional"
+            element={<AlatDirektoriProfesional />}
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
