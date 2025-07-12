@@ -14,7 +14,7 @@ import {
   Phone,
   Mail,
   Award,
-  Tool,
+  Wrench,
 } from "lucide-react";
 
 const AlatDirektoriProfesional = () => {
@@ -35,7 +35,7 @@ const AlatDirektoriProfesional = () => {
       title: "Instrumen Kematangan",
       count: "15+",
       description: "Tools untuk mengukur tingkat kematangan cyber security",
-      icon: Tool,
+      icon: Wrench,
     },
   ];
 
@@ -239,7 +239,7 @@ const AlatDirektoriProfesional = () => {
                 <Card className="group hover:shadow-lg transition-all duration-300">
                   <CardHeader>
                     <CardTitle className="flex items-center space-x-2">
-                      <Tool className="h-6 w-6 text-government-600" />
+                      <Wrench className="h-6 w-6 text-government-600" />
                       <span>Cyber Security Maturity Model</span>
                     </CardTitle>
                   </CardHeader>
