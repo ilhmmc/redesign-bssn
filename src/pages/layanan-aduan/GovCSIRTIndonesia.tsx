@@ -13,7 +13,7 @@ import {
   Shield,
   Mail,
   MessageSquare,
-  Download,
+  ExternalLink,
   AlertTriangle,
   Users,
   MonitorSpeaker,
@@ -61,22 +61,57 @@ const GovCSIRTIndonesia = () => {
   ];
 
   const panduan = [
-    { title: "PANDUAN PELAPORAN INSIDEN", icon: FileText },
-    { title: "PANDUAN PENANGANAN INSIDEN WEB DEFACEMENT", icon: Eye },
-    { title: "PANDUAN PENANGANAN INSIDEN SERANGAN DDOS", icon: Zap },
+    {
+      title: "PANDUAN PELAPORAN INSIDEN",
+      icon: FileText,
+      filename: "Panduan_Pelaporan_Insiden.pdf",
+    },
+    {
+      title: "PANDUAN PENANGANAN INSIDEN WEB DEFACEMENT",
+      icon: Eye,
+      filename: "Panduan_Penanganan_Insiden_Web_Defacement.pdf",
+    },
+    {
+      title: "PANDUAN PENANGANAN INSIDEN SERANGAN DDOS",
+      icon: Zap,
+      filename: "Panduan_Penanganan_Insiden_Serangan_DDoS.pdf",
+    },
     {
       title: "PANDUAN PENANGANAN INSIDEN SERANGAN PHISHING",
       icon: AlertTriangle,
+      filename: "Panduan_Penanganan_Insiden_Serangan_Phishing.pdf",
     },
     {
       title: "PANDUAN PENANGANAN INSIDEN SERANGAN SQL INJECTION",
       icon: Target,
+      filename: "Panduan_Penanganan_Insiden_Serangan_SQL_Injecton.pdf",
     },
-    { title: "PANDUAN PENANGANAN INSIDEN MALWARE", icon: Shield },
-    { title: "PANDUAN PENANGANAN INSIDEN RANSOMWARE", icon: Lock },
-    { title: "PANDUAN PENGGUNAAN OPEN PGP", icon: Lock },
-    { title: "RFC 2350 Gov-CSIRT Indonesia", icon: FileText },
+    {
+      title: "PANDUAN PENANGANAN INSIDEN MALWARE",
+      icon: Shield,
+      filename: "Panduan_Penanganan_Insiden_Malware.pdf",
+    },
+    {
+      title: "PANDUAN PENANGANAN INSIDEN RANSOMWARE",
+      icon: Lock,
+      filename: "Panduan_Penanganan_Insiden_Ransomware.pdf",
+    },
+    {
+      title: "PANDUAN PENGGUNAAN OPEN PGP",
+      icon: Lock,
+      filename: "PANDUAN-PENGGUNAAN-OPENPGP.pdf",
+    },
+    {
+      title: "RFC 2350 Gov-CSIRT Indonesia",
+      icon: FileText,
+      filename: "RFC2350-Gov-CSIRT-Indonesia.pdf",
+    },
   ];
+
+  const handleViewDocument = (filename: string) => {
+    const fileUrl = `/gov-csirt/${filename}`;
+    window.open(fileUrl, "_blank");
+  };
 
   const missionItems = [
     "Mengkoordinasikan serta mengolaborasikan layanan keamanan siber pada sektor pemerintah",
@@ -341,9 +376,14 @@ const GovCSIRTIndonesia = () => {
                         <item.icon className="h-6 w-6 text-white" />
                       </div>
                       <h3 className="font-medium text-sm mb-3">{item.title}</h3>
-                      <Button variant="outline" size="sm" className="w-full">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download PDF
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full"
+                        onClick={() => handleViewDocument(item.filename)}
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Lihat Dokumen
                       </Button>
                     </CardContent>
                   </Card>
