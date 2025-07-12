@@ -90,9 +90,9 @@ const navigationItems = [
         description: "Informasi kegiatan dan pernyataan resmi untuk media.",
       },
       {
-        title: "Publikasi & Dokumen",
-        href: "/publikasi/laporan-tahunan", // Halaman baru
-        description: "Laporan tahunan, jurnal, dan dokumen resmi lainnya.",
+        title: "Publikasi",
+        href: "/informasi-regulasi/publikasi",
+        description: "Berbagai publikasi dan dokumen keamanan siber BSSN.",
       },
       {
         title: "Edukasi & Imbauan Keamanan",
