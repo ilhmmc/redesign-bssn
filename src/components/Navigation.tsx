@@ -55,6 +55,11 @@ const navigationItems = [
     icon: Settings,
     children: [
       {
+        title: "PPID",
+        href: "/layanan/ppid",
+        description: "Pejabat Pengelola Informasi dan Dokumentasi BSSN",
+      },
+      {
         title: "Keamanan Siber",
         href: "/layanan/keamanan-siber",
         description: "Layanan proteksi dan monitoring keamanan siber",
