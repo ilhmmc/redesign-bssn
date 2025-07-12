@@ -104,7 +104,7 @@ const GovCSIRTIndonesia = () => {
     {
       title: "RFC 2350 Gov-CSIRT Indonesia",
       icon: FileText,
-      filename: "RFC2350-gov-csirt.pdf",
+      filename: "RFC2350-Gov-CSIRT-Indonesia.pdf",
     },
   ];
 
