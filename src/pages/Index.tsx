@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -66,75 +67,66 @@ const Index = () => {
       <Navigation />
 
       <main>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-background to-cyan-50 py-20">
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Content */}
-              <div className="space-y-8">
-                <div className="space-y-4">
-                  <Badge className="bg-blue-100 text-blue-700 border-blue-200">
-                    <Shield className="mr-2 h-4 w-4" />
-                    Badan Siber dan Sandi Negara
-                  </Badge>
+        {/* Hero Carousel Section */}
+        <section className="relative">
+          <HeroCarousel />
+        </section>
 
-                  <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
-                    Melindungi <span className="text-blue-600">Indonesia</span>
-                    <br />
-                    di Era Digital
-                  </h1>
+        {/* Content Section */}
+        <section className="relative bg-gradient-to-br from-blue-50 via-background to-cyan-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <div className="space-y-4">
+                <Badge className="bg-blue-100 text-blue-700 border-blue-200">
+                  <Shield className="mr-2 h-4 w-4" />
+                  Badan Siber dan Sandi Negara
+                </Badge>
 
-                  <p className="text-xl text-muted-foreground max-w-2xl">
-                    BSSN berkomitmen menjaga keamanan siber Indonesia dengan
-                    layanan proteksi, monitoring, dan edukasi untuk masyarakat,
-                    pemerintah, dan dunia usaha.
-                  </p>
-                </div>
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                  Melindungi <span className="text-blue-600">Indonesia</span>
+                  <br />
+                  di Era Digital
+                </h1>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90"
-                  >
-                    <Link to="/layanan">Jelajahi Layanan</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link to="/tentang-bssn/profil-organisasi">
-                      Profil Organisasi
-                    </Link>
-                  </Button>
-                </div>
-
-                {/* Quick Stats */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
-                  {stats.map((stat, index) => (
-                    <Card key={index} className="border-white/20">
-                      <CardContent className="p-4 text-center">
-                        <stat.icon
-                          className={`h-6 w-6 mx-auto mb-2 ${stat.color}`}
-                        />
-                        <div className="text-2xl font-bold text-foreground">
-                          {stat.value}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {stat.label}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  BSSN berkomitmen menjaga keamanan siber Indonesia dengan
+                  layanan proteksi, monitoring, dan edukasi untuk masyarakat,
+                  pemerintah, dan dunia usaha.
+                </p>
               </div>
 
-              {/* Visual Element */}
-              <div className="relative">
-                <div className="relative mx-auto w-full max-w-lg">
-                  <div className="relative bg-gradient-to-br from-blue-100 to-cyan-100 rounded-3xl p-8 shadow-2xl">
-                    <div className="flex items-center justify-center">
-                      <Shield className="h-32 w-32 text-primary" />
-                    </div>
-                  </div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90"
+                >
+                  <Link to="/layanan">Jelajahi Layanan</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/tentang-bssn/profil-organisasi">
+                    Profil Organisasi
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
+                {stats.map((stat, index) => (
+                  <Card key={index} className="border-white/20">
+                    <CardContent className="p-4 text-center">
+                      <stat.icon
+                        className={`h-6 w-6 mx-auto mb-2 ${stat.color}`}
+                      />
+                      <div className="text-2xl font-bold text-foreground">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {stat.label}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
