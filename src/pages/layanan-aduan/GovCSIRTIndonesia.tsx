@@ -149,7 +149,7 @@ const GovCSIRTIndonesia = () => {
               </div>
 
               <p className="text-lg text-muted-foreground">
-                Tim Tanggap Insiden Siber Sektor Administrasi Pemerintahan
+                Government – Computer Security Incident Response Team
               </p>
 
               <div className="text-sm text-muted-foreground">
