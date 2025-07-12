@@ -61,10 +61,7 @@ const App = () => (
             path="/layanan-aduan/gov-csirt-indonesia"
             element={<GovCSIRTIndonesia />}
           />
-          <Route
-            path="/layanan-aduan/aduan-siber-whistleblowing"
-            element={<AduanSiberWhistleblowing />}
-          />
+          <Route path="/layanan-aduan/aduan-siber" element={<AduanSiber />} />
           <Route
             path="/layanan-aduan/sertifikasi-asesmen"
             element={<SertifikasiAsesmen />}
