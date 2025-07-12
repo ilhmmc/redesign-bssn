@@ -23,6 +23,7 @@ import SertifikasiAsesmen from "./pages/layanan-aduan/SertifikasiAsesmen";
 import AlatDirektoriProfesional from "./pages/layanan-aduan/AlatDirektoriProfesional";
 import LayananAduan from "./pages/layanan-aduan/LayananAduan";
 import JDIH from "./pages/JDIH";
+import Publikasi from "./pages/Publikasi";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
             element={<PanduanTips />}
           />
           <Route path="/informasi-regulasi/jdih" element={<JDIH />} />
+          <Route path="/informasi-regulasi/publikasi" element={<Publikasi />} />
           <Route path="/layanan/ppid" element={<PPID />} />
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
