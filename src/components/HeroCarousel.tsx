@@ -99,7 +99,7 @@ const HeroCarousel = () => {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="relative h-[18.75rem] md:h-[25rem] lg:h-[31.25rem] overflow-hidden rounded-lg">
+              <div className="relative h-[18.75em] md:h-[25em] lg:h-[31.25em] overflow-hidden rounded-lg">
                 <img
                   src={image.src}
                   alt={image.alt}
