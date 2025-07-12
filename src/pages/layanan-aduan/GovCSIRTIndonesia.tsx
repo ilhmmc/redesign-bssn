@@ -13,7 +13,7 @@ import {
   Shield,
   Mail,
   MessageSquare,
-  Download,
+  ExternalLink,
   AlertTriangle,
   Users,
   MonitorSpeaker,
