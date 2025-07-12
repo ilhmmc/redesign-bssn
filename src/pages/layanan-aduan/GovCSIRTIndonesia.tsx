@@ -143,7 +143,7 @@ const GovCSIRTIndonesia = () => {
 
               <div className="flex items-center justify-center">
                 <img
-                  src="/gov-csirt-logo.png"
+                  src="/gov-csirt/GovtCSIRT.jpg"
                   alt="Gov-CSIRT Indonesia Logo"
                   className="h-32 w-auto object-contain"
                   onError={(e) => {
