@@ -376,9 +376,14 @@ const GovCSIRTIndonesia = () => {
                         <item.icon className="h-6 w-6 text-white" />
                       </div>
                       <h3 className="font-medium text-sm mb-3">{item.title}</h3>
-                      <Button variant="outline" size="sm" className="w-full">
-                        <Download className="h-4 w-4 mr-2" />
-                        Download PDF
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full"
+                        onClick={() => handleViewDocument(item.filename)}
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Lihat Dokumen
                       </Button>
                     </CardContent>
                   </Card>
