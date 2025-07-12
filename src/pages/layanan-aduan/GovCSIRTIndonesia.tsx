@@ -137,10 +137,6 @@ const GovCSIRTIndonesia = () => {
                 Indonesia
               </h1>
 
-              <p className="text-lg text-muted-foreground">
-                Tim Tanggap Insiden Siber Sektor Administrasi Pemerintahan
-              </p>
-
               <div className="flex items-center justify-center">
                 <img
                   src="/gov-csirt/GovtCSIRT.jpg"
@@ -151,6 +147,10 @@ const GovCSIRTIndonesia = () => {
                   }}
                 />
               </div>
+
+              <p className="text-lg text-muted-foreground">
+                Tim Tanggap Insiden Siber Sektor Administrasi Pemerintahan
+              </p>
 
               <div className="text-sm text-muted-foreground">
                 <div className="flex items-center justify-center space-x-4">
