@@ -24,6 +24,8 @@ import AlatDirektoriProfesional from "./pages/layanan-aduan/AlatDirektoriProfesi
 import LayananAduan from "./pages/layanan-aduan/LayananAduan";
 import JDIH from "./pages/JDIH";
 import Publikasi from "./pages/Publikasi";
+import DokumenStrategis from "./pages/publikasi/DokumenStrategis";
+import PanduanKeamanan from "./pages/publikasi/PanduanKeamanan";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +59,14 @@ const App = () => (
           />
           <Route path="/informasi-regulasi/jdih" element={<JDIH />} />
           <Route path="/informasi-regulasi/publikasi" element={<Publikasi />} />
+          <Route
+            path="/informasi-regulasi/publikasi/dokumen-strategis"
+            element={<DokumenStrategis />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/panduan-keamanan"
+            element={<PanduanKeamanan />}
+          />
           <Route path="/layanan/ppid" element={<PPID />} />
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
