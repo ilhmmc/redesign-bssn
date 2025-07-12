@@ -14,6 +14,7 @@ import PanduanTips from "./pages/PanduanTips";
 import Sertifikasi from "./pages/Sertifikasi";
 import KeamananSiber from "./pages/KeamananSiber";
 import Konsultasi from "./pages/Konsultasi";
+import PPID from "./pages/PPID";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
             element={<PeringatanKeamanan />}
           />
           <Route path="/informasi/panduan-tips" element={<PanduanTips />} />
+          <Route path="/layanan/ppid" element={<PPID />} />
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
           <Route path="/layanan/konsultasi" element={<Konsultasi />} />
