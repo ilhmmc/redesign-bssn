@@ -21,6 +21,7 @@ import GovCSIRTIndonesia from "./pages/layanan-aduan/GovCSIRTIndonesia";
 import AduanSiberWhistleblowing from "./pages/layanan-aduan/AduanSiberWhistleblowing";
 import SertifikasiAsesmen from "./pages/layanan-aduan/SertifikasiAsesmen";
 import AlatDirektoriProfesional from "./pages/layanan-aduan/AlatDirektoriProfesional";
+import LayananAduan from "./pages/layanan-aduan/LayananAduan";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
           <Route path="/layanan/konsultasi" element={<Konsultasi />} />
           {/* New Layanan & Aduan routes */}
+          <Route path="/layanan-aduan" element={<LayananAduan />} />
           <Route
             path="/layanan-aduan/gov-csirt-indonesia"
             element={<GovCSIRTIndonesia />}
