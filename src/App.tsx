@@ -40,6 +40,7 @@ const App = () => (
             element={<PeringatanKeamanan />}
           />
           <Route path="/informasi/panduan-tips" element={<PanduanTips />} />
+          <Route path="/layanan/ppid" element={<PPID />} />
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
           <Route path="/layanan/konsultasi" element={<Konsultasi />} />
