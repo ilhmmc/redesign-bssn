@@ -57,22 +57,24 @@ const navigationItems = [
     children: [
       {
         title: "Gov-CSIRT Indonesia",
-        href: "/layanan/keamanan-siber",
+        href: "/layanan-aduan/gov-csirt-indonesia",
         description: "Pusat Tanggap Insiden Siber Sektor Pemerintah.",
       },
       {
         title: "Sertifikasi & Asesmen",
-        href: "/layanan/sertifikasi",
-        description: "Layanan Sertifikat Elektronik, LSPro, dan IT Security Assessment.",
+        href: "/layanan-aduan/sertifikasi-asesmen",
+        description:
+          "Layanan Sertifikat Elektronik, LSPro, dan IT Security Assessment.",
       },
       {
         title: "Aduan Siber & Whistleblowing",
-        href: "/kontak", // Diarahkan ke kontak untuk melapor
-        description: "Laporkan konten negatif, insiden, atau pelanggaran (WBS).",
+        href: "/layanan-aduan/aduan-siber-whistleblowing",
+        description:
+          "Laporkan konten negatif, insiden, atau pelanggaran (WBS).",
       },
       {
         title: "Alat & Direktori Profesional",
-        href: "/layanan/direktori", // Halaman baru
+        href: "/layanan-aduan/alat-direktori-profesional",
         description:
           "Daftar auditor, lembaga konsultan, dan instrumen kematangan siber.",
       },
@@ -95,7 +97,8 @@ const navigationItems = [
       {
         title: "Edukasi & Imbauan Keamanan",
         href: "/informasi/panduan-tips",
-        description: "Panduan praktis, tips, dan peringatan keamanan untuk publik.",
+        description:
+          "Panduan praktis, tips, dan peringatan keamanan untuk publik.",
       },
       {
         title: "Pusat Informasi Hukum (JDIH)",
@@ -106,7 +109,8 @@ const navigationItems = [
       {
         title: "Agenda & Penghargaan", // <-- ITEM YANG DIPERBAIKI/DITAMBAHKAN
         href: "/pusat-media/agenda", // Halaman baru
-        description: "Informasi jadwal kegiatan dan penghargaan yang diterima BSSN.",
+        description:
+          "Informasi jadwal kegiatan dan penghargaan yang diterima BSSN.",
       },
     ],
   },
@@ -124,7 +128,7 @@ const navigationItems = [
         href: "/partisipasi/karir/poltek-ssn", // Halaman baru
         description: "Seleksi Penerimaan Taruna Baru Poltek SSN.",
       },
-       {
+      {
         title: "Seleksi Jabatan Pimpinan (JPT)",
         href: "/partisipasi/karir/jpt", // Halaman baru
         description: "Informasi seleksi Jabatan Pimpinan Tinggi.",
@@ -225,7 +229,10 @@ const Navigation = () => {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px] overflow-y-auto">
+          <SheetContent
+            side="right"
+            className="w-[300px] sm:w-[400px] overflow-y-auto"
+          >
             <div className="flex flex-col space-y-2 py-4">
               {navigationItems.map((item) => (
                 <div key={item.title}>
