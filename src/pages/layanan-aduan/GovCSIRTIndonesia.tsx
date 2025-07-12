@@ -145,7 +145,7 @@ const GovCSIRTIndonesia = () => {
                 <img
                   src="/gov-csirt/GovtCSIRT.jpg"
                   alt="Gov-CSIRT Indonesia Logo"
-                  className="h-32 w-auto object-contain"
+                  className="h-64 w-auto object-contain"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                   }}
