@@ -149,7 +149,7 @@ const GovCSIRTIndonesia = () => {
               </div>
 
               <p className="text-lg text-muted-foreground">
-                Government – Computer Security Incident Response Team
+                Government – Computer Security Incident Response Team Indonesia
               </p>
 
               <div className="text-sm text-muted-foreground">
