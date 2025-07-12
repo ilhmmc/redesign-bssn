@@ -86,7 +86,7 @@ const navigationItems = [
     children: [
       {
         title: "Berita & Siaran Pers",
-        href: "/informasi/berita",
+        href: "/informasi-regulasi/berita",
         description: "Informasi kegiatan dan pernyataan resmi untuk media.",
       },
       {
@@ -96,13 +96,13 @@ const navigationItems = [
       },
       {
         title: "Edukasi & Imbauan Keamanan",
-        href: "/informasi/panduan-tips",
+        href: "/informasi-regulasi/panduan-tips",
         description:
           "Panduan praktis, tips, dan peringatan keamanan untuk publik.",
       },
       {
         title: "Pusat Informasi Hukum (JDIH)",
-        href: "/regulasi/jdih", // Halaman baru
+        href: "/informasi-regulasi/jdih",
         description:
           "Jaringan Dokumentasi dan Informasi Hukum terkait keamanan siber.",
       },
