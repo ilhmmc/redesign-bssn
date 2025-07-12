@@ -22,6 +22,7 @@ import AduanSiber from "./pages/layanan-aduan/AduanSiber";
 import SertifikasiAsesmen from "./pages/layanan-aduan/SertifikasiAsesmen";
 import AlatDirektoriProfesional from "./pages/layanan-aduan/AlatDirektoriProfesional";
 import LayananAduan from "./pages/layanan-aduan/LayananAduan";
+import JDIH from "./pages/JDIH";
 
 const queryClient = new QueryClient();
 
@@ -44,13 +45,16 @@ const App = () => (
           />
           <Route path="/tentang-bssn/pimpinan" element={<Pimpinan />} />
           <Route path="/kontak" element={<Kontak />} />
-          <Route path="/informasi/berita" element={<Berita />} />
-          <Route path="/informasi/berita" element={<Berita />} />
+          <Route path="/informasi-regulasi/berita" element={<Berita />} />
           <Route
-            path="/informasi/peringatan-keamanan"
+            path="/informasi-regulasi/peringatan-keamanan"
             element={<PeringatanKeamanan />}
           />
-          <Route path="/informasi/panduan-tips" element={<PanduanTips />} />
+          <Route
+            path="/informasi-regulasi/panduan-tips"
+            element={<PanduanTips />}
+          />
+          <Route path="/informasi-regulasi/jdih" element={<JDIH />} />
           <Route path="/layanan/ppid" element={<PPID />} />
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
