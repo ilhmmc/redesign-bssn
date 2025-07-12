@@ -22,6 +22,23 @@ import AduanSiber from "./pages/layanan-aduan/AduanSiber";
 import SertifikasiAsesmen from "./pages/layanan-aduan/SertifikasiAsesmen";
 import AlatDirektoriProfesional from "./pages/layanan-aduan/AlatDirektoriProfesional";
 import LayananAduan from "./pages/layanan-aduan/LayananAduan";
+import JDIH from "./pages/JDIH";
+import Publikasi from "./pages/Publikasi";
+import DokumenStrategis from "./pages/publikasi/DokumenStrategis";
+import PanduanKeamanan from "./pages/publikasi/PanduanKeamanan";
+import GlobalSecurityIndex from "./pages/publikasi/GlobalSecurityIndex";
+import BacaanRinganBerisi from "./pages/publikasi/BacaanRinganBerisi";
+import AmanBermediaSosial from "./pages/publikasi/AmanBermediaSosial";
+import HoneynetProject from "./pages/publikasi/HoneynetProject";
+import MonitoringKeamananSiber from "./pages/publikasi/MonitoringKeamananSiber";
+import MajalahSanapati from "./pages/publikasi/MajalahSanapati";
+import MonitoringKamsiber from "./pages/publikasi/MonitoringKamsiber";
+import CyberBlitz from "./pages/publikasi/CyberBlitz";
+import BeritaEdukasiSiber from "./pages/publikasi/BeritaEdukasiSiber";
+import SiberminJagaRuangSiber from "./pages/publikasi/SiberminJagaRuangSiber";
+import PodcastKeamananSiber from "./pages/publikasi/PodcastKeamananSiber";
+import WebinarKeamananSiber from "./pages/publikasi/WebinarKeamananSiber";
+import VideoLiterasiSiber from "./pages/publikasi/VideoLiterasiSiber";
 
 const queryClient = new QueryClient();
 
@@ -44,13 +61,77 @@ const App = () => (
           />
           <Route path="/tentang-bssn/pimpinan" element={<Pimpinan />} />
           <Route path="/kontak" element={<Kontak />} />
-          <Route path="/informasi/berita" element={<Berita />} />
-          <Route path="/informasi/berita" element={<Berita />} />
+          <Route path="/informasi-regulasi/berita" element={<Berita />} />
           <Route
-            path="/informasi/peringatan-keamanan"
+            path="/informasi-regulasi/peringatan-keamanan"
             element={<PeringatanKeamanan />}
           />
-          <Route path="/informasi/panduan-tips" element={<PanduanTips />} />
+          <Route
+            path="/informasi-regulasi/panduan-tips"
+            element={<PanduanTips />}
+          />
+          <Route path="/informasi-regulasi/jdih" element={<JDIH />} />
+          <Route path="/informasi-regulasi/publikasi" element={<Publikasi />} />
+          <Route
+            path="/informasi-regulasi/publikasi/dokumen-strategis"
+            element={<DokumenStrategis />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/panduan-keamanan"
+            element={<PanduanKeamanan />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/global-security-index"
+            element={<GlobalSecurityIndex />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/bacaan-ringan-berisi"
+            element={<BacaanRinganBerisi />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/aman-bermedia-sosial"
+            element={<AmanBermediaSosial />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/honeynet-project"
+            element={<HoneynetProject />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/monitoring-keamanan-siber"
+            element={<MonitoringKeamananSiber />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/majalah-sanapati"
+            element={<MajalahSanapati />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/monitoring-kamsiber"
+            element={<MonitoringKamsiber />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/cyber-blitz"
+            element={<CyberBlitz />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/berita-edukasi-siber"
+            element={<BeritaEdukasiSiber />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/sibermin-jagaruangsiber"
+            element={<SiberminJagaRuangSiber />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/podcast-keamanan-siber"
+            element={<PodcastKeamananSiber />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/webinar-keamanan-siber"
+            element={<WebinarKeamananSiber />}
+          />
+          <Route
+            path="/informasi-regulasi/publikasi/video-literasi-siber"
+            element={<VideoLiterasiSiber />}
+          />
           <Route path="/layanan/ppid" element={<PPID />} />
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
           <Route path="/layanan/keamanan-siber" element={<KeamananSiber />} />
