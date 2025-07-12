@@ -398,24 +398,19 @@ const JDIH = () => {
                 <div>
                   <strong>Alamat:</strong>
                   <p className="text-muted-foreground">
-                    Jl. Kuningan Barat Raya No. 01A, Kuningan
-                    <br />
-                    Mampang Prapatan, Jakarta Selatan 12710
+                    Jl. Raya Muchtar No.70, Bojongsari Lama, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
                   </p>
                 </div>
                 <div>
                   <strong>Email:</strong>
                   <p className="text-muted-foreground">
-                    bagian_hukum2@bsn.go.id
+                    jdih@bssn.go.id
                   </p>
                 </div>
                 <div>
                   <strong>Telepon:</strong>
-                  <p className="text-muted-foreground">021 38250007</p>
-                </div>
-                <div>
-                  <strong>WhatsApp:</strong>
-                  <p className="text-muted-foreground">081317761112</p>
+                  <p className="text-muted-foreground">(021) 7805814</p>
+                  <p className="text-muted-foreground">(021) 78844104</p>
                 </div>
               </div>
             </CardContent>
