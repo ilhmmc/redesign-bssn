@@ -137,20 +137,20 @@ const GovCSIRTIndonesia = () => {
                 Indonesia
               </h1>
 
-              <p className="text-lg text-muted-foreground">
-                Tim Tanggap Insiden Siber Sektor Administrasi Pemerintahan
-              </p>
-
               <div className="flex items-center justify-center">
                 <img
-                  src="/gov-csirt-logo.png"
+                  src="/gov-csirt/GovtCSIRT.jpg"
                   alt="Gov-CSIRT Indonesia Logo"
-                  className="h-32 w-auto object-contain"
+                  className="h-64 w-auto object-contain"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                   }}
                 />
               </div>
+
+              <p className="text-lg text-muted-foreground">
+                Government – Computer Security Incident Response Team Indonesia
+              </p>
 
               <div className="text-sm text-muted-foreground">
                 <div className="flex items-center justify-center space-x-4">
