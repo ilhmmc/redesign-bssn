@@ -239,8 +239,6 @@ const AgendaPenghargaan = () => {
           </div>
         </div>
 
-
-
         {/* Featured Agenda 2024 */}
         <section className="mb-12">
           <div className="flex items-center mb-6">
