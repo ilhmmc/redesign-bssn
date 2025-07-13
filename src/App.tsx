@@ -39,6 +39,7 @@ import SiberminJagaRuangSiber from "./pages/publikasi/SiberminJagaRuangSiber";
 import PodcastKeamananSiber from "./pages/publikasi/PodcastKeamananSiber";
 import WebinarKeamananSiber from "./pages/publikasi/WebinarKeamananSiber";
 import VideoLiterasiSiber from "./pages/publikasi/VideoLiterasiSiber";
+import AgendaPenghargaan from "./pages/AgendaPenghargaan";
 
 const queryClient = new QueryClient();
 
@@ -131,6 +132,10 @@ const App = () => (
           <Route
             path="/informasi-regulasi/publikasi/video-literasi-siber"
             element={<VideoLiterasiSiber />}
+          />
+          <Route
+            path="/informasi-regulasi/agenda-penghargaan"
+            element={<AgendaPenghargaan />}
           />
           <Route path="/layanan/ppid" element={<PPID />} />
           <Route path="/layanan/sertifikasi" element={<Sertifikasi />} />
