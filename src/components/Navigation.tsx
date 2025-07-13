@@ -115,29 +115,29 @@ const navigationItems = [
     ],
   },
   {
-    title: "Karir & Pengadaan",
+    title: "Karir",
     icon: Briefcase,
     children: [
       {
-        title: "Penerimaan ASN (CPNS & PPPK)",
-        href: "/partisipasi/karir", // Halaman baru
-        description: "Informasi seleksi aparatur sipil negara.",
+        title: "Penerimaan CPNS ",
+        href: "/karir/CPNS", // Halaman baru
+        description: "Informasi seleksi CPNS.",
+      },
+      {
+        title: "Penerimaan PPPK ",
+        href: "/karir/pppk", // Halaman baru
+        description:
+          "Informasi seleksi PPPK.",
       },
       {
         title: "Penerimaan Poltek SSN",
-        href: "/partisipasi/karir/poltek-ssn", // Halaman baru
+        href: "/karir/poltek-ssn", // Halaman baru
         description: "Seleksi Penerimaan Taruna Baru Poltek SSN.",
       },
       {
         title: "Seleksi Jabatan Pimpinan (JPT)",
-        href: "/partisipasi/karir/jpt", // Halaman baru
+        href: "/karir/jpt", // Halaman baru
         description: "Informasi seleksi Jabatan Pimpinan Tinggi.",
-      },
-      {
-        title: "LPSE (Layanan Pengadaan)",
-        href: "/partisipasi/lpse", // Halaman baru
-        description:
-          "Pusat informasi untuk semua proses pengadaan barang dan jasa.",
       },
     ],
   },

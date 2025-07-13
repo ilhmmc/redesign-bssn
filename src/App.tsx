@@ -47,6 +47,12 @@ import LaporanKinerja from "./pages/LaporanKinerja";
 import LaporanKinerjaUnit2024 from "./pages/LaporanKinerjaUnit2024";
 import PerjanjianKinerja2024 from "./pages/PerjanjianKinerja2024";
 import PerjanjianKinerja2023 from "./pages/PerjanjianKinerja2023";
+import PenerimaanCPNS from "./pages/PenerimaanCPNS";
+import PenerimaanPPPK from "./pages/PenerimaanPPPK";
+import PenerimaanSSN from "./pages/PenerimaanSSN";
+import SeleksiJPT from "./pages/SeleksiJPT";
+import SeleksiJPTMadya from "./pages/SeleksiJPTMadya";
+import SeleksiJPTPratama from "./pages/SeleksiJPTPratama";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +71,12 @@ const App = () => (
           <Route path="/perjanjian-kinerja/2024" element={<PerjanjianKinerja2024 />} />
           <Route path="/perjanjian-kinerja/2023" element={<PerjanjianKinerja2023 />} />
           <Route path="/tentang-bssn/tugas-fungsi" element={<TugasFungsi />} />
+          <Route path="/karir/CPNS" element={<PenerimaanCPNS />} />
+          <Route path="/karir/pppk" element={<PenerimaanPPPK />} />
+          <Route path="/karir/poltek-ssn" element={<PenerimaanSSN />} />
+          <Route path="/karir/jpt" element={<SeleksiJPT />} />
+          <Route path="/karir/jpt/madya" element={<SeleksiJPTMadya />} />
+          <Route path="/karir/jpt/pratama" element={<SeleksiJPTPratama />} />
           <Route
             path="/tentang-bssn/strategi-keamanan"
             element={<StrategiKeamanan />}
