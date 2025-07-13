@@ -229,9 +229,7 @@ const AgendaPenghargaan = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex justify-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-government-100 rounded-full mb-6">
-            <BookOpen className="w-8 h-8 text-government-600" />
-          </div>
+          
           <div className="mb-8 text-center">
             <h1 className="text-4xl font-bold text-foreground mb-2">
               Agenda & Penghargaan BSSN
