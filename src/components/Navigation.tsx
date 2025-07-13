@@ -107,8 +107,8 @@ const navigationItems = [
           "Jaringan Dokumentasi dan Informasi Hukum terkait keamanan siber.",
       },
       {
-        title: "Agenda & Penghargaan", // <-- ITEM YANG DIPERBAIKI/DITAMBAHKAN
-        href: "/pusat-media/agenda", // Halaman baru
+        title: "Agenda & Penghargaan",
+        href: "/informasi-regulasi/agenda-penghargaan",
         description:
           "Informasi jadwal kegiatan dan penghargaan yang diterima BSSN.",
       },
