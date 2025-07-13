@@ -40,6 +40,13 @@ import PodcastKeamananSiber from "./pages/publikasi/PodcastKeamananSiber";
 import WebinarKeamananSiber from "./pages/publikasi/WebinarKeamananSiber";
 import VideoLiterasiSiber from "./pages/publikasi/VideoLiterasiSiber";
 import AgendaPenghargaan from "./pages/AgendaPenghargaan";
+import AkuntabilitasKinerja from "./pages/AkuntabilitasKinerja";
+import RencanaStrategis from "./pages/RencanaStrategis";
+import PerjanjianKinerja from "./pages/PerjanjianKinerja";
+import LaporanKinerja from "./pages/LaporanKinerja";
+import LaporanKinerjaUnit2024 from "./pages/LaporanKinerjaUnit2024";
+import PerjanjianKinerja2024 from "./pages/PerjanjianKinerja2024";
+import PerjanjianKinerja2023 from "./pages/PerjanjianKinerja2023";
 
 const queryClient = new QueryClient();
 
@@ -55,13 +62,20 @@ const App = () => (
             path="/tentang-bssn/profil-organisasi"
             element={<ProfilOrganisasi />}
           />
+          <Route path="/perjanjian-kinerja/2024" element={<PerjanjianKinerja2024 />} />
+          <Route path="/perjanjian-kinerja/2023" element={<PerjanjianKinerja2023 />} />
           <Route path="/tentang-bssn/tugas-fungsi" element={<TugasFungsi />} />
           <Route
             path="/tentang-bssn/strategi-keamanan"
             element={<StrategiKeamanan />}
           />
           <Route path="/tentang-bssn/pimpinan" element={<Pimpinan />} />
+          <Route path="/rencana-strategis" element={<RencanaStrategis />} />
+          <Route path="/perjanjian-kinerja" element={<PerjanjianKinerja />} />
+          <Route path="/laporan-kinerja" element={<LaporanKinerja />} />
+          <Route path="/informasi-publik/kinerja" element={<AkuntabilitasKinerja />} />
           <Route path="/kontak" element={<Kontak />} />
+          <Route path="/laporan-kinerja/unit-2024" element={<LaporanKinerjaUnit2024 />} />
           <Route path="/informasi-regulasi/berita" element={<Berita />} />
           <Route
             path="/informasi-regulasi/peringatan-keamanan"
