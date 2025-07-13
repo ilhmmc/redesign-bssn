@@ -228,15 +228,17 @@ const AgendaPenghargaan = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="items-center justify-center mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">
-            Agenda & Penghargaan BSSN
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Informasi jadwal kegiatan dan penghargaan Badan Siber dan Sandi
-            Negara
-          </p>
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="mb-8 text-center">
+            <h1 className="text-4xl font-bold text-foreground mb-2">
+              Agenda & Penghargaan BSSN
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Informasi jadwal kegiatan dan penghargaan Badan Siber dan Sandi Negara
+            </p>
+          </div>
         </div>
+
 
         {/* Featured Agenda 2024 */}
         <section className="mb-12">
