@@ -229,17 +229,6 @@ const AgendaPenghargaan = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center text-sm text-muted-foreground mb-4">
-            <Link to="/" className="hover:text-foreground">
-              Beranda
-            </Link>
-            <ChevronRight className="mx-2 h-4 w-4" />
-            <Link to="/informasi-regulasi" className="hover:text-foreground">
-              Informasi & Regulasi
-            </Link>
-            <ChevronRight className="mx-2 h-4 w-4" />
-            <span>Agenda & Penghargaan</span>
-          </div>
           <h1 className="text-4xl font-bold text-foreground mb-2">
             Agenda & Penghargaan BSSN
           </h1>
