@@ -126,19 +126,19 @@ const webinarSeries = [
 const upcomingWebinars = [
   {
     title: "AI & Machine Learning dalam Cybersecurity",
-    date: "15 Februari 2025",
+    date: "15 Februari 2026",
     registrants: "250+ terdaftar",
     status: "Open Registration",
   },
   {
     title: "Zero Trust Architecture Implementation",
-    date: "28 Februari 2025",
+    date: "28 Februari 2026",
     registrants: "180+ terdaftar",
     status: "Open Registration",
   },
   {
     title: "Cloud Security Best Practices",
-    date: "12 Maret 2025",
+    date: "12 Maret 2026",
     registrants: "120+ terdaftar",
     status: "Coming Soon",
   },
