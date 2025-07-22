@@ -9,8 +9,7 @@ import TugasFungsi from "./pages/TugasFungsi";
 import Pimpinan from "./pages/Pimpinan";
 import Kontak from "./pages/Kontak";
 import Berita from "./pages/Berita";
-import PeringatanKeamanan from "./pages/PeringatanKeamanan";
-import PanduanTips from "./pages/PanduanTips";
+import EdukasiImbauan from "./pages/EdukasiImbauan";
 import Sertifikasi from "./pages/Sertifikasi";
 import KeamananSiber from "./pages/KeamananSiber";
 import Konsultasi from "./pages/Konsultasi";
@@ -90,12 +89,8 @@ const App = () => (
           <Route path="/laporan-kinerja/unit-2024" element={<LaporanKinerjaUnit2024 />} />
           <Route path="/informasi-regulasi/berita" element={<Berita />} />
           <Route
-            path="/informasi-regulasi/peringatan-keamanan"
-            element={<PeringatanKeamanan />}
-          />
-          <Route
-            path="/informasi-regulasi/panduan-tips"
-            element={<PanduanTips />}
+            path="/informasi-regulasi/edukasi-imbauan-keamanan"
+            element={<EdukasiImbauan />}
           />
           <Route path="/informasi-regulasi/jdih" element={<JDIH />} />
           <Route path="/informasi-regulasi/publikasi" element={<Publikasi />} />
