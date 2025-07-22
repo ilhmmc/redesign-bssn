@@ -96,7 +96,7 @@ const navigationItems = [
       },
       {
         title: "Edukasi & Imbauan Keamanan",
-        href: "/informasi-regulasi/panduan-tips",
+        href: "/informasi-regulasi/edukasi-imbauan-keamanan",
         description:
           "Panduan praktis, tips, dan peringatan keamanan untuk publik.",
       },
