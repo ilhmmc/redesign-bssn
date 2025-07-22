@@ -249,6 +249,18 @@ const Navigation = () => {
             className="w-[300px] sm:w-[400px] overflow-y-auto"
           >
             <div className="flex flex-col space-y-2 py-4">
+              <Link
+                to="/"
+                className={cn(
+                  "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                  location.pathname === "/" &&
+                    "bg-accent text-accent-foreground",
+                )}
+                onClick={() => setIsOpen(false)}
+              >
+                <Home className="h-5 w-5" />
+                <span>Beranda</span>
+              </Link>
               {navigationItems.map((item) => (
                 <div key={item.title}>
                   <div className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-foreground">
