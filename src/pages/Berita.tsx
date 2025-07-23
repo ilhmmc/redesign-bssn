@@ -44,7 +44,7 @@ const Berita = () => {
     category: "Info Terkini",
     date: "2025-07-22",
     author: "Tim Humas BSSN",
-    image: "/berita/ttis-peresmian.jpg",
+    image: "/berita/ttis-peresmian.jpeg",
     featured: true,
     views: 3540,
   };
@@ -417,7 +417,7 @@ const Berita = () => {
                         {article.author}
                       </span>
                       <Button variant="ghost" size="sm">
-                        Baca
+                        Baca Selengkapnya
                         <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </div>
