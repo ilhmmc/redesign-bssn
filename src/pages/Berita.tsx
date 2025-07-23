@@ -157,38 +157,6 @@ const Berita = () => {
     },
   ];
 
-  const categories = [
-    { name: "Semua", value: "all", count: newsArticles.length + 1 },
-    { name: "Info Terkini", value: "info-terkini", count: 10 },
-    { name: "Program", value: "program", count: 3 },
-    { name: "Kerjasama", value: "kerjasama", count: 5 },
-    { name: "Keamanan", value: "keamanan", count: 8 },
-    { name: "Edukasi", value: "edukasi", count: 4 },
-    { name: "Workshop", value: "workshop", count: 6 },
-    { name: "Regulasi", value: "regulasi", count: 2 },
-  ];
-
-  const stats = [
-    {
-      icon: FileText,
-      value: "200+",
-      label: "Berita Bulan Ini",
-      color: "text-blue-600",
-    },
-    {
-      icon: TrendingUp,
-      value: "75K+",
-      label: "Total Pembaca",
-      color: "text-green-600",
-    },
-    {
-      icon: Shield,
-      value: "24/7",
-      label: "Update Keamanan",
-      color: "text-orange-600",
-    },
-  ];
-
   const getCategoryColor = (category: string) => {
     const colors = {
       "Info Terkini": "bg-cyan-100 text-cyan-700",
@@ -244,41 +212,7 @@ const Berita = () => {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input placeholder="Cari berita..." className="pl-10" />
                 </div>
-                <Select>
-                  <SelectTrigger className="w-full sm:w-48">
-                    <Filter className="mr-2 h-4 w-4" />
-                    <SelectValue placeholder="Kategori" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {categories.map((category) => (
-                      <SelectItem key={category.value} value={category.value}>
-                        {category.name} ({category.count})
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-12 bg-gradient-to-b from-background to-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
-                <Card key={index} className="text-center">
-                  <CardContent className="p-6">
-                    <stat.icon
-                      className={`h-8 w-8 mx-auto mb-2 ${stat.color}`}
-                    />
-                    <div className="text-2xl font-bold">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {stat.label}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>
@@ -354,16 +288,6 @@ const Berita = () => {
             <div className="flex items-center justify-between mb-12">
               <h2 className="text-3xl font-bold">Berita Terbaru</h2>
               <div className="flex items-center space-x-4">
-                <Select>
-                  <SelectTrigger className="w-40">
-                    <SelectValue placeholder="Urutkan" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="latest">Terbaru</SelectItem>
-                    <SelectItem value="popular">Terpopuler</SelectItem>
-                    <SelectItem value="oldest">Terlama</SelectItem>
-                  </SelectContent>
-                </Select>
               </div>
             </div>
 
@@ -431,65 +355,6 @@ const Berita = () => {
               <Button variant="outline" size="lg">
                 Muat Lebih Banyak Berita
               </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Categories Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Kategori Berita</h2>
-              <p className="text-muted-foreground">
-                Jelajahi berita berdasarkan kategori yang Anda minati
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {categories.slice(1).map((category, index) => (
-                <Card
-                  key={index}
-                  className="text-center group hover:shadow-lg transition-all duration-300 cursor-pointer hover:-translate-y-1"
-                >
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                      <FileText className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <h3 className="font-semibold mb-2">{category.name}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {category.count} artikel
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Subscription */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h2 className="text-3xl font-bold">
-                Dapatkan Update Berita Terbaru
-              </h2>
-              <p className="text-xl text-blue-100">
-                Berlangganan newsletter kami untuk mendapatkan berita keamanan
-                siber terbaru langsung di email Anda.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <Input
-                  placeholder="Masukkan email Anda"
-                  className="flex-1 bg-white text-gray-900"
-                />
-                <Button variant="secondary" size="lg">
-                  Berlangganan
-                </Button>
-              </div>
-              <p className="text-sm text-blue-200">
-                Kami menghormati privasi Anda. Tidak ada spam, hanya update
-                penting.
-              </p>
             </div>
           </div>
         </section>
