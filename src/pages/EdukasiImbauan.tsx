@@ -584,6 +584,70 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
               </TabsContent>
 
               <TabsContent value="imbauan" className="space-y-12">
+                {/* Featured Imbauan Section */}
+                <div>
+                  <Card className="overflow-hidden border-l-4 border-l-red-500">
+                    <CardHeader className="bg-gradient-to-r from-red-50 to-orange-50 border-b">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
+                          <AlertTriangle className="h-6 w-6 text-white" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-2xl">
+                            Imbauan Keamanan
+                          </CardTitle>
+                          <CardDescription className="text-red-700">
+                            Kumpulan Imbauan Keamanan Siber untuk Melindungi Anda dari Ancaman Digital
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-8">
+                      <div className="space-y-6">
+                        <p className="text-muted-foreground leading-relaxed">
+                          Dapatkan informasi terkini tentang berbagai ancaman keamanan siber seperti malware APK,
+                          serangan phishing, web defacement, dan kerentanan sistem. Setiap imbauan dilengkapi dengan
+                          panduan mitigasi dan file PDF yang dapat diunduh.
+                        </p>
+
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div className="flex items-center space-x-3 p-4 bg-red-50 rounded-lg">
+                            <Shield className="h-8 w-8 text-red-600" />
+                            <div>
+                              <h4 className="font-semibold">5 Imbauan Aktif</h4>
+                              <p className="text-sm text-muted-foreground">
+                                Ancaman keamanan terkini
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg">
+                            <Download className="h-8 w-8 text-blue-600" />
+                            <div>
+                              <h4 className="font-semibold">Panduan PDF</h4>
+                              <p className="text-sm text-muted-foreground">
+                                Mitigasi dan penanganan
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex justify-center pt-4">
+                          <Button
+                            size="lg"
+                            className="bg-red-600 hover:bg-red-700"
+                            asChild
+                          >
+                            <Link to="/informasi-regulasi/edukasi-imbauan-keamanan/imbauan-keamanan">
+                              <AlertTriangle className="h-4 w-4 mr-2" />
+                              Lihat Semua Imbauan Keamanan
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
                 {/* Emergency Alert Banner */}
                 <div className="bg-red-600 text-white rounded-lg p-6">
                   <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
