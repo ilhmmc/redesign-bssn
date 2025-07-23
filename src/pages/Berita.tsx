@@ -185,6 +185,27 @@ const Berita = () => {
     });
   };
 
+  // Filter news articles based on search query
+  const filteredNewsArticles = useMemo(() => {
+    if (!searchQuery.trim()) return newsArticles;
+
+    const query = searchQuery.toLowerCase().trim();
+    return newsArticles.filter(article =>
+      article.title.toLowerCase().includes(query) ||
+      article.excerpt.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
+  // Check if featured news matches search query
+  const showFeaturedNews = useMemo(() => {
+    if (!searchQuery.trim()) return true;
+
+    const query = searchQuery.toLowerCase().trim();
+    return featuredNews.title.toLowerCase().includes(query) ||
+           featuredNews.excerpt.toLowerCase().includes(query) ||
+           featuredNews.content.toLowerCase().includes(query);
+  }, [searchQuery]);
+
   return (
     <div className="min-h-screen">
       <Navigation />
