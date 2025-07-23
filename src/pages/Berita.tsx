@@ -34,6 +34,8 @@ import { Link } from "react-router-dom";
 import { useState, useMemo } from "react";
 
 const Berita = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
   const featuredNews = {
     id: 1,
     title:
