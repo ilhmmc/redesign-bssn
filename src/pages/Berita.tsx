@@ -331,7 +331,10 @@ const Berita = () => {
                       <p className="text-muted-foreground mb-6 line-clamp-3">
                         {featuredNews.excerpt}
                       </p>
-                      <Button className="bg-blue-600 hover:bg-blue-700">
+                      <Button
+                        className="bg-blue-600 hover:bg-blue-700"
+                        onClick={() => openNewsModal(featuredNews)}
+                      >
                         Baca Selengkapnya
                         <ArrowRight className="h-4 w-4 ml-2" />
                       </Button>
