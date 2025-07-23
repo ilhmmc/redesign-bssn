@@ -125,7 +125,7 @@ const PenerimaanSSN = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <Eye className="h-4 w-4" />
+                              <Download className="h-4 w-4" />
                             </a>
                           </Button>
                         </TableCell>
