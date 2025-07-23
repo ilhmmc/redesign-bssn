@@ -52,50 +52,81 @@ import {
 import { Link } from "react-router-dom";
 
 const EdukasiImbauan = () => {
-  // Data Edukasi dari konten masyarakat umum
-  const edukasiPrograms = [
+  // Konten Utama Budaya Keamanan Informasi
+  const mainContent = {
+    title: "Budaya Keamanan Informasi",
+    content: `Pemanfaatan internet telah mengubah pola hidup dan budaya manusia dalam belajar, bekerja, berkomunikasi, berbelanja dan aspek lainnya. Saat ini masyarakat lebih banyak menggunakan internet dalam berkomunikasi seperti surat elektronik (e-mail) serta jejaring sosial (social networking) yang dianggap lebih efektif dan efisien. Kini kita berkomunikasi di dunia maya sama seperti halnya ketika berkomunikasi di dunia nyata. Informasi yang didapatkan semakin terbuka baik konten positif maupun negatif.
+
+Pengaruh konten negatif sudah sering diberitakan di berbagai media berupa pemuatan gambar porno, perjudian, penipuan, pelecehan, pencemaran nama baik dan berita bohong. Selain itu penggunaan jejaring sosial juga memiliki dampak negatif, salah satunya adalah cyberbullying yang biasanya menimpa anak-anak dan sesama remaja. Bahkan kejahatan dunia maya yang dikenal sebagai cybercrime sudah sampai pada peretasan situs-situs penting dalam negeri.
+
+Untuk menghindari kejahatan di dunia maya, selalu ditekankan prinsip dasar yang harus diketahui dalam menggunakan internet. Prinsip dasar di dunia nyata berlaku pula di dunia maya. Penggunaan internet secara sehat dan aman perlu ditanamkan semenjak dini melalui pembelajaran etika berinternet secara sehat (cyber ethics). Hal ini perlu disampaikan untuk menghindari kebiasaan jelek di dunia nyata akan terbawa di dunia maya dan menimbulkan kembali efek negatif di dunia nyata.
+
+Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, kaum lanjut usia, penyandang disabilitas serta seluruh lapisan masyarakat lain yang kemungkinan rentan kejahatan siber sehingga pemanfaatan internet dapat tetap aman dan dilakukan dengan penuh tanggung jawab. Kesadaran generasi muda akan potensi sekaligus risiko internet harus terus ditumbuhkan begitu pula dengan kepedulian orangtua untuk terus mendampingi dan mengawasi putra-putrinya agar terhindar dari konten negatif dan mendorong untuk lebih cerdas dalam menciptakan kreativitas.`
+  };
+
+  // Data Edukasi dan Tips berdasarkan konten BSSN
+  const edukasiTopics = [
     {
       id: 1,
-      title: "Kampanye #SadarSiber",
-      description: "Kampanye nasional untuk meningkatkan literasi digital masyarakat dalam mengenali dan menangkal ancaman siber seperti penipuan online, phishing, dan penyebaran hoaks.",
-      category: "Kampanye Nasional",
-      participants: "1M+",
-      duration: "Berkelanjutan",
-      type: "Awareness Campaign",
-      icon: TrendingUp,
+      title: "Cara Mengatasi Cyberbullying",
+      description: "Panduan lengkap untuk mengidentifikasi, mengatasi, dan mencegah cyberbullying di berbagai platform digital.",
+      category: "Perlindungan Anak",
+      icon: Shield,
+      path: "/edukasi/cyberbullying",
       featured: true,
     },
     {
       id: 2,
-      title: "Gerakan Literasi Keamanan Siber (GELITIKS)",
-      description: "Program edukasi khusus untuk pelajar SMA yang mencakup pemahaman tentang ancaman siber, etika berinternet, dan penggunaan media sosial yang aman.",
-      category: "Program Pendidikan",
-      participants: "50K+",
-      duration: "Per Semester",
-      type: "Educational Program",
+      title: "Tips untuk Guru dalam Merespon Bullying",
+      description: "Strategi praktis bagi pendidik untuk mengenali, menangani, dan mencegah bullying di lingkungan sekolah.",
+      category: "Pendidikan",
       icon: GraduationCap,
+      path: "/edukasi/guru-bullying",
       featured: true,
     },
     {
       id: 3,
-      title: "Komik Komunika - Tipu-tipu Digital",
-      description: "Kolaborasi dengan Kemenkominfo untuk menyusun konten edukatif melalui komik bertema keamanan siber untuk memperkuat budaya keamanan informasi.",
-      category: "Media Edukasi",
-      participants: "25K+",
-      duration: "Seri Berkelanjutan",
-      type: "Educational Content",
-      icon: BookOpen,
+      title: "Tips Membicarakan Bullying dengan Anak",
+      description: "Panduan untuk orangtua dalam berkomunikasi dengan anak tentang bullying dan keamanan online.",
+      category: "Parenting",
+      icon: Users,
+      path: "/edukasi/bicara-bullying-anak",
       featured: false,
     },
     {
       id: 4,
-      title: "Literasi #JagaRuangSiber",
-      description: "Program literasi keamanan siber untuk masyarakat umum dengan tema 'Tingkatkan Kompetensi Raih Prestasi di Ruang Siber' yang diselenggarakan di berbagai daerah.",
-      category: "Program Regional",
-      participants: "100K+",
-      duration: "Per Kuartal",
-      type: "Regional Program",
+      title: "Waspada Dampak Buruk Gadget pada Anak",
+      description: "Informasi tentang risiko penggunaan gadget berlebihan dan cara melindungi anak dari dampak negatifnya.",
+      category: "Kesehatan Digital",
+      icon: Smartphone,
+      path: "/edukasi/dampak-gadget-anak",
+      featured: false,
+    },
+    {
+      id: 5,
+      title: "Tips Aman Berinternet",
+      description: "Panduan praktis untuk browsing yang aman, melindungi data pribadi, dan menghindari ancaman online.",
+      category: "Keamanan Online",
+      icon: Globe,
+      path: "/edukasi/aman-berinternet",
+      featured: true,
+    },
+    {
+      id: 6,
+      title: "Tips Memulai Bisnis untuk Penyandang Disabilitas",
+      description: "Panduan khusus untuk penyandang disabilitas dalam memulai bisnis online dengan aman dan sukses.",
+      category: "Inklusi Digital",
       icon: Award,
+      path: "/edukasi/bisnis-disabilitas",
+      featured: false,
+    },
+    {
+      id: 7,
+      title: "Aplikasi Bantu Penyandang Disabilitas",
+      description: "Kumpulan aplikasi dan tools digital yang dapat membantu penyandang disabilitas dalam aktivitas sehari-hari.",
+      category: "Aksesibilitas",
+      icon: Smartphone,
+      path: "/edukasi/aplikasi-disabilitas",
       featured: false,
     },
   ];
