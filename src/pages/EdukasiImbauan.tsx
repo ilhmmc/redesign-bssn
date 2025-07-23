@@ -824,7 +824,7 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <ExternalLink className="h-4 w-4 mr-2" />
+                                <Eye className="h-4 w-4 mr-2" />
                                 Lihat Imbauan
                               </a>
                             </Button>
