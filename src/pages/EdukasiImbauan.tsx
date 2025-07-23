@@ -825,7 +825,7 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                                 rel="noopener noreferrer"
                               >
                                 <Download className="h-4 w-4 mr-2" />
-                                Download PD
+                                Lihat Imbauan
                               </a>
                             </Button>
                           </div>
