@@ -453,6 +453,72 @@ const Berita = () => {
         </section>
       </main>
 
+      {/* News Detail Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          {selectedNews && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center space-x-4 mb-4">
+                  <Badge className={getCategoryColor(selectedNews.category)}>
+                    {selectedNews.category}
+                  </Badge>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    {formatDate(selectedNews.date)}
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <User className="h-4 w-4 mr-1" />
+                    {selectedNews.author}
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="h-4 w-4 mr-1" />
+                    {selectedNews.views.toLocaleString()} views
+                  </div>
+                </div>
+                <DialogTitle className="text-2xl font-bold leading-tight">
+                  {selectedNews.title}
+                </DialogTitle>
+              </DialogHeader>
+
+              <div className="space-y-6">
+                {/* Featured Image */}
+                <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
+                  <img
+                    src={selectedNews.image}
+                    alt={selectedNews.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="prose prose-gray max-w-none">
+                  <p className="text-lg leading-relaxed text-foreground">
+                    {selectedNews.content}
+                  </p>
+                </div>
+
+                {/* Article Footer */}
+                <div className="flex items-center justify-between pt-6 border-t">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <FileText className="h-4 w-4 mr-1" />
+                      Artikel BSSN
+                    </div>
+                  </div>
+                  <Button
+                    variant="outline"
+                    onClick={closeNewsModal}
+                  >
+                    Tutup
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+
       <Footer />
     </div>
   );
