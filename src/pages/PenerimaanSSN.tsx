@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, UserPlus, ExternalLink } from "lucide-react";
+import { Download, UserPlus, ExternalLink, Eye } from "lucide-react";
 
 const pengumumanData = [
   {
@@ -125,7 +125,7 @@ const PenerimaanSSN = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <Download className="h-4 w-4" />
+                              <Eye className="h-4 w-4" />
                             </a>
                           </Button>
                         </TableCell>
