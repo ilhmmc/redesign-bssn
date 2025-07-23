@@ -806,12 +806,11 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <h2 className="text-3xl font-bold">
-                Jadi Pahlawan Keamanan Siber!
+                Bersama Membangun Budaya Keamanan Informasi
               </h2>
               <p className="text-xl text-blue-100">
-                Terapkan pengetahuan yang Anda pelajari dan bantu orang lain
-                untuk lebih aman di dunia digital. Bagikan tips keamanan ke
-                keluarga dan teman-teman Anda.
+                Internet sehat dan aman perlu disosialisasikan kepada seluruh lapisan masyarakat.
+                Mari bersama-sama membangun kesadaran akan keamanan siber untuk Indonesia yang lebih aman.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -821,7 +820,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
                   className="bg-white text-blue-600 hover:bg-blue-50"
                 >
                   <Download className="h-5 w-5 mr-2" />
-                  Download Panduan Lengkap
+                  Download Panduan Edukasi
                 </Button>
                 <Button
                   variant="outline"
@@ -831,23 +830,23 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
                 >
                   <Link to="/kontak">
                     <Mail className="h-5 w-5 mr-2" />
-                    Hubungi Tim Edukasi
+                    Hubungi BSSN
                   </Link>
                 </Button>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 mt-12">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">1M+</div>
-                  <div className="text-blue-200">Peserta Program</div>
+                  <div className="text-3xl font-bold">Seluruh</div>
+                  <div className="text-blue-200">Lapisan Masyarakat</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold">95%</div>
-                  <div className="text-blue-200">Tingkat Kepuasan</div>
+                  <div className="text-3xl font-bold">Cyber</div>
+                  <div className="text-blue-200">Ethics Education</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold">24/7</div>
-                  <div className="text-blue-200">Dukungan Darurat</div>
+                  <div className="text-blue-200">Dukungan Keamanan</div>
                 </div>
               </div>
             </div>
