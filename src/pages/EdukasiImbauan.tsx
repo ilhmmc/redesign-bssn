@@ -766,57 +766,6 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h2 className="text-3xl font-bold">
-                Bersama Membangun Budaya Keamanan Informasi
-              </h2>
-              <p className="text-xl text-blue-100">
-                Internet sehat dan aman perlu disosialisasikan kepada seluruh lapisan masyarakat.
-                Mari bersama-sama membangun kesadaran akan keamanan siber untuk Indonesia yang lebih aman.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="bg-white text-blue-600 hover:bg-blue-50"
-                >
-                  <Download className="h-5 w-5 mr-2" />
-                  Download Panduan Edukasi
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-blue-600"
-                  asChild
-                >
-                  <Link to="/kontak">
-                    <Mail className="h-5 w-5 mr-2" />
-                    Hubungi BSSN
-                  </Link>
-                </Button>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6 mt-12">
-                <div className="text-center">
-                  <div className="text-3xl font-bold">Seluruh</div>
-                  <div className="text-blue-200">Lapisan Masyarakat</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold">Cyber</div>
-                  <div className="text-blue-200">Ethics Education</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold">24/7</div>
-                  <div className="text-blue-200">Dukungan Keamanan</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
