@@ -22,7 +22,7 @@ import {
 import { cn } from "@/lib/utils";
 
 // =======================================================================
-// STRUKTUR NAVIGASI BARU (DENGAN KOREKSI)
+// STRUKTUR NAVIGASI 
 // =======================================================================
 const navigationItems = [
   {
