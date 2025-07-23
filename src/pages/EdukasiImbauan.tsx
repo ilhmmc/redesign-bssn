@@ -372,51 +372,69 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
               </div>
 
               <TabsContent value="edukasi" className="space-y-12">
-                {/* Program Edukasi Unggulan */}
+                {/* Budaya Keamanan Informasi - Konten Utama */}
+                <div>
+                  <Card className="overflow-hidden">
+                    <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50 border-b">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                          <Shield className="h-6 w-6 text-white" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-2xl">{mainContent.title}</CardTitle>
+                          <CardDescription className="text-blue-700">
+                            Membangun Kesadaran Keamanan Siber untuk Seluruh Masyarakat Indonesia
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-8">
+                      <div className="prose prose-lg max-w-none">
+                        {mainContent.content.split('\n\n').map((paragraph, index) => (
+                          <p key={index} className="text-muted-foreground leading-relaxed mb-6">
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Tips dan Panduan Unggulan */}
                 <div>
                   <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">Program Edukasi Unggulan</h2>
+                    <h2 className="text-3xl font-bold mb-4">Tips dan Panduan Unggulan</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                      Program edukasi keamanan siber BSSN untuk meningkatkan literasi digital masyarakat Indonesia
+                      Panduan praktis untuk keamanan siber yang dapat diterapkan dalam kehidupan sehari-hari
                     </p>
                   </div>
 
-                  <div className="grid lg:grid-cols-2 gap-8">
-                    {edukasiPrograms.filter(program => program.featured).map((program) => (
+                  <div className="grid lg:grid-cols-3 gap-8">
+                    {edukasiTopics.filter(topic => topic.featured).map((topic) => (
                       <Card
-                        key={program.id}
-                        className="group hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                        key={topic.id}
+                        className="group hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer"
                       >
-                        <CardHeader className="bg-gradient-to-r from-blue-50 to-green-50">
-                          <div className="flex items-center justify-between mb-4">
-                            <Badge className="bg-blue-600 text-white">
-                              <program.icon className="h-3 w-3 mr-1" />
-                              Unggulan
+                        <CardContent className="p-8 text-center">
+                          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <topic.icon className="h-8 w-8 text-white" />
+                          </div>
+                          <div className="mb-4">
+                            <Badge className="bg-blue-100 text-blue-700 mb-3">
+                              {topic.category}
                             </Badge>
-                            <Badge variant="outline">{program.category}</Badge>
                           </div>
-                          <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
-                            {program.title}
+                          <CardTitle className="text-lg mb-3 group-hover:text-blue-600 transition-colors">
+                            {topic.title}
                           </CardTitle>
-                          <CardDescription>{program.description}</CardDescription>
-                        </CardHeader>
-                        <CardContent className="p-6">
-                          <div className="grid grid-cols-3 gap-4 mb-6">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-blue-600">{program.participants}</div>
-                              <div className="text-xs text-muted-foreground">Peserta</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-sm font-semibold">{program.duration}</div>
-                              <div className="text-xs text-muted-foreground">Durasi</div>
-                            </div>
-                            <div className="text-center">
-                              <Badge variant="outline">{program.type}</Badge>
-                            </div>
-                          </div>
-                          <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                            <BookOpen className="h-4 w-4 mr-2" />
-                            Pelajari Program
+                          <CardDescription className="mb-6">
+                            {topic.description}
+                          </CardDescription>
+                          <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                            <Link to={topic.path}>
+                              <BookOpen className="h-4 w-4 mr-2" />
+                              Pelajari Selengkapnya
+                            </Link>
                           </Button>
                         </CardContent>
                       </Card>
@@ -424,35 +442,33 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
                   </div>
                 </div>
 
-                {/* Program Edukasi Lainnya */}
+                {/* Topik Edukasi Lainnya */}
                 <div>
-                  <h3 className="text-2xl font-bold mb-8">Program Edukasi Lainnya</h3>
+                  <h3 className="text-2xl font-bold mb-8">Topik Edukasi Lainnya</h3>
                   <div className="grid md:grid-cols-2 gap-6">
-                    {edukasiPrograms.filter(program => !program.featured).map((program) => (
-                      <Card key={program.id} className="group hover:shadow-lg transition-all duration-300">
+                    {edukasiTopics.filter(topic => !topic.featured).map((topic) => (
+                      <Card key={topic.id} className="group hover:shadow-lg transition-all duration-300">
                         <CardContent className="p-6">
                           <div className="flex items-start space-x-4">
                             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                              <program.icon className="h-6 w-6 text-blue-600" />
+                              <topic.icon className="h-6 w-6 text-blue-600" />
                             </div>
                             <div className="flex-1">
                               <div className="flex items-center space-x-2 mb-2">
-                                <Badge variant="outline">{program.category}</Badge>
+                                <Badge variant="outline">{topic.category}</Badge>
                               </div>
                               <h4 className="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
-                                {program.title}
+                                {topic.title}
                               </h4>
                               <p className="text-sm text-muted-foreground mb-4">
-                                {program.description}
+                                {topic.description}
                               </p>
-                              <div className="flex items-center justify-between">
-                                <div className="text-sm text-muted-foreground">
-                                  {program.participants} peserta
-                                </div>
-                                <Button variant="ghost" size="sm">
-                                  Detail
-                                </Button>
-                              </div>
+                              <Button variant="ghost" size="sm" asChild>
+                                <Link to={topic.path}>
+                                  Baca Selengkapnya
+                                  <ExternalLink className="h-3 w-3 ml-1" />
+                                </Link>
+                              </Button>
                             </div>
                           </div>
                         </CardContent>
