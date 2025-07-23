@@ -317,7 +317,14 @@ const Berita = () => {
         <section className="py-20 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-12">
-              <h2 className="text-3xl font-bold">Berita Terbaru</h2>
+              <div>
+                <h2 className="text-3xl font-bold">Berita Terbaru</h2>
+                {searchQuery && (
+                  <p className="text-muted-foreground mt-2">
+                    {filteredNewsArticles.length} berita ditemukan untuk "{searchQuery}"
+                  </p>
+                )}
+              </div>
               <div className="flex items-center space-x-4">
               </div>
             </div>
