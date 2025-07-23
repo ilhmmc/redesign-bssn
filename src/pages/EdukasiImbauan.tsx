@@ -72,7 +72,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
       description: "Panduan lengkap untuk mengidentifikasi, mengatasi, dan mencegah cyberbullying di berbagai platform digital.",
       category: "Perlindungan Anak",
       icon: Shield,
-      path: "/edukasi/cyberbullying",
+      path: "/informasi-regulasi/edukasi-imbauan-keamanan/cara-mengatasi-cyberbullying",
       featured: true,
     },
     {
@@ -81,7 +81,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
       description: "Strategi praktis bagi pendidik untuk mengenali, menangani, dan mencegah bullying di lingkungan sekolah.",
       category: "Pendidikan",
       icon: GraduationCap,
-      path: "/edukasi/guru-bullying",
+      path: "/informasi-regulasi/edukasi-imbauan-keamanan/tips-guru-respon-bullying",
       featured: true,
     },
     {
@@ -90,7 +90,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
       description: "Panduan untuk orangtua dalam berkomunikasi dengan anak tentang bullying dan keamanan online.",
       category: "Parenting",
       icon: Users,
-      path: "/edukasi/bicara-bullying-anak",
+      path: "/informasi-regulasi/edukasi-imbauan-keamanan/bicara-bullying-anak",
       featured: false,
     },
     {
@@ -99,7 +99,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
       description: "Informasi tentang risiko penggunaan gadget berlebihan dan cara melindungi anak dari dampak negatifnya.",
       category: "Kesehatan Digital",
       icon: Smartphone,
-      path: "/edukasi/dampak-gadget-anak",
+      path: "/informasi-regulasi/edukasi-imbauan-keamanan/dampak-gadget-anak",
       featured: false,
     },
     {
@@ -108,7 +108,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
       description: "Panduan praktis untuk browsing yang aman, melindungi data pribadi, dan menghindari ancaman online.",
       category: "Keamanan Online",
       icon: Globe,
-      path: "/edukasi/aman-berinternet",
+      path: "/informasi-regulasi/edukasi-imbauan-keamanan/tips-aman-berinternet",
       featured: true,
     },
     {
@@ -117,7 +117,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
       description: "Panduan khusus untuk penyandang disabilitas dalam memulai bisnis online dengan aman dan sukses.",
       category: "Inklusi Digital",
       icon: Award,
-      path: "/edukasi/bisnis-disabilitas",
+      path: "/informasi-regulasi/edukasi-imbauan-keamanan/bisnis-disabilitas",
       featured: false,
     },
     {
@@ -126,7 +126,7 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
       description: "Kumpulan aplikasi dan tools digital yang dapat membantu penyandang disabilitas dalam aktivitas sehari-hari.",
       category: "Aksesibilitas",
       icon: Smartphone,
-      path: "/edukasi/aplikasi-disabilitas",
+      path: "/informasi-regulasi/edukasi-imbauan-keamanan/aplikasi-disabilitas",
       featured: false,
     },
   ];
