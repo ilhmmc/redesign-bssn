@@ -139,6 +139,106 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
     },
   ];
 
+  // Data Imbauan Keamanan dari security advisory content
+  const imauanKeamananData = [
+    {
+      id: 1,
+      title: "Imbauan Keamanan Bahaya Malware APK Atas Nama Pemilu 2024",
+      author: "Admin Website",
+      date: "10 February 2024",
+      categories: ["Info Terkini", "Security Advisory"],
+      content: `Tiga malware yang teridentifikasi berkaitan dengan Pemilu 2024 dengan ekstensi APK menghadirkan ancaman serius terhadap keamanan dan privasi pengguna. Malware tersebut berfungsi untuk mengambil informasi dan kredensial dari perangkat yang terinfeksi. Mirip dengan malware undangan pernikahan.apk, salah satu penyebaran ketiga malware tersebut adalah melalui pesan Whatsapp. Serangan ini mencoba mengelabui pengguna untuk mengunduh dokumen palsu yang sebenarnya bertujuan meretas perangkat pribadi. Perlu memastikan untuk tidak mengunduh atau membuka dokumen dari sumber yang tidak dikenal guna melindungi keamanan pribadi dan perangkat pribadi dari potensi serangan malware atau pencurian data.`,
+      pdfFile: "SA-CVE-2024-APK-PEMILU-2024-2_signed.pdf",
+      comments: 0,
+    },
+    {
+      id: 2,
+      title:
+        "Langkah-langkah Penanggulangan Insiden Web Defacement: Judi Online",
+      author: "Admin Website",
+      date: "Jul 28, 2023",
+      categories: ["Info Terkini", "Security Advisory"],
+      content: `Beberapa waktu ini banyak ditemukan insiden serangan siber yang terjadi di Indonesia. Salah satu insiden siber tersebut yaitu insiden web defacement yang terjadi pada situs pemerintahan dan pendidikan. Web defacement yang sangat marak belakangan ini tentang "Web Defacement Slot Gacor atau Judi Online" di mana penyerang melakukan perubahan tampilan pada situs dengan mengganti tampilan menjadi judi online.
+
+Dokumen ini disusun atas maraknya insiden yang terjadi. Dokumen berisikan tentang bagaimana alur serangan web defacement terjadi dan bagaimana cara melakukan penanggulangan dan pemulihan atas insiden yang terjadi serta bagaimana cara mitigasi untuk meminimalisir kemungkinan terkena serangan web defacement pada sebuah situs website.`,
+      pdfFile: "Panduan-Penanganan-Insiden-Web-Defacement-Judi-Online.pdf",
+      comments: 0,
+    },
+    {
+      id: 3,
+      title: "Imbauan Keamanan Modus Penipuan Perbankan",
+      author: "Admin Website",
+      date: "Jul 21, 2023",
+      categories: ["Security Advisory"],
+      content: `Serangan phishing pada nasabah bank sering dilakukan dengan modus penipu berpura-pura menjadi bank dan mengirim pesan palsu yang meminta data pribadi atau keuangan nasabah. Biasanya korban akan terkecoh dan memberikan info sensitifnya, sehingga penipu dapat mencuri uang atau data pribadi milik korban. Penipu biasa melancarkan aksinya melalui pesan palsu, seperti email, Pesan WhatsApp, atau SMS.
+
+Tujuan dari penyerangan ini adalah untuk memperoleh informasi pribadi, seperti kata sandi atau nomor kartu kredit, dengan mengarahkan nasabah ke situs palsu yang tampak sah.`,
+      pdfFile: "Phising-Modus-Peninpuan-Perbankan.pdf",
+      comments: 0,
+    },
+    {
+      id: 4,
+      title:
+        "Imbauan Keamanan Modus Penipuan Menggunakan Undangan Pernikahan Elektronik .APK",
+      author: "Admin Website",
+      date: "Jan 29, 2023",
+      categories: ["Security Advisory"],
+      content: `Waspadai modus penipuan menggunakan berkas Android Package Kit (.apk) undangan pernikahan elektronik. Berkas .apk tersebut dikirimkan melalui aplikasi perpesanan WhatsApp. Jika penerima pesan mengakses berkas .apk tersebut maka penjahat akan mendapatkan akses terhadap SMS korban termasuk token SMS-banking.
+
+Cara kerja dari modus kejahatan siber ini adalah sebagai berikut. Jika diklik aplikasi tersebut akan meminta akses untuk melakukan aktivitas Baca SMS atau MMS. Jika diizinkan maka SMS yang tersimpan di HP atau kartu SIM akan dapat dibaca oleh aktor jahat.
+
+Akses selanjutnya yang diminta adalah untuk melakukan aktivitas Terima SMS juga akan diminta. Jika diizinkan maka aktor jahat dapat memonitor dan atau menghapus pesan tanpa sepengetahuan korban.
+
+Akses selanjutnya yang diminta adalah untuk melakukan aktivitas Kirim SMS. Jika diizinkan maka aktor jahat dapat mengirimkan SMS berbayar tanpa perlu melakuan konfirmasi terlenih dahulu kepada korban.
+
+Ketika seluruh permintaan tersebut diberikan maka aplikasi tersebut terpasang di perangkat android milik korban, aktor jahat memiliki kemungkinan untuk mengakses riwayat informasi SMS-Banking seperti kode pin dari riwayat SMS yang biasanya tidak dihapus oleh korban. Berbekal informasi tersebut aktor jahat dapat melakukan pengiriman uang dari rekening korban.
+
+Panduan mitigasi yang disarankan untuk meminimalisasi risiko keamanan dari modus penipuan menggunakan berkas .apk undangan pernikahan elektronik adalah tidak asal membuka tautan atau executable file.Modus pengiriman file .apk merupakan media paling sering yang digunakan oleh aktor jahat untuk menjebak korban. Selain itu gunakan hanya mengunduh dan menginstal aplikasi dari sumber aplikasi resmi (Play Store atau iOS App Store). Teliti dalam memberikan izin akses terhadap aplikasi yang diinstal.
+
+Untuk meningkatkan keamanan, perbarui sistem operasi, aplikasi/software, firmware, dan web browser secara berkala untuk meningkatkan keamanan perangkat dari kerawanan yang ada. Perbarui juga kata sandi secara berkala. Gunakan antivirus dan perangkat keamanan yang terkini serta lakukan pemindaian baik terhadap storage maupun memory secara berkala.`,
+      pdfFile: "Kerentanan-file-dot-apk-undangan-pernikahan.pdf",
+      comments: 0,
+    },
+    {
+      id: 5,
+      title:
+        "Imbauan Keamanan CVE-2022-42821 Kerentanan Mekanisme Gatekeeper MacOS Monterey 12.6.2, MacOS Big Sur 11.7.2, dan MacOS Ventura 13",
+      author: "Admin Website",
+      date: "Jan 6, 2023",
+      categories: ["Security Advisory"],
+      content: `Gatekeeper merupakan teknologi yang dirancang untuk memastikan hanya perangkat lunak tepercaya yang dapat dijalankan di lingkungan MacOS saat pengguna mengunduh dan membuka aplikasi, plug–in, atau paket penginstal dari luar App Store.
+
+Gatekeeper memverifikasi perangkat lunak tersebut tidak diubah sejak dirilis oleh pengembang dan bebas dari konten berbahaya. Gatekeeper juga memberikan notifikasi dan meminta izin kepada pengguna sebelum unduhan perangkat lunak untuk pertama kalinya dibuka untuk memastikan pengguna menyadari dan tidak tertipu file yang mereka unduh dan jalankan tersebut merupakan kode yang dapat dieksekusi dan bukan sekadar file data semata.
+
+Berdasarkan nilai CVSS yang dikeluarkan oleh NVD, CVE–2022–42821 dikategorikan sebagai kerentanan dengan kategori medium dengan skor 5.5. Kerentanan tersebut dapat menyebabkan penyerang bisa mengakses dan modifikasi informasi.
+
+Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terbaru untuk memitigasi risiko ancaman tersebut.`,
+      pdfFile: "CVE-2022-42821.pdf",
+      comments: 0,
+    },
+  ];
+
+  // Helper function for date formatting
+  const formatImauanDate = (dateString: string) => {
+    // Handle different date formats
+    if (dateString.includes("February")) {
+      return dateString;
+    }
+
+    const monthMap: { [key: string]: string } = {
+      Jan: "Januari",
+      Jul: "Juli",
+    };
+
+    const parts = dateString.split(" ");
+    if (parts.length === 3) {
+      const month = monthMap[parts[0]] || parts[0];
+      return `${parts[1]} ${month} ${parts[2]}`;
+    }
+
+    return dateString;
+  };
+
   // Data Imbauan Keamanan dari security advisory
   const securityAdvisories = [
     {
