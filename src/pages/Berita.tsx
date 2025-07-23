@@ -35,114 +35,149 @@ import { Link } from "react-router-dom";
 const Berita = () => {
   const featuredNews = {
     id: 1,
-    title: "BSSN Luncurkan Program Sertifikasi Keamanan Siber Nasional 2024",
+    title:
+      "BSSN Resmikan 43 TTIS Bentuk Sinergi Penguatan Keamanan Siber Nasional",
     excerpt:
-      "Program sertifikasi terbaru ini ditujukan untuk meningkatkan kompetensi profesional keamanan siber di Indonesia dengan standar internasional.",
+      "Badan Siber dan Sandi Negara (BSSN) meresmikan 43 Tim Tanggap Insiden Siber (TTIS/CSIRT) yang terdiri dari 3 TTIS Sektoral, 10 TTIS Pemerintah Pusat, 24 TTIS Pemerintah Daerah, dan 6 Pembangunan Manusia sebagai bentuk sinergi penguatan keamanan siber nasional.",
     content:
-      "Jakarta - Badan Siber dan Sandi Negara (BSSN) resmi meluncurkan Program Sertifikasi Keamanan Siber Nasional 2024 yang dirancang khusus untuk meningkatkan kapasitas dan kompetensi para profesional keamanan siber di Indonesia...",
-    category: "Program",
-    date: "2024-01-15",
+      "Depok, BSSN.go.id – Badan Siber dan Sandi Negara (BSSN) meresmikan 43 Tim Tanggap Insiden Siber (TTIS/CSIRT) yang terdiri dari 3 TTIS Sektoral, 10 TTIS Pemerintah Pusat, 24 TTIS Pemerintah Daerah, dan 6 Pembangunan Manusia sebagai bentuk sinergi penguatan keamanan siber nasional di Kantor BSSN Sawangan, Depok, Jawa Barat, Selasa (22/07/2025). Kepala BSSN Letjen TNI (Purn) Drs. Nugroho Sulistyo Budi, M.M., M.Han secara simbolis meresmikan pembentukan TTIS tersebut.",
+    category: "Info Terkini",
+    date: "2025-07-22",
     author: "Tim Humas BSSN",
-    image: "/placeholder.svg",
+    image: "/berita/ttis-peresmian.jpg",
     featured: true,
-    views: 2540,
+    views: 3540,
   };
 
   const newsArticles = [
     {
       id: 2,
-      title:
-        "Kerjasama BSSN dengan Perguruan Tinggi untuk Penelitian Cyber Security",
+      title: "BSSN Berkomitmen Perkuat Implementasi Pendataan Keluarga 2025",
       excerpt:
-        "Kolaborasi strategis untuk mengembangkan inovasi teknologi keamanan siber dan SDM berkualitas melalui program penelitian bersama.",
-      category: "Kerjasama",
-      date: "2024-01-12",
+        "Badan Siber dan Sandi Negara (BSSN) Republik Indonesia menegaskan komitmennya memberikan dukungan teknis dan asistensi pengamanan dalam ruang lingkup tugas dan kewenangannya, guna memperkuat kesiapan serta ketahanan infrastruktur teknologi informasi yang digunakan dalam pelaksanaan Pendataan Keluarga Tahun 2025 (PK-25).",
+      category: "Info Terkini",
+      date: "2025-07-22",
       author: "Tim Humas BSSN",
-      image: "/placeholder.svg",
-      views: 1890,
+      image: "/berita/pendataan-keluarga.jpg",
+      views: 2890,
     },
     {
       id: 3,
       title:
-        "BSSN Berhasil Menggagalkan 1,247 Serangan Siber pada Desember 2023",
+        "BSSN Gelar Workshop Identifikasi IIV dan Penyelenggara IIV Sektor Keuangan",
       excerpt:
-        "Upaya proteksi infrastruktur vital nasional menunjukkan hasil positif dengan tingkat keberhasilan mencapai 99.2% dalam menangkal ancaman siber.",
-      category: "Keamanan",
-      date: "2024-01-10",
-      author: "Tim Operasi BSSN",
-      image: "/placeholder.svg",
-      views: 3420,
+        "Badan Siber dan Sandi Negara (BSSN) melalui Direktorat Keamanan Siber dan Sandi Keuangan, Perdagangan dan Pariwisata menggelar Workshop Identifikasi Infrastruktur Informasi Vital (IIV) dan Penyelenggara IIV di Jakarta selama dua hari pada tanggal 17-18 Juli 2025.",
+      category: "Info Terkini",
+      date: "2025-07-19",
+      author: "Tim Humas BSSN",
+      image: "/berita/workshop-iiv.jpg",
+      views: 2420,
     },
     {
       id: 4,
-      title: "Workshop Keamanan Siber untuk UMKM Sukses Digelar di 5 Kota",
+      title: "BSSN Hadir pada CYDES 2025 di Putrajaya Malaysia",
       excerpt:
-        "Lebih dari 2,500 peserta UMKM mengikuti workshop edukasi keamanan siber tingkat dasar yang diselenggarakan secara serentak.",
-      category: "Edukasi",
-      date: "2024-01-08",
-      author: "Tim Edukasi BSSN",
-      image: "/placeholder.svg",
-      views: 1650,
+        "Badan Siber dan Sandi Negara Republik Indonesia (BSSN RI) mengikuti kegiatan Cyber Defence and Security Exhibition and Conference (CYDES) 2025 yang dilaksanakan di Putrajaya Internasional Convention Center (PICC), Putrajaya, Malaysia pada tanggal 1-3 Juli 2025.",
+      category: "Info Terkini",
+      date: "2025-07-18",
+      author: "Tim Humas BSSN",
+      image: "/berita/cydes-2025.jpg",
+      views: 1850,
     },
     {
       id: 5,
       title:
-        "Peringatan: Meningkatnya Serangan Phishing Menggunakan AI di Indonesia",
+        "Forum Kolaborasi Pelindungan IIV Sektor ESDA, BSSN: Sinergi Keamanan Siber Harus Berjalan Optimal",
       excerpt:
-        "BSSN memperingatkan masyarakat tentang meningkatnya serangan phishing yang menggunakan teknologi AI untuk menyamar sebagai institusi resmi.",
-      category: "Peringatan",
-      date: "2024-01-05",
-      author: "Tim Deteksi BSSN",
-      image: "/placeholder.svg",
-      views: 4120,
-      urgent: true,
+        "Badan Siber dan Sandi Negara (BSSN) melalui Direktorat Keamanan Siber dan Sandi Energi dan Sumber Daya Alam, Deputi Bidang Keamanan Siber dan Sandi Perekonomian BSSN menyelenggarakan Forum Kolaborasi Pelimdungan Inmfrastruktur Informasi Vital Sektor ESDA Tahun 2025 di Jakarta selama 3 hari pada tanggal 15-17 Juli 2025.",
+      category: "Info Terkini",
+      date: "2025-07-18",
+      author: "Tim Humas BSSN",
+      image: "/berita/forum-esda.jpg",
+      views: 1920,
     },
     {
       id: 6,
-      title:
-        "BSSN Raih Penghargaan Best Cyber Security Agency Asia Pacific 2023",
+      title: "BSSN Terima Audiensi Kementerian Imigrasi dan Pemasyarakatan",
       excerpt:
-        "Pengakuan internasional atas kontribusi BSSN dalam menjaga keamanan siber regional dan kerjasama multilateral di kawasan Asia Pasifik.",
-      category: "Penghargaan",
-      date: "2024-01-03",
+        "Pusat Data dan Teknologi Informasi Komunikasi Badan Siber dan Sandi Negara (Pusdatik BSSN) menerima kunjungan audiensi Direktorat Teknologi Informasi Keimigrasian Kementerian Imigrasi dan Pemasyarakatan (Kemenimipas), guna membahas keamanan transformasi digital.",
+      category: "Info Terkini",
+      date: "2025-07-16",
       author: "Tim Humas BSSN",
-      image: "/placeholder.svg",
-      views: 2890,
+      image: "/berita/audiensi-imigrasi.jpg",
+      views: 1650,
     },
     {
       id: 7,
-      title: "Implementasi Standar Keamanan Siber Baru untuk Sektor Keuangan",
+      title:
+        "Pusbang SDM BSSN Canangkan Pembangunan Zona Integritas Menuju Wilayah Bebas Korupsi",
       excerpt:
-        "Sektor perbankan dan fintech diwajibkan menerapkan standar keamanan siber terbaru mulai Q2 2024 untuk melindungi data nasabah.",
-      category: "Regulasi",
-      date: "2024-01-01",
-      author: "Tim Regulasi BSSN",
-      image: "/placeholder.svg",
-      views: 2140,
+        "Pusat Pengembangan Sumber Daya Manusia Badan Siber dan Sandi Negara (Pusbang SDM BSSN) mencanangkan Pembangunan Zona Integritas Menuju Wilayah Bebas dari Korupsi (WBK), dari Aula dr. Roebiono Kertopati Kantor BSSN Sawangan, Depok, Jawa Barat pada Selasa (15/07/2025).",
+      category: "Info Terkini",
+      date: "2025-07-16",
+      author: "Tim Humas BSSN",
+      image: "/berita/zona-integritas.jpg",
+      views: 1480,
+    },
+    {
+      id: 8,
+      title:
+        "BSSN Literasi Keamanan Siber dalam Forum Komunikasi Sosial Bersama Masyarakat",
+      excerpt:
+        "Badan Siber dan Sandi Negara (BSSN) menegaskan pentingnya literasi keamanan siber dalam kehidupan masyarakat di era digital saat ini. Penegasan tersebut disampaikan dalam kegiatan Komunikasi Sosial Bersama Komponen Masyarakat di Wilayah Jajaran Satkowil Korem 052/Wijayakrama yang digelar di kampus Universitas Pelita Harapan (UPH), Karawaci, Tangerang.",
+      category: "Info Terkini",
+      date: "2025-07-16",
+      author: "Tim Humas BSSN",
+      image: "/berita/literasi-siber.jpg",
+      views: 2150,
+    },
+    {
+      id: 9,
+      title:
+        "BSSN Terima Kunjungan HIMATIF ULBI, Bekali Mahasiswa Keamanan Siber Sosial",
+      excerpt:
+        "Badan Siber dan Sandi Negara (BSSN) terus menunjukkan komitmennya dalam memperkuat literasi keamanan siber di kalangan generasi muda. Kali ini BSSN menerima kunjungan edukatif dari Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Logistik dan Bisnis Internasional (ULBI) Bandung di Ruang Teater Lantai 2 Aula dr. Roebiono Kertopati Kantor BSSN Sawangan, Depok, jawa Barat.",
+      category: "Info Terkini",
+      date: "2025-07-15",
+      author: "Tim Humas BSSN",
+      image: "/berita/kunjungan-himatif.jpg",
+      views: 1320,
+    },
+    {
+      id: 10,
+      title:
+        "Cyber Security Awareness Webinar BSSN 2025 Serie #1: Kenalan Sama AI, Teman atau Ancaman?",
+      excerpt:
+        "Pusat Data dan Teknologi Informasi Komunikasi Badan Siber dan Sandi Negara (Pusdatik BSSN) menyelenggarakan webinar bertajuk Kenalan Sama AI: Teman atau Ancaman? sebagai bagian dari rangkaian kegiatan Cyber Security Awareness atau Bulan Kesadaran Keamanan Informasi 2025 untuk seluruh pegawai.",
+      category: "Info Terkini",
+      date: "2025-07-15",
+      author: "Tim Humas BSSN",
+      image: "/berita/webinar-ai.jpg",
+      views: 2840,
     },
   ];
 
   const categories = [
     { name: "Semua", value: "all", count: newsArticles.length + 1 },
-    { name: "Keamanan", value: "keamanan", count: 1 },
-    { name: "Program", value: "program", count: 1 },
-    { name: "Kerjasama", value: "kerjasama", count: 1 },
-    { name: "Edukasi", value: "edukasi", count: 1 },
-    { name: "Peringatan", value: "peringatan", count: 1 },
-    { name: "Penghargaan", value: "penghargaan", count: 1 },
-    { name: "Regulasi", value: "regulasi", count: 1 },
+    { name: "Info Terkini", value: "info-terkini", count: 10 },
+    { name: "Program", value: "program", count: 3 },
+    { name: "Kerjasama", value: "kerjasama", count: 5 },
+    { name: "Keamanan", value: "keamanan", count: 8 },
+    { name: "Edukasi", value: "edukasi", count: 4 },
+    { name: "Workshop", value: "workshop", count: 6 },
+    { name: "Regulasi", value: "regulasi", count: 2 },
   ];
 
   const stats = [
     {
       icon: FileText,
-      value: "150+",
+      value: "200+",
       label: "Berita Bulan Ini",
       color: "text-blue-600",
     },
     {
       icon: TrendingUp,
-      value: "50K+",
+      value: "75K+",
       label: "Total Pembaca",
       color: "text-green-600",
     },
@@ -156,11 +191,12 @@ const Berita = () => {
 
   const getCategoryColor = (category: string) => {
     const colors = {
+      "Info Terkini": "bg-cyan-100 text-cyan-700",
       Program: "bg-blue-100 text-blue-700",
       Kerjasama: "bg-green-100 text-green-700",
       Keamanan: "bg-red-100 text-red-700",
       Edukasi: "bg-purple-100 text-purple-700",
-      Peringatan: "bg-orange-100 text-orange-700",
+      Workshop: "bg-orange-100 text-orange-700",
       Penghargaan: "bg-yellow-100 text-yellow-700",
       Regulasi: "bg-indigo-100 text-indigo-700",
     };
