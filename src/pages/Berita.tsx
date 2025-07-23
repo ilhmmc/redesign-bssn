@@ -130,6 +130,7 @@ const Berita = () => {
         "Pusbang SDM BSSN Canangkan Pembangunan Zona Integritas Menuju Wilayah Bebas Korupsi",
       excerpt:
         "Pusat Pengembangan Sumber Daya Manusia Badan Siber dan Sandi Negara (Pusbang SDM BSSN) mencanangkan Pembangunan Zona Integritas Menuju Wilayah Bebas dari Korupsi (WBK), dari Aula dr. Roebiono Kertopati Kantor BSSN Sawangan, Depok, Jawa Barat pada Selasa (15/07/2025).",
+      content: "Depok, BSSN.go.id – Pusat Pengembangan Sumber Daya Manusia Badan Siber dan Sandi Negara (Pusbang SDM BSSN) mencanangkan Pembangunan Zona Integritas Menuju Wilayah Bebas dari Korupsi (WBK). Pencanangan ini dilakukan sebagai komitmen BSSN dalam mewujudkan tata kelola pemerintahan yang bersih, akuntabel, dan bebas dari praktik korupsi. Program Zona Integritas ini akan melibatkan seluruh pegawai BSSN dalam menciptakan budaya kerja yang berintegritas tinggi. BSSN berkomitmen untuk terus meningkatkan kualitas pelayanan publik dan transparansi dalam menjalankan tugas-tugas keamanan siber dan persandian nasional.",
       category: "Info Terkini",
       date: "2025-07-16",
       author: "Tim Humas BSSN",
