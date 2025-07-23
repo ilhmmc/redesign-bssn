@@ -85,7 +85,7 @@ const navigationItems = [
     icon: Newspaper,
     children: [
       {
-        title: "Berita & Siaran Pers",
+        title: "Berita & Informasi Terkini",
         href: "/informasi-regulasi/berita",
         description: "Informasi kegiatan dan pernyataan resmi untuk media.",
       },
