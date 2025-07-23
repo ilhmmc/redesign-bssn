@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, UserPlus, ExternalLink, Eye } from "lucide-react";
+import { UserPlus, ExternalLink, Eye } from "lucide-react";
 
 const pengumumanData = [
   {
