@@ -44,7 +44,7 @@ const Berita = () => {
     category: "Info Terkini",
     date: "2025-07-22",
     author: "Tim Humas BSSN",
-    image: "/berita/ttis-peresmian.jpeg",
+    image: "/berita/ttis-peresmian.jpg",
     featured: true,
     views: 3540,
   };
