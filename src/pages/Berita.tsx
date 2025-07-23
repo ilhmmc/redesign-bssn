@@ -156,6 +156,7 @@ const Berita = () => {
         "BSSN Terima Kunjungan HIMATIF ULBI, Bekali Mahasiswa Keamanan Siber Sosial",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) terus menunjukkan komitmennya dalam memperkuat literasi keamanan siber di kalangan generasi muda. Kali ini BSSN menerima kunjungan edukatif dari Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Logistik dan Bisnis Internasional (ULBI) Bandung di Ruang Teater Lantai 2 Aula dr. Roebiono Kertopati Kantor BSSN Sawangan, Depok, jawa Barat.",
+      content: "Depok, BSSN.go.id – Badan Siber dan Sandi Negara (BSSN) terus menunjukkan komitmennya dalam memperkuat literasi keamanan siber di kalangan generasi muda. Dalam kunjungan edukatif ini, mahasiswa HIMATIF ULBI mendapatkan pembekalan mengenai pentingnya keamanan siber dalam era digital, tren ancaman siber terkini, dan peluang karir di bidang keamanan siber. BSSN juga memperkenalkan berbagai program magang dan scholarship yang tersedia untuk mahasiswa yang tertarik berkontribusi dalam pengembangan keamanan siber nasional. Kunjungan ini diharapkan dapat menginspirasi generasi muda untuk berperan aktif dalam menjaga kedaulatan siber Indonesia.",
       category: "Info Terkini",
       date: "2025-07-15",
       author: "Tim Humas BSSN",
@@ -168,6 +169,7 @@ const Berita = () => {
         "Cyber Security Awareness Webinar BSSN 2025 Serie #1: Kenalan Sama AI, Teman atau Ancaman?",
       excerpt:
         "Pusat Data dan Teknologi Informasi Komunikasi Badan Siber dan Sandi Negara (Pusdatik BSSN) menyelenggarakan webinar bertajuk Kenalan Sama AI: Teman atau Ancaman? sebagai bagian dari rangkaian kegiatan Cyber Security Awareness atau Bulan Kesadaran Keamanan Informasi 2025 untuk seluruh pegawai.",
+      content: "Jakarta, BSSN.go.id – Pusat Data dan Teknologi Informasi Komunikasi Badan Siber dan Sandi Negara (Pusdatik BSSN) menyelenggarakan webinar bertajuk 'Kenalan Sama AI: Teman atau Ancaman?' sebagai bagian dari rangkaian kegiatan Cyber Security Awareness. Webinar ini membahas perkembangan teknologi Artificial Intelligence (AI) dan dampaknya terhadap keamanan siber. Para peserta mendapatkan edukasi mengenai potensi AI sebagai alat bantu dalam meningkatkan produktivitas, sekaligus ancaman yang dapat ditimbulkan jika AI disalahgunakan untuk kepentingan jahat. BSSN menekankan pentingnya pemahaman yang komprehensif mengenai teknologi AI agar dapat dimanfaatkan secara optimal sambil tetap menjaga aspek keamanan dan privasi data.",
       category: "Info Terkini",
       date: "2025-07-15",
       author: "Tim Humas BSSN",
