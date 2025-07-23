@@ -184,11 +184,12 @@ const Berita = () => {
 
   const getCategoryColor = (category: string) => {
     const colors = {
+      "Info Terkini": "bg-cyan-100 text-cyan-700",
       Program: "bg-blue-100 text-blue-700",
       Kerjasama: "bg-green-100 text-green-700",
       Keamanan: "bg-red-100 text-red-700",
       Edukasi: "bg-purple-100 text-purple-700",
-      Peringatan: "bg-orange-100 text-orange-700",
+      Workshop: "bg-orange-100 text-orange-700",
       Penghargaan: "bg-yellow-100 text-yellow-700",
       Regulasi: "bg-indigo-100 text-indigo-700",
     };
