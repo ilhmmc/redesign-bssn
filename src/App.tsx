@@ -10,6 +10,13 @@ import Pimpinan from "./pages/Pimpinan";
 import Kontak from "./pages/Kontak";
 import Berita from "./pages/Berita";
 import EdukasiImbauan from "./pages/EdukasiImbauan";
+import CaraMengatasiCyberbullying from "./pages/edukasi/CaraMengatasiCyberbullying";
+import TipsGuruResponBullying from "./pages/edukasi/TipsGuruResponBullying";
+import BicaraBullyingAnak from "./pages/edukasi/BicaraBullyingAnak";
+import DampakGadgetAnak from "./pages/edukasi/DampakGadgetAnak";
+import TipsAmanBerinternet from "./pages/edukasi/TipsAmanBerinternet";
+import BisnisDisabilitas from "./pages/edukasi/BisnisDisabilitas";
+import AplikasiDisabilitas from "./pages/edukasi/AplikasiDisabilitas";
 import Sertifikasi from "./pages/Sertifikasi";
 import KeamananSiber from "./pages/KeamananSiber";
 import Konsultasi from "./pages/Konsultasi";
@@ -91,6 +98,34 @@ const App = () => (
           <Route
             path="/informasi-regulasi/edukasi-imbauan-keamanan"
             element={<EdukasiImbauan />}
+          />
+          <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/cara-mengatasi-cyberbullying"
+            element={<CaraMengatasiCyberbullying />}
+          />
+          <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/tips-guru-respon-bullying"
+            element={<TipsGuruResponBullying />}
+          />
+          <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/bicara-bullying-anak"
+            element={<BicaraBullyingAnak />}
+          />
+          <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/dampak-gadget-anak"
+            element={<DampakGadgetAnak />}
+          />
+          <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/tips-aman-berinternet"
+            element={<TipsAmanBerinternet />}
+          />
+          <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/bisnis-disabilitas"
+            element={<BisnisDisabilitas />}
+          />
+          <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/aplikasi-disabilitas"
+            element={<AplikasiDisabilitas />}
           />
           <Route path="/informasi-regulasi/jdih" element={<JDIH />} />
           <Route path="/informasi-regulasi/publikasi" element={<Publikasi />} />
