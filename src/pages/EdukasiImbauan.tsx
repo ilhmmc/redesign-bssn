@@ -447,7 +447,6 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                 dapatkan informasi terkini tentang ancaman keamanan siber serta
                 panduan mitigasinya.
               </p>
-
             </div>
           </div>
         </section>
@@ -712,7 +711,8 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
 
                         <div className="text-center pt-4">
                           <p className="text-sm text-muted-foreground">
-                            Scroll ke bawah untuk melihat semua imbauan keamanan lengkap
+                            Scroll ke bawah untuk melihat semua imbauan keamanan
+                            lengkap
                           </p>
                         </div>
                       </div>
@@ -764,14 +764,16 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
 
                       <CardContent className="space-y-6">
                         <div className="prose prose-lg max-w-none">
-                          {advisory.content.split("\n\n").map((paragraph, idx) => (
-                            <p
-                              key={idx}
-                              className="text-muted-foreground leading-relaxed mb-4"
-                            >
-                              {paragraph}
-                            </p>
-                          ))}
+                          {advisory.content
+                            .split("\n\n")
+                            .map((paragraph, idx) => (
+                              <p
+                                key={idx}
+                                className="text-muted-foreground leading-relaxed mb-4"
+                              >
+                                {paragraph}
+                              </p>
+                            ))}
                         </div>
 
                         {/* Download Section */}
