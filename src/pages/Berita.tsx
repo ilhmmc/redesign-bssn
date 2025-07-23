@@ -329,64 +329,82 @@ const Berita = () => {
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-              {newsArticles.map((article) => (
-                <Card
-                  key={article.id}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
-                >
-                  <div className="relative h-48">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-3 left-3">
-                      <Badge className={getCategoryColor(article.category)}>
-                        {article.category}
-                      </Badge>
-                    </div>
-                    {article.urgent && (
-                      <div className="absolute top-3 right-3">
-                        <Badge className="bg-red-600 text-white">
-                          <AlertTriangle className="h-3 w-3 mr-1" />
-                          Urgent
+            {filteredNewsArticles.length > 0 ? (
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+                {filteredNewsArticles.map((article) => (
+                  <Card
+                    key={article.id}
+                    className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+                  >
+                    <div className="relative h-48">
+                      <img
+                        src={article.image}
+                        alt={article.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-3 left-3">
+                        <Badge className={getCategoryColor(article.category)}>
+                          {article.category}
                         </Badge>
                       </div>
-                    )}
-                  </div>
-                  <CardHeader>
-                    <div className="flex items-center space-x-4 text-xs text-muted-foreground mb-2">
-                      <div className="flex items-center">
-                        <Calendar className="h-3 w-3 mr-1" />
-                        {formatDate(article.date)}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="h-3 w-3 mr-1" />
-                        {article.views.toLocaleString()}
-                      </div>
+                      {article.urgent && (
+                        <div className="absolute top-3 right-3">
+                          <Badge className="bg-red-600 text-white">
+                            <AlertTriangle className="h-3 w-3 mr-1" />
+                            Urgent
+                          </Badge>
+                        </div>
+                      )}
                     </div>
-                    <CardTitle className="text-lg leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
-                      {article.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">
-                        {article.author}
-                      </span>
-                      <Button variant="ghost" size="sm">
-                        Baca Selengkapnya
-                        <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    <CardHeader>
+                      <div className="flex items-center space-x-4 text-xs text-muted-foreground mb-2">
+                        <div className="flex items-center">
+                          <Calendar className="h-3 w-3 mr-1" />
+                          {formatDate(article.date)}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="h-3 w-3 mr-1" />
+                          {article.views.toLocaleString()}
+                        </div>
+                      </div>
+                      <CardTitle className="text-lg leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">
+                        {article.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                        {article.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-muted-foreground">
+                          {article.author}
+                        </span>
+                        <Button variant="ghost" size="sm">
+                          Baca Selengkapnya
+                          <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16">
+                <div className="max-w-md mx-auto">
+                  <Search className="h-16 w-16 text-muted-foreground/50 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Tidak ada berita ditemukan</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Tidak ada berita yang cocok dengan pencarian "{searchQuery}". Coba gunakan kata kunci yang berbeda.
+                  </p>
+                  <Button
+                    variant="outline"
+                    onClick={() => setSearchQuery("")}
+                  >
+                    Hapus Pencarian
+                  </Button>
+                </div>
+              </div>
+            )}
 
             {/* Load More */}
             <div className="text-center mt-12">
