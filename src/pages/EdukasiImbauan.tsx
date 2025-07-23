@@ -448,31 +448,6 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                 panduan mitigasinya.
               </p>
 
-              {/* Search Bar */}
-              <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto pt-6">
-                <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    placeholder="Cari edukasi atau imbauan keamanan..."
-                    className="pl-10"
-                  />
-                </div>
-                <Select>
-                  <SelectTrigger className="w-full sm:w-48">
-                    <Filter className="mr-2 h-4 w-4" />
-                    <SelectValue placeholder="Kategori" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Semua Kategori</SelectItem>
-                    <SelectItem value="education">Program Edukasi</SelectItem>
-                    <SelectItem value="advisory">Imbauan Keamanan</SelectItem>
-                    <SelectItem value="vulnerability">Kerentanan</SelectItem>
-                    <SelectItem value="awareness">
-                      Kampanye Kesadaran
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
             </div>
           </div>
         </section>
