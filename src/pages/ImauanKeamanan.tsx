@@ -133,6 +133,7 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
               <div className="mb-8">
                 <Button variant="ghost" asChild className="mb-4">
                   <Link to="/informasi-regulasi/edukasi-imbauan-keamanan">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
                     KEMBALI
                   </Link>
                 </Button>
