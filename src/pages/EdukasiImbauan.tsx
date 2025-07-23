@@ -735,17 +735,10 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                           </div>
                         </div>
 
-                        <div className="flex justify-center pt-4">
-                          <Button
-                            size="lg"
-                            className="bg-red-600 hover:bg-red-700"
-                            asChild
-                          >
-                            <Link to="/informasi-regulasi/edukasi-imbauan-keamanan/imbauan-keamanan">
-                              <AlertTriangle className="h-4 w-4 mr-2" />
-                              Lihat Semua Imbauan Keamanan
-                            </Link>
-                          </Button>
+                        <div className="text-center pt-4">
+                          <p className="text-sm text-muted-foreground">
+                            Scroll ke bawah untuk melihat semua imbauan keamanan lengkap
+                          </p>
                         </div>
                       </div>
                     </CardContent>
