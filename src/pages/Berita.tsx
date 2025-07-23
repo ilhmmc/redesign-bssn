@@ -143,6 +143,7 @@ const Berita = () => {
         "BSSN Literasi Keamanan Siber dalam Forum Komunikasi Sosial Bersama Masyarakat",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) menegaskan pentingnya literasi keamanan siber dalam kehidupan masyarakat di era digital saat ini. Penegasan tersebut disampaikan dalam kegiatan Komunikasi Sosial Bersama Komponen Masyarakat di Wilayah Jajaran Satkowil Korem 052/Wijayakrama yang digelar di kampus Universitas Pelita Harapan (UPH), Karawaci, Tangerang.",
+      content: "Tangerang, BSSN.go.id – Badan Siber dan Sandi Negara (BSSN) menegaskan pentingnya literasi keamanan siber dalam kehidupan masyarakat di era digital saat ini. Dalam forum ini, BSSN memberikan edukasi mengenai ancaman siber yang dapat mengancam masyarakat, seperti penipuan online, pencurian identitas, dan penyebaran malware. BSSN juga mengajarkan cara-cara sederhana untuk melindungi diri dari ancaman siber, seperti penggunaan password yang kuat, verifikasi dua faktor, dan kehati-hatian dalam berbagi informasi pribadi di media sosial. Kegiatan ini merupakan bagian dari program BSSN untuk meningkatkan kesadaran keamanan siber di seluruh lapisan masyarakat Indonesia.",
       category: "Info Terkini",
       date: "2025-07-16",
       author: "Tim Humas BSSN",
