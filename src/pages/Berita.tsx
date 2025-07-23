@@ -247,69 +247,71 @@ const Berita = () => {
         </section>
 
         {/* Featured News */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Berita Utama</h2>
-              <p className="text-muted-foreground">
-                Berita terpenting dan terbaru dari BSSN
-              </p>
-            </div>
+        {showFeaturedNews && (
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">Berita Utama</h2>
+                <p className="text-muted-foreground">
+                  Berita terpenting dan terbaru dari BSSN
+                </p>
+              </div>
 
-            <div className="max-w-6xl mx-auto">
-              <Card className="group hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="relative h-64 lg:h-auto">
-                    <img
-                      src={featuredNews.image}
-                      alt={featuredNews.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <Badge
-                        className={getCategoryColor(featuredNews.category)}
-                      >
-                        {featuredNews.category}
-                      </Badge>
+              <div className="max-w-6xl mx-auto">
+                <Card className="group hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    <div className="relative h-64 lg:h-auto">
+                      <img
+                        src={featuredNews.image}
+                        alt={featuredNews.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <Badge
+                          className={getCategoryColor(featuredNews.category)}
+                        >
+                          {featuredNews.category}
+                        </Badge>
+                      </div>
+                      <div className="absolute top-4 right-4">
+                        <Badge variant="secondary">
+                          <TrendingUp className="h-3 w-3 mr-1" />
+                          Featured
+                        </Badge>
+                      </div>
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <Badge variant="secondary">
-                        <TrendingUp className="h-3 w-3 mr-1" />
-                        Featured
-                      </Badge>
+                    <div className="p-8 lg:p-12">
+                      <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-4">
+                        <div className="flex items-center">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {formatDate(featuredNews.date)}
+                        </div>
+                        <div className="flex items-center">
+                          <User className="h-4 w-4 mr-1" />
+                          {featuredNews.author}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="h-4 w-4 mr-1" />
+                          {featuredNews.views.toLocaleString()} views
+                        </div>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
+                        {featuredNews.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-6 line-clamp-3">
+                        {featuredNews.excerpt}
+                      </p>
+                      <Button className="bg-blue-600 hover:bg-blue-700">
+                        Baca Selengkapnya
+                        <ArrowRight className="h-4 w-4 ml-2" />
+                      </Button>
                     </div>
                   </div>
-                  <div className="p-8 lg:p-12">
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-4">
-                      <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        {formatDate(featuredNews.date)}
-                      </div>
-                      <div className="flex items-center">
-                        <User className="h-4 w-4 mr-1" />
-                        {featuredNews.author}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {featuredNews.views.toLocaleString()} views
-                      </div>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
-                      {featuredNews.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6 line-clamp-3">
-                      {featuredNews.excerpt}
-                    </p>
-                    <Button className="bg-blue-600 hover:bg-blue-700">
-                      Baca Selengkapnya
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Button>
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* News Grid */}
         <section className="py-20 bg-gradient-to-b from-background to-muted/30">
