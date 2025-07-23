@@ -42,6 +42,8 @@ import { useState, useMemo } from "react";
 
 const Berita = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedNews, setSelectedNews] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const featuredNews = {
     id: 1,
