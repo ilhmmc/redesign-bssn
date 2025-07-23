@@ -263,7 +263,7 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                 >
                   <Link to="/informasi-regulasi/edukasi-imbauan-keamanan">
                     <ArrowLeft className="mr-2 h-4 w-4" />
-                    &lt;&lt;&lt; KEMBALI
+                    KEMBALI
                   </Link>
                 </Button>
               </div>
