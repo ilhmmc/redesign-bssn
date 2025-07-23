@@ -106,7 +106,7 @@ const PenerimaanSSN = () => {
                       <TableHead className="w-[150px]">Tanggal</TableHead>
                       <TableHead>Tentang</TableHead>
                       <TableHead className="text-center w-[100px]">
-                        Aksi
+                        Lihat
                       </TableHead>
                     </TableRow>
                   </TableHeader>
