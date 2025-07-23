@@ -811,7 +811,7 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                                   Informasi Lengkap
                                 </h4>
                                 <p className="text-sm text-muted-foreground">
-                                  Download panduan lengkap untuk informasi detail
+                                  Lihat panduan lengkap untuk informasi detail
                                 </p>
                               </div>
                             </div>
