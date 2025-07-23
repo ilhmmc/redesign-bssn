@@ -412,7 +412,11 @@ const Berita = () => {
                         <span className="text-xs text-muted-foreground">
                           {article.author}
                         </span>
-                        <Button variant="ghost" size="sm">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => openNewsModal(article)}
+                        >
                           Baca Selengkapnya
                           <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
                         </Button>
