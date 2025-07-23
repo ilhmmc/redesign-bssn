@@ -517,41 +517,6 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
                     </div>
                   </div>
                 </div>
-
-                {/* Konten Interaktif */}
-                <div>
-                  <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">Konten Interaktif</h2>
-                    <p className="text-muted-foreground">
-                      Belajar keamanan siber dengan cara yang menyenangkan dan interaktif
-                    </p>
-                  </div>
-
-                  <div className="grid lg:grid-cols-3 gap-8">
-                    {interactiveContent.map((content, index) => (
-                      <Card
-                        key={index}
-                        className="group hover:shadow-xl transition-all duration-300 text-center"
-                      >
-                        <CardContent className="p-8">
-                          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <content.icon className="h-8 w-8 text-white" />
-                          </div>
-                          <h3 className="text-xl font-bold mb-3">{content.title}</h3>
-                          <p className="text-muted-foreground mb-4">{content.description}</p>
-                          <div className="flex items-center justify-center space-x-4 mb-6">
-                            <Badge variant="outline">{content.type}</Badge>
-                            <div className="text-sm text-muted-foreground">{content.duration}</div>
-                          </div>
-                          <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                            <Lightbulb className="h-4 w-4 mr-2" />
-                            {content.action}
-                          </Button>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
               </TabsContent>
 
               <TabsContent value="imbauan" className="space-y-12">
