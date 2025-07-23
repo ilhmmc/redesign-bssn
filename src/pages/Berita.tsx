@@ -224,6 +224,18 @@ const Berita = () => {
            featuredNews.content.toLowerCase().includes(query);
   }, [searchQuery]);
 
+  // Function to open modal with selected news
+  const openNewsModal = (newsItem: any) => {
+    setSelectedNews(newsItem);
+    setIsModalOpen(true);
+  };
+
+  // Function to close modal
+  const closeNewsModal = () => {
+    setSelectedNews(null);
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
