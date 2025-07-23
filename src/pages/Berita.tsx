@@ -31,6 +31,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState, useMemo } from "react";
 
 const Berita = () => {
   const featuredNews = {
