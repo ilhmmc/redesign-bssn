@@ -117,6 +117,7 @@ const Berita = () => {
       title: "BSSN Terima Audiensi Kementerian Imigrasi dan Pemasyarakatan",
       excerpt:
         "Pusat Data dan Teknologi Informasi Komunikasi Badan Siber dan Sandi Negara (Pusdatik BSSN) menerima kunjungan audiensi Direktorat Teknologi Informasi Keimigrasian Kementerian Imigrasi dan Pemasyarakatan (Kemenimipas), guna membahas keamanan transformasi digital.",
+      content: "Jakarta, BSSN.go.id – Pusat Data dan Teknologi Informasi Komunikasi Badan Siber dan Sandi Negara (Pusdatik BSSN) menerima kunjungan audiensi Direktorat Teknologi Informasi Keimigrasian Kementerian Imigrasi dan Pemasyarakatan (Kemenimipas), guna membahas keamanan transformasi digital. Audiensi ini bertujuan untuk memperkuat sinergi dalam implementasi keamanan siber pada sistem informasi keimigrasian dan pemasyarakatan. Kedua lembaga sepakat untuk meningkatkan kerja sama dalam pengamanan data dan sistem informasi yang menangani data sensitif warga negara. BSSN akan memberikan asistensi teknis dalam penerapan standar keamanan siber pada sistem-sistem digital yang digunakan oleh Kemenimipas.",
       category: "Info Terkini",
       date: "2025-07-16",
       author: "Tim Humas BSSN",
