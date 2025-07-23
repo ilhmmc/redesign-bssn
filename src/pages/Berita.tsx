@@ -152,25 +152,25 @@ const Berita = () => {
 
   const categories = [
     { name: "Semua", value: "all", count: newsArticles.length + 1 },
-    { name: "Keamanan", value: "keamanan", count: 1 },
-    { name: "Program", value: "program", count: 1 },
-    { name: "Kerjasama", value: "kerjasama", count: 1 },
-    { name: "Edukasi", value: "edukasi", count: 1 },
-    { name: "Peringatan", value: "peringatan", count: 1 },
-    { name: "Penghargaan", value: "penghargaan", count: 1 },
-    { name: "Regulasi", value: "regulasi", count: 1 },
+    { name: "Info Terkini", value: "info-terkini", count: 10 },
+    { name: "Program", value: "program", count: 3 },
+    { name: "Kerjasama", value: "kerjasama", count: 5 },
+    { name: "Keamanan", value: "keamanan", count: 8 },
+    { name: "Edukasi", value: "edukasi", count: 4 },
+    { name: "Workshop", value: "workshop", count: 6 },
+    { name: "Regulasi", value: "regulasi", count: 2 },
   ];
 
   const stats = [
     {
       icon: FileText,
-      value: "150+",
+      value: "200+",
       label: "Berita Bulan Ini",
       color: "text-blue-600",
     },
     {
       icon: TrendingUp,
-      value: "50K+",
+      value: "75K+",
       label: "Total Pembaca",
       color: "text-green-600",
     },
