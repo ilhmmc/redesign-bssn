@@ -824,7 +824,7 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <Download className="h-4 w-4 mr-2" />
+                                <DataView className="h-4 w-4 mr-2" />
                                 Lihat Imbauan
                               </a>
                             </Button>
