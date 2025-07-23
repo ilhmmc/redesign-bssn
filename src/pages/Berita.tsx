@@ -67,6 +67,7 @@ const Berita = () => {
       title: "BSSN Berkomitmen Perkuat Implementasi Pendataan Keluarga 2025",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) Republik Indonesia menegaskan komitmennya memberikan dukungan teknis dan asistensi pengamanan dalam ruang lingkup tugas dan kewenangannya, guna memperkuat kesiapan serta ketahanan infrastruktur teknologi informasi yang digunakan dalam pelaksanaan Pendataan Keluarga Tahun 2025 (PK-25).",
+      content: "Jakarta, BSSN.go.id – Badan Siber dan Sandi Negara (BSSN) Republik Indonesia menegaskan komitmennya memberikan dukungan teknis dan asistensi pengamanan dalam ruang lingkup tugas dan kewenangannya, guna memperkuat kesiapan serta ketahanan infrastruktur teknologi informasi yang digunakan dalam pelaksanaan Pendataan Keluarga Tahun 2025 (PK-25). Komitmen tersebut disampaikan Kepala BSSN Letjen TNI (Purn) Drs. Nugroho Sulistyo Budi, M.M., M.Han dalam Rapat Koordinasi Nasional (Rakornas) Persiapan Pelaksanaan Pendataan Keluarga Tahun 2025 yang diselenggarakan di Jakarta Convention Center (JCC), Jakarta, Senin (21/07/2025). Dukungan BSSN dalam PK-25 meliputi pengamanan sistem informasi dan infrastruktur TI yang digunakan dalam proses pendataan, termasuk perlindungan data pribadi penduduk yang akan dikumpulkan. BSSN akan memastikan sistem yang digunakan memenuhi standar keamanan siber nasional dan terlindungi dari berbagai ancaman siber yang dapat mengganggu proses pendataan.",
       category: "Info Terkini",
       date: "2025-07-22",
       author: "Tim Humas BSSN",
