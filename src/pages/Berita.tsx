@@ -353,7 +353,7 @@ const Berita = () => {
               <div>
                 <h2 className="text-3xl font-bold">Berita Terbaru</h2>
                 {searchQuery && (
-                  <p className="text-muted-foreground mt-2 text-center">
+                  <p className="text-muted-foreground mt-2">
                     {filteredNewsArticles.length} berita ditemukan untuk "{searchQuery}"
                   </p>
                 )}
