@@ -80,6 +80,7 @@ const Berita = () => {
         "BSSN Gelar Workshop Identifikasi IIV dan Penyelenggara IIV Sektor Keuangan",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) melalui Direktorat Keamanan Siber dan Sandi Keuangan, Perdagangan dan Pariwisata menggelar Workshop Identifikasi Infrastruktur Informasi Vital (IIV) dan Penyelenggara IIV di Jakarta selama dua hari pada tanggal 17-18 Juli 2025.",
+      content: "Jakarta, BSSN.go.id – Badan Siber dan Sandi Negara (BSSN) melalui Direktorat Keamanan Siber dan Sandi Keuangan, Perdagangan dan Pariwisata menggelar Workshop Identifikasi Infrastruktur Informasi Vital (IIV) dan Penyelenggara IIV di Jakarta selama dua hari pada tanggal 17-18 Juli 2025. Workshop ini dihadiri oleh perwakilan dari berbagai institusi sektor keuangan, perbankan, dan lembaga keuangan lainnya. Tujuan workshop adalah untuk mengidentifikasi dan memetakan infrastruktur informasi vital di sektor keuangan yang perlu mendapat perlindungan khusus dari ancaman siber. Dalam workshop tersebut, BSSN memberikan pemahaman mengenai kriteria dan standar yang harus dipenuhi untuk menjadi penyelenggara IIV, serta kewajiban-kewajiban yang harus dilaksanakan dalam menjaga keamanan siber. Sektor keuangan merupakan salah satu sektor strategis yang sangat rentan terhadap serangan siber, sehingga perlindungan infrastruktur informasi vital menjadi prioritas utama dalam menjaga stabilitas ekonomi nasional.",
       category: "Info Terkini",
       date: "2025-07-19",
       author: "Tim Humas BSSN",
