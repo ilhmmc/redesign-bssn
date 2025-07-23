@@ -597,7 +597,8 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
                             Imbauan Keamanan
                           </CardTitle>
                           <CardDescription className="text-red-700">
-                            Kumpulan Imbauan Keamanan Siber untuk Melindungi Anda dari Ancaman Digital
+                            Kumpulan Imbauan Keamanan Siber untuk Melindungi
+                            Anda dari Ancaman Digital
                           </CardDescription>
                         </div>
                       </div>
@@ -605,9 +606,11 @@ Internet sehat dan aman perlu disosialisasikan kepada pelajar, orangtua, guru, k
                     <CardContent className="p-8">
                       <div className="space-y-6">
                         <p className="text-muted-foreground leading-relaxed">
-                          Dapatkan informasi terkini tentang berbagai ancaman keamanan siber seperti malware APK,
-                          serangan phishing, web defacement, dan kerentanan sistem. Setiap imbauan dilengkapi dengan
-                          panduan mitigasi dan file PDF yang dapat diunduh.
+                          Dapatkan informasi terkini tentang berbagai ancaman
+                          keamanan siber seperti malware APK, serangan phishing,
+                          web defacement, dan kerentanan sistem. Setiap imbauan
+                          dilengkapi dengan panduan mitigasi dan file PDF yang
+                          dapat diunduh.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">

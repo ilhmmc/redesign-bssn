@@ -105,18 +105,18 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
     if (dateString.includes("February")) {
       return dateString;
     }
-    
+
     const monthMap: { [key: string]: string } = {
-      "Jan": "Januari",
-      "Jul": "Juli"
+      Jan: "Januari",
+      Jul: "Juli",
     };
-    
+
     const parts = dateString.split(" ");
     if (parts.length === 3) {
       const month = monthMap[parts[0]] || parts[0];
       return `${parts[1]} ${month} ${parts[2]}`;
     }
-    
+
     return dateString;
   };
 
