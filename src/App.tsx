@@ -74,8 +74,14 @@ const App = () => (
             path="/tentang-bssn/profil-organisasi"
             element={<ProfilOrganisasi />}
           />
-          <Route path="/perjanjian-kinerja/2024" element={<PerjanjianKinerja2024 />} />
-          <Route path="/perjanjian-kinerja/2023" element={<PerjanjianKinerja2023 />} />
+          <Route
+            path="/perjanjian-kinerja/2024"
+            element={<PerjanjianKinerja2024 />}
+          />
+          <Route
+            path="/perjanjian-kinerja/2023"
+            element={<PerjanjianKinerja2023 />}
+          />
           <Route path="/tentang-bssn/tugas-fungsi" element={<TugasFungsi />} />
           <Route path="/karir/CPNS" element={<PenerimaanCPNS />} />
           <Route path="/karir/pppk" element={<PenerimaanPPPK />} />
@@ -91,9 +97,15 @@ const App = () => (
           <Route path="/rencana-strategis" element={<RencanaStrategis />} />
           <Route path="/perjanjian-kinerja" element={<PerjanjianKinerja />} />
           <Route path="/laporan-kinerja" element={<LaporanKinerja />} />
-          <Route path="/informasi-publik/kinerja" element={<AkuntabilitasKinerja />} />
+          <Route
+            path="/informasi-publik/kinerja"
+            element={<AkuntabilitasKinerja />}
+          />
           <Route path="/kontak" element={<Kontak />} />
-          <Route path="/laporan-kinerja/unit-2024" element={<LaporanKinerjaUnit2024 />} />
+          <Route
+            path="/laporan-kinerja/unit-2024"
+            element={<LaporanKinerjaUnit2024 />}
+          />
           <Route path="/informasi-regulasi/berita" element={<Berita />} />
           <Route
             path="/informasi-regulasi/edukasi-imbauan-keamanan"

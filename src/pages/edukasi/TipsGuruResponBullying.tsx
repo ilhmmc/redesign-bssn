@@ -35,8 +35,8 @@ const TipsGuruResponBullying = () => {
         "Keengganan menggunakan komputer atau gadget",
         "Menunjukkan kecemasan atau ketakutan saat menerima pesan",
         "Keluhan fisik tanpa sebab medis yang jelas (sakit kepala, sakit perut)",
-        "Kehilangan teman atau isolasi sosial"
-      ]
+        "Kehilangan teman atau isolasi sosial",
+      ],
     },
     {
       category: "Tanda-tanda pada Pelaku",
@@ -46,15 +46,16 @@ const TipsGuruResponBullying = () => {
         "Menggunakan teknologi secara berlebihan atau sembunyi-sembunyi",
         "Menunjukkan kegembiraan saat melihat orang lain dalam kesulitan",
         "Memiliki banyak akun media sosial atau akun anonim",
-        "Riwayat perilaku bullying di kehidupan nyata"
-      ]
-    }
+        "Riwayat perilaku bullying di kehidupan nyata",
+      ],
+    },
   ];
 
   const responseStrategies = [
     {
       title: "Respon Segera",
-      description: "Langkah-langkah yang harus diambil segera setelah mengetahui insiden cyberbullying",
+      description:
+        "Langkah-langkah yang harus diambil segera setelah mengetahui insiden cyberbullying",
       icon: Clock,
       steps: [
         "Dengarkan laporan siswa dengan seksama tanpa menghakimi",
@@ -62,12 +63,13 @@ const TipsGuruResponBullying = () => {
         "Berikan dukungan emosional kepada korban",
         "Jangan menyalahkan korban atas kejadian yang dialami",
         "Pastikan keamanan siswa secara langsung",
-        "Laporkan ke kepala sekolah dan orangtua"
-      ]
+        "Laporkan ke kepala sekolah dan orangtua",
+      ],
     },
     {
       title: "Investigasi dan Dokumentasi",
-      description: "Proses investigasi yang terstruktur untuk mengumpulkan fakta dan bukti",
+      description:
+        "Proses investigasi yang terstruktur untuk mengumpulkan fakta dan bukti",
       icon: FileText,
       steps: [
         "Kumpulkan bukti digital (screenshot, log chat, dll)",
@@ -75,12 +77,13 @@ const TipsGuruResponBullying = () => {
         "Catat waktu, tempat, dan detail kejadian",
         "Identifikasi saksi dan dapatkan kesaksian mereka",
         "Simpan semua dokumentasi dengan aman",
-        "Buat laporan tertulis yang komprehensif"
-      ]
+        "Buat laporan tertulis yang komprehensif",
+      ],
     },
     {
       title: "Intervensi dan Mediasi",
-      description: "Proses penyelesaian yang melibatkan semua pihak untuk mencapai resolusi",
+      description:
+        "Proses penyelesaian yang melibatkan semua pihak untuk mencapai resolusi",
       icon: Users,
       steps: [
         "Adakan pertemuan dengan pelaku untuk membahas dampak tindakannya",
@@ -88,8 +91,8 @@ const TipsGuruResponBullying = () => {
         "Buat rencana tindakan untuk mencegah pengulangan",
         "Berikan konseling atau dukungan psikologis",
         "Monitor perkembangan situasi secara berkala",
-        "Libatkan orangtua dalam proses penyelesaian"
-      ]
+        "Libatkan orangtua dalam proses penyelesaian",
+      ],
     },
     {
       title: "Dukungan dan Pemulihan",
@@ -101,9 +104,9 @@ const TipsGuruResponBullying = () => {
         "Ajarkan strategi coping dan resiliensi",
         "Monitor prestasi akademik dan sosial",
         "Hubungkan dengan layanan konseling profesional jika diperlukan",
-        "Ciptakan lingkungan yang mendukung dan aman"
-      ]
-    }
+        "Ciptakan lingkungan yang mendukung dan aman",
+      ],
+    },
   ];
 
   const preventionStrategies = [
@@ -114,25 +117,25 @@ const TipsGuruResponBullying = () => {
     "Latih guru untuk mengenali tanda-tanda cyberbullying",
     "Buat sistem pelaporan yang mudah diakses siswa",
     "Kolaborasi dengan orangtua dalam pengawasan digital",
-    "Gunakan teknologi untuk monitoring aktivitas online siswa di sekolah"
+    "Gunakan teknologi untuk monitoring aktivitas online siswa di sekolah",
   ];
 
   const emergencyContacts = [
     {
       service: "Polisi",
       number: "110",
-      description: "Untuk kasus cyberbullying yang melibatkan ancaman serius"
+      description: "Untuk kasus cyberbullying yang melibatkan ancaman serius",
     },
     {
       service: "Komisi Perlindungan Anak Indonesia (KPAI)",
       number: "021-319-015-56",
-      description: "Untuk konsultasi dan pelaporan kasus bullying anak"
+      description: "Untuk konsultasi dan pelaporan kasus bullying anak",
     },
     {
       service: "Sejiwa (Yayasan Semai Jiwa Amini)",
       number: "119 ext 8",
-      description: "Layanan konseling dan dukungan psikologis"
-    }
+      description: "Layanan konseling dan dukungan psikologis",
+    },
   ];
 
   return (
@@ -160,12 +163,14 @@ const TipsGuruResponBullying = () => {
                 </Badge>
 
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                  Tips untuk Guru dalam <span className="text-blue-600">Merespon Bullying</span>
+                  Tips untuk Guru dalam{" "}
+                  <span className="text-blue-600">Merespon Bullying</span>
                 </h1>
 
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Strategi praktis bagi pendidik untuk mengenali, menangani, dan mencegah bullying 
-                  di lingkungan sekolah, baik yang terjadi secara langsung maupun di dunia digital.
+                  Strategi praktis bagi pendidik untuk mengenali, menangani, dan
+                  mencegah bullying di lingkungan sekolah, baik yang terjadi
+                  secara langsung maupun di dunia digital.
                 </p>
               </div>
             </div>
@@ -177,16 +182,21 @@ const TipsGuruResponBullying = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold mb-4">Mengenali Tanda-tanda Bullying</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Mengenali Tanda-tanda Bullying
+                </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Penting bagi guru untuk dapat mengidentifikasi tanda-tanda bullying pada siswa, 
-                  baik pada korban maupun pelaku
+                  Penting bagi guru untuk dapat mengidentifikasi tanda-tanda
+                  bullying pada siswa, baik pada korban maupun pelaku
                 </p>
               </div>
 
               <div className="grid lg:grid-cols-2 gap-8">
                 {identificationSigns.map((category, index) => (
-                  <Card key={index} className="group hover:shadow-lg transition-all duration-300">
+                  <Card
+                    key={index}
+                    className="group hover:shadow-lg transition-all duration-300"
+                  >
                     <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50">
                       <CardTitle className="text-xl flex items-center space-x-3">
                         <Eye className="h-6 w-6 text-blue-600" />
@@ -196,7 +206,10 @@ const TipsGuruResponBullying = () => {
                     <CardContent className="p-6">
                       <div className="space-y-3">
                         {category.signs.map((sign, signIndex) => (
-                          <div key={signIndex} className="flex items-start space-x-3">
+                          <div
+                            key={signIndex}
+                            className="flex items-start space-x-3"
+                          >
                             <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                             <span className="text-sm">{sign}</span>
                           </div>
@@ -215,20 +228,28 @@ const TipsGuruResponBullying = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold mb-4">Strategi Respon Terstruktur</h2>
+                <h2 className="text-3xl font-bold mb-4">
+                  Strategi Respon Terstruktur
+                </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Panduan langkah demi langkah untuk merespon kasus bullying dengan efektif dan profesional
+                  Panduan langkah demi langkah untuk merespon kasus bullying
+                  dengan efektif dan profesional
                 </p>
               </div>
 
               <div className="space-y-8">
                 {responseStrategies.map((strategy, index) => (
-                  <Card key={index} className="group hover:shadow-lg transition-all duration-300">
+                  <Card
+                    key={index}
+                    className="group hover:shadow-lg transition-all duration-300"
+                  >
                     <CardContent className="p-8">
                       <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-8">
                         <div className="flex items-center space-x-4 mb-6 lg:mb-0">
                           <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                            <div className="text-blue-600 font-bold text-lg">{index + 1}</div>
+                            <div className="text-blue-600 font-bold text-lg">
+                              {index + 1}
+                            </div>
                           </div>
                           <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                             <strategy.icon className="h-6 w-6 text-purple-600" />
@@ -238,10 +259,15 @@ const TipsGuruResponBullying = () => {
                           <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
                             {strategy.title}
                           </h3>
-                          <p className="text-muted-foreground mb-6">{strategy.description}</p>
+                          <p className="text-muted-foreground mb-6">
+                            {strategy.description}
+                          </p>
                           <div className="grid md:grid-cols-2 gap-3">
                             {strategy.steps.map((step, stepIndex) => (
-                              <div key={stepIndex} className="flex items-start space-x-3">
+                              <div
+                                key={stepIndex}
+                                className="flex items-start space-x-3"
+                              >
                                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
                                 <span className="text-sm">{step}</span>
                               </div>
@@ -264,7 +290,8 @@ const TipsGuruResponBullying = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold mb-4">Strategi Pencegahan</h2>
                 <p className="text-muted-foreground">
-                  Langkah-langkah proaktif untuk mencegah terjadinya bullying di lingkungan sekolah
+                  Langkah-langkah proaktif untuk mencegah terjadinya bullying di
+                  lingkungan sekolah
                 </p>
               </div>
 
@@ -291,18 +318,28 @@ const TipsGuruResponBullying = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold mb-4">Kontak Darurat</h2>
                 <p className="text-muted-foreground">
-                  Nomor penting yang dapat dihubungi untuk mendapatkan bantuan profesional
+                  Nomor penting yang dapat dihubungi untuk mendapatkan bantuan
+                  profesional
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
                 {emergencyContacts.map((contact, index) => (
-                  <Card key={index} className="text-center group hover:shadow-lg transition-all duration-300">
+                  <Card
+                    key={index}
+                    className="text-center group hover:shadow-lg transition-all duration-300"
+                  >
                     <CardContent className="p-6">
                       <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                      <h3 className="text-lg font-bold mb-2">{contact.service}</h3>
-                      <div className="text-2xl font-bold text-blue-600 mb-3">{contact.number}</div>
-                      <p className="text-sm text-muted-foreground">{contact.description}</p>
+                      <h3 className="text-lg font-bold mb-2">
+                        {contact.service}
+                      </h3>
+                      <div className="text-2xl font-bold text-blue-600 mb-3">
+                        {contact.number}
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        {contact.description}
+                      </p>
                     </CardContent>
                   </Card>
                 ))}
@@ -319,8 +356,9 @@ const TipsGuruResponBullying = () => {
                 Guru sebagai Garda Depan Perlindungan Anak
               </h2>
               <p className="text-xl text-blue-100">
-                Peran guru sangat penting dalam menciptakan lingkungan belajar yang aman dan mendukung. 
-                Dengan pengetahuan dan strategi yang tepat, kita dapat melindungi setiap siswa dari bullying.
+                Peran guru sangat penting dalam menciptakan lingkungan belajar
+                yang aman dan mendukung. Dengan pengetahuan dan strategi yang
+                tepat, kita dapat melindungi setiap siswa dari bullying.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
