@@ -113,6 +113,10 @@ const App = () => (
             element={<EdukasiImbauan />}
           />
           <Route
+            path="/informasi-regulasi/edukasi-imbauan-keamanan/imbauan-keamanan"
+            element={<ImauanKeamanan />}
+          />
+          <Route
             path="/informasi-regulasi/edukasi-imbauan-keamanan/cara-mengatasi-cyberbullying"
             element={<CaraMengatasiCyberbullying />}
           />
