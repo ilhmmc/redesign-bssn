@@ -92,6 +92,7 @@ const Berita = () => {
       title: "BSSN Hadir pada CYDES 2025 di Putrajaya Malaysia",
       excerpt:
         "Badan Siber dan Sandi Negara Republik Indonesia (BSSN RI) mengikuti kegiatan Cyber Defence and Security Exhibition and Conference (CYDES) 2025 yang dilaksanakan di Putrajaya Internasional Convention Center (PICC), Putrajaya, Malaysia pada tanggal 1-3 Juli 2025.",
+      content: "Putrajaya, BSSN.go.id – Badan Siber dan Sandi Negara Republik Indonesia (BSSN RI) mengikuti kegiatan Cyber Defence and Security Exhibition and Conference (CYDES) 2025 yang dilaksanakan di Putrajaya Internasional Convention Center (PICC), Putrajaya, Malaysia pada tanggal 1-3 Juli 2025. CYDES 2025 merupakan pameran dan konferensi terbesar di Asia Tenggara yang memfokuskan pada pertahanan dan keamanan siber. Kehadiran BSSN dalam acara ini bertujuan untuk memperkuat kerja sama bilateral dan multilateral dalam bidang keamanan siber dengan negara-negara ASEAN. Dalam pameran tersebut, BSSN memperkenalkan berbagai program dan inisiatif keamanan siber Indonesia, termasuk pengembangan ekosistem keamanan siber nasional dan strategi penanganan ancaman siber. Delegasi BSSN juga menghadiri berbagai sesi diskusi panel yang membahas tren terkini dalam keamanan siber, threat intelligence, dan teknologi pertahanan siber. Partisipasi ini diharapkan dapat meningkatkan kapasitas dan kapabilitas BSSN dalam menghadapi tantangan keamanan siber yang semakin kompleks di era digital.",
       category: "Info Terkini",
       date: "2025-07-18",
       author: "Tim Humas BSSN",
