@@ -48,6 +48,7 @@ import {
   TrendingUp,
   Award,
   GraduationCap,
+  User,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
