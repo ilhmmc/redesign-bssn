@@ -59,6 +59,7 @@ import PenerimaanSSN from "./pages/PenerimaanSSN";
 import SeleksiJPT from "./pages/SeleksiJPT";
 import SeleksiJPTMadya from "./pages/SeleksiJPTMadya";
 import SeleksiJPTPratama from "./pages/SeleksiJPTPratama";
+import ImauanKeamanan from "./pages/ImauanKeamanan";
 
 const queryClient = new QueryClient();
 
