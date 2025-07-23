@@ -35,7 +35,8 @@ import { Link } from "react-router-dom";
 const Berita = () => {
   const featuredNews = {
     id: 1,
-    title: "BSSN Resmikan 43 TTIS Bentuk Sinergi Penguatan Keamanan Siber Nasional",
+    title:
+      "BSSN Resmikan 43 TTIS Bentuk Sinergi Penguatan Keamanan Siber Nasional",
     excerpt:
       "Badan Siber dan Sandi Negara (BSSN) meresmikan 43 Tim Tanggap Insiden Siber (TTIS/CSIRT) yang terdiri dari 3 TTIS Sektoral, 10 TTIS Pemerintah Pusat, 24 TTIS Pemerintah Daerah, dan 6 Pembangunan Manusia sebagai bentuk sinergi penguatan keamanan siber nasional.",
     content:
@@ -62,7 +63,8 @@ const Berita = () => {
     },
     {
       id: 3,
-      title: "BSSN Gelar Workshop Identifikasi IIV dan Penyelenggara IIV Sektor Keuangan",
+      title:
+        "BSSN Gelar Workshop Identifikasi IIV dan Penyelenggara IIV Sektor Keuangan",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) melalui Direktorat Keamanan Siber dan Sandi Keuangan, Perdagangan dan Pariwisata menggelar Workshop Identifikasi Infrastruktur Informasi Vital (IIV) dan Penyelenggara IIV di Jakarta selama dua hari pada tanggal 17-18 Juli 2025.",
       category: "Info Terkini",
@@ -84,7 +86,8 @@ const Berita = () => {
     },
     {
       id: 5,
-      title: "Forum Kolaborasi Pelindungan IIV Sektor ESDA, BSSN: Sinergi Keamanan Siber Harus Berjalan Optimal",
+      title:
+        "Forum Kolaborasi Pelindungan IIV Sektor ESDA, BSSN: Sinergi Keamanan Siber Harus Berjalan Optimal",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) melalui Direktorat Keamanan Siber dan Sandi Energi dan Sumber Daya Alam, Deputi Bidang Keamanan Siber dan Sandi Perekonomian BSSN menyelenggarakan Forum Kolaborasi Pelimdungan Inmfrastruktur Informasi Vital Sektor ESDA Tahun 2025 di Jakarta selama 3 hari pada tanggal 15-17 Juli 2025.",
       category: "Info Terkini",
@@ -106,7 +109,8 @@ const Berita = () => {
     },
     {
       id: 7,
-      title: "Pusbang SDM BSSN Canangkan Pembangunan Zona Integritas Menuju Wilayah Bebas Korupsi",
+      title:
+        "Pusbang SDM BSSN Canangkan Pembangunan Zona Integritas Menuju Wilayah Bebas Korupsi",
       excerpt:
         "Pusat Pengembangan Sumber Daya Manusia Badan Siber dan Sandi Negara (Pusbang SDM BSSN) mencanangkan Pembangunan Zona Integritas Menuju Wilayah Bebas dari Korupsi (WBK), dari Aula dr. Roebiono Kertopati Kantor BSSN Sawangan, Depok, Jawa Barat pada Selasa (15/07/2025).",
       category: "Info Terkini",
@@ -117,7 +121,8 @@ const Berita = () => {
     },
     {
       id: 8,
-      title: "BSSN Literasi Keamanan Siber dalam Forum Komunikasi Sosial Bersama Masyarakat",
+      title:
+        "BSSN Literasi Keamanan Siber dalam Forum Komunikasi Sosial Bersama Masyarakat",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) menegaskan pentingnya literasi keamanan siber dalam kehidupan masyarakat di era digital saat ini. Penegasan tersebut disampaikan dalam kegiatan Komunikasi Sosial Bersama Komponen Masyarakat di Wilayah Jajaran Satkowil Korem 052/Wijayakrama yang digelar di kampus Universitas Pelita Harapan (UPH), Karawaci, Tangerang.",
       category: "Info Terkini",
@@ -128,7 +133,8 @@ const Berita = () => {
     },
     {
       id: 9,
-      title: "BSSN Terima Kunjungan HIMATIF ULBI, Bekali Mahasiswa Keamanan Siber Sosial",
+      title:
+        "BSSN Terima Kunjungan HIMATIF ULBI, Bekali Mahasiswa Keamanan Siber Sosial",
       excerpt:
         "Badan Siber dan Sandi Negara (BSSN) terus menunjukkan komitmennya dalam memperkuat literasi keamanan siber di kalangan generasi muda. Kali ini BSSN menerima kunjungan edukatif dari Himpunan Mahasiswa Teknik Informatika (HIMATIF) Universitas Logistik dan Bisnis Internasional (ULBI) Bandung di Ruang Teater Lantai 2 Aula dr. Roebiono Kertopati Kantor BSSN Sawangan, Depok, jawa Barat.",
       category: "Info Terkini",
@@ -139,7 +145,8 @@ const Berita = () => {
     },
     {
       id: 10,
-      title: "Cyber Security Awareness Webinar BSSN 2025 Serie #1: Kenalan Sama AI, Teman atau Ancaman?",
+      title:
+        "Cyber Security Awareness Webinar BSSN 2025 Serie #1: Kenalan Sama AI, Teman atau Ancaman?",
       excerpt:
         "Pusat Data dan Teknologi Informasi Komunikasi Badan Siber dan Sandi Negara (Pusdatik BSSN) menyelenggarakan webinar bertajuk Kenalan Sama AI: Teman atau Ancaman? sebagai bagian dari rangkaian kegiatan Cyber Security Awareness atau Bulan Kesadaran Keamanan Informasi 2025 untuk seluruh pegawai.",
       category: "Info Terkini",
