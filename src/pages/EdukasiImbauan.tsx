@@ -752,284 +752,98 @@ Pengguna dengan versi MacOS yang terdampak dapat meng-update ke MacOS versi terb
                   </Card>
                 </div>
 
-                {/* Emergency Alert Banner */}
-                <div className="bg-red-600 text-white rounded-lg p-6">
-                  <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-                    <div className="flex items-center space-x-3">
-                      <AlertTriangle className="h-6 w-6 animate-pulse" />
-                      <span className="font-semibold">
-                        {
-                          securityAdvisories.filter(
-                            (alert) => alert.severity === "critical",
-                          ).length
-                        }{" "}
-                        Imbauan Kritis Aktif
-                      </span>
-                    </div>
-                    <Button
-                      variant="secondary"
-                      size="lg"
-                      className="bg-white text-red-600 hover:bg-red-50"
+                {/* Security Advisories Content */}
+                <div className="space-y-12">
+                  {imauanKeamananData.map((advisory, index) => (
+                    <Card
+                      key={advisory.id}
+                      className="group hover:shadow-xl transition-all duration-300 border-l-4 border-l-red-500"
                     >
-                      <Phone className="h-5 w-5 mr-2" />
-                      Hotline: 1500-567
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Imbauan Keamanan Kritis */}
-                <div>
-                  <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">
-                      Imbauan Keamanan Kritis
-                    </h2>
-                    <p className="text-muted-foreground">
-                      Ancaman keamanan siber tingkat tinggi yang memerlukan
-                      perhatian segera
-                    </p>
-                  </div>
-
-                  <div className="space-y-6">
-                    {securityAdvisories
-                      .filter((alert) => alert.severity === "critical")
-                      .map((alert) => (
-                        <Card
-                          key={alert.id}
-                          className="group hover:shadow-xl transition-all duration-300 border-l-4 border-l-red-500"
-                        >
-                          <CardContent className="p-8">
-                            <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-6">
-                              <div className="flex-1">
-                                <div className="flex items-start justify-between mb-4">
-                                  <div className="flex items-center space-x-3">
-                                    <Badge
-                                      className={getSeverityColor(
-                                        alert.severity,
-                                      )}
-                                    >
-                                      {getSeverityIcon(alert.severity)}
-                                      <span className="ml-1 uppercase">
-                                        {alert.severity}
-                                      </span>
-                                    </Badge>
-                                    <Badge variant="outline">{alert.id}</Badge>
-                                    <Badge className="bg-blue-100 text-blue-700">
-                                      {getCategoryIcon(alert.category)}
-                                      <span className="ml-1">
-                                        {alert.category}
-                                      </span>
-                                    </Badge>
-                                  </div>
-                                  <div className="text-right text-sm text-muted-foreground">
-                                    <div className="flex items-center">
-                                      <Calendar className="h-4 w-4 mr-1" />
-                                      {formatDate(alert.date)}
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <h3 className="text-2xl font-bold mb-3 group-hover:text-red-600 transition-colors">
-                                  {alert.title}
-                                </h3>
-
-                                <p className="text-muted-foreground mb-4">
-                                  {alert.description}
-                                </p>
-
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                                  <div className="flex items-center space-x-2">
-                                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                                    <span className="text-sm">
-                                      <strong>Target:</strong> {alert.affected}
-                                    </span>
-                                  </div>
-                                  <div className="flex items-center space-x-2">
-                                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                    <span className="text-sm">
-                                      <strong>CVSS:</strong> {alert.cvss}/10
-                                    </span>
-                                  </div>
-                                  <div className="flex items-center space-x-2">
-                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                    <span className="text-sm">
-                                      <strong>Status:</strong> {alert.status}
-                                    </span>
-                                  </div>
-                                </div>
-
-                                <div className="flex flex-col sm:flex-row gap-3">
-                                  <Button className="bg-red-600 hover:bg-red-700">
-                                    <Download className="h-4 w-4 mr-2" />
-                                    Download Panduan Mitigasi
-                                  </Button>
-                                  <Button variant="outline">
-                                    <ExternalLink className="h-4 w-4 mr-2" />
-                                    Detail Teknis
-                                  </Button>
-                                </div>
-                              </div>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      ))}
-                  </div>
-                </div>
-
-                {/* Imbauan Keamanan Lainnya */}
-                <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <h2 className="text-3xl font-bold">
-                      Imbauan Keamanan Lainnya
-                    </h2>
-                    <Select>
-                      <SelectTrigger className="w-40">
-                        <SelectValue placeholder="Urutkan" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="latest">Terbaru</SelectItem>
-                        <SelectItem value="severity">Tingkat Risiko</SelectItem>
-                        <SelectItem value="category">Kategori</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="grid lg:grid-cols-2 gap-6">
-                    {securityAdvisories
-                      .filter((alert) => alert.severity !== "critical")
-                      .map((alert) => (
-                        <Card
-                          key={alert.id}
-                          className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                        >
-                          <CardHeader>
-                            <div className="flex items-start justify-between mb-2">
-                              <div className="flex items-center space-x-2">
-                                <Badge
-                                  className={getSeverityColor(alert.severity)}
-                                >
-                                  {getSeverityIcon(alert.severity)}
-                                  <span className="ml-1 uppercase text-xs">
-                                    {alert.severity}
-                                  </span>
-                                </Badge>
-                                <Badge variant="outline" className="text-xs">
-                                  {alert.id}
-                                </Badge>
-                              </div>
-                              <div className="text-xs text-muted-foreground">
-                                {formatDate(alert.date)}
-                              </div>
-                            </div>
-
-                            <div className="flex items-center space-x-2 mb-3">
-                              <Badge className="bg-blue-100 text-blue-700">
-                                {getCategoryIcon(alert.category)}
-                                <span className="ml-1">{alert.category}</span>
-                              </Badge>
-                            </div>
-
-                            <CardTitle className="text-lg leading-tight group-hover:text-red-600 transition-colors">
-                              {alert.title}
-                            </CardTitle>
-                          </CardHeader>
-
-                          <CardContent>
-                            <p className="text-sm text-muted-foreground mb-4">
-                              {alert.description}
-                            </p>
-
-                            <div className="grid grid-cols-2 gap-3 mb-4 text-xs">
-                              <div>
-                                <strong>Target:</strong> {alert.affected}
-                              </div>
-                              <div>
-                                <strong>CVSS:</strong> {alert.cvss}/10
-                              </div>
-                              {alert.cve && (
-                                <div>
-                                  <strong>CVE:</strong> {alert.cve}
-                                </div>
-                              )}
-                            </div>
-
-                            <div className="flex items-center justify-between">
+                      <CardHeader className="pb-4">
+                        <div className="flex flex-col space-y-4">
+                          <div className="flex flex-wrap items-center gap-2">
+                            {advisory.categories.map((category, idx) => (
                               <Badge
+                                key={idx}
                                 variant="outline"
-                                className={
-                                  alert.status === "Patch Available"
-                                    ? "border-green-200 text-green-700"
-                                    : alert.status === "Active Monitoring"
-                                      ? "border-red-200 text-red-700"
-                                      : "border-yellow-200 text-yellow-700"
-                                }
+                                className="bg-red-50 text-red-700 border-red-200"
                               >
-                                {alert.status}
+                                {category}
                               </Badge>
-                              <Button variant="ghost" size="sm">
-                                Detail
-                                <ExternalLink className="h-3 w-3 ml-1" />
-                              </Button>
+                            ))}
+                          </div>
+
+                          <CardTitle className="text-2xl leading-tight group-hover:text-red-600 transition-colors">
+                            {advisory.title}
+                          </CardTitle>
+
+                          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                            <div className="flex items-center">
+                              <User className="h-4 w-4 mr-1" />
+                              by {advisory.author}
                             </div>
-                          </CardContent>
-                        </Card>
-                      ))}
-                  </div>
-                </div>
-
-                {/* Panduan Respons */}
-                <div className="bg-gradient-to-b from-background to-muted/30 py-16 -mx-4 px-4">
-                  <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-12">
-                      <h2 className="text-3xl font-bold mb-4">
-                        Panduan Respons Keamanan
-                      </h2>
-                      <p className="text-muted-foreground">
-                        Langkah-langkah yang harus diambil ketika menghadapi
-                        ancaman keamanan siber
-                      </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <Card className="text-center">
-                        <CardContent className="p-6">
-                          <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <AlertTriangle className="h-6 w-6 text-red-600" />
+                            <div className="flex items-center">
+                              <Calendar className="h-4 w-4 mr-1" />
+                              {formatImauanDate(advisory.date)}
+                            </div>
+                            <div className="flex items-center">
+                              <Shield className="h-4 w-4 mr-1" />
+                              {advisory.comments} Comments
+                            </div>
                           </div>
-                          <h3 className="font-semibold mb-2">Identifikasi</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Identifikasi jenis ancaman dan tingkat dampaknya
-                            pada sistem Anda
-                          </p>
-                        </CardContent>
-                      </Card>
+                        </div>
+                      </CardHeader>
 
-                      <Card className="text-center">
-                        <CardContent className="p-6">
-                          <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Shield className="h-6 w-6 text-orange-600" />
-                          </div>
-                          <h3 className="font-semibold mb-2">Mitigasi</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Terapkan langkah mitigasi sesuai panduan untuk
-                            mencegah penyebaran ancaman
-                          </p>
-                        </CardContent>
-                      </Card>
+                      <CardContent className="space-y-6">
+                        <div className="prose prose-lg max-w-none">
+                          {advisory.content.split("\n\n").map((paragraph, idx) => (
+                            <p
+                              key={idx}
+                              className="text-muted-foreground leading-relaxed mb-4"
+                            >
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
 
-                      <Card className="text-center">
-                        <CardContent className="p-6">
-                          <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Phone className="h-6 w-6 text-blue-600" />
+                        {/* Download Section */}
+                        <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-lg border">
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-4 sm:space-y-0">
+                            <div className="flex items-center space-x-3">
+                              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                                <FileText className="h-6 w-6 text-red-600" />
+                              </div>
+                              <div>
+                                <h4 className="font-semibold text-lg">
+                                  Informasi Lengkap
+                                </h4>
+                                <p className="text-sm text-muted-foreground">
+                                  Download panduan lengkap untuk informasi detail
+                                </p>
+                              </div>
+                            </div>
+                            <Button
+                              className="bg-red-600 hover:bg-red-700 w-full sm:w-auto"
+                              asChild
+                            >
+                              <a
+                                href={`/imbauan-keamanan/${advisory.pdfFile}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Download className="h-4 w-4 mr-2" />
+                                Download PDF
+                              </a>
+                            </Button>
                           </div>
-                          <h3 className="font-semibold mb-2">Lapor</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Laporkan insiden ke BSSN melalui hotline 1500-567
-                            atau email
-                          </p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
+                        </div>
+
+                        {index < imauanKeamananData.length - 1 && (
+                          <hr className="border-muted my-8" />
+                        )}
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
               </TabsContent>
             </Tabs>
