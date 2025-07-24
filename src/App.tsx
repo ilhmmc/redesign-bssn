@@ -84,7 +84,7 @@ const App = () => (
             path="/profil/tugas-fungsi-strategi"
             element={<TugasFungsi />}
           />
-          <Route path="/karir/CPNS" element={<PenerimaanCPNS />} />
+          <Route path="/karir/cpns" element={<PenerimaanCPNS />} />
           <Route path="/karir/pppk" element={<PenerimaanPPPK />} />
           <Route path="/karir/poltek-ssn" element={<PenerimaanSSN />} />
           <Route path="/karir/jpt" element={<SeleksiJPT />} />

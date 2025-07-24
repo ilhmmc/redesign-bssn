@@ -20,14 +20,23 @@ const footerLinks = {
     { title: "Akuntabilitas & Kinerja", href: "/profil/akuntabilitas-kinerja" },
   ],
   layanan: [
-    { title: "Keamanan Siber", href: "/layanan/keamanan-siber" },
-    { title: "Sertifikasi", href: "/layanan/sertifikasi" },
-    { title: "Konsultasi", href: "/layanan/konsultasi" },
+    { title: "Gov-CSIRT Indonesia", href: "/layanan-aduan/gov-csirt-indonesia" },
+    { title: "Aduan Siber", href: "/layanan-aduan/aduan-siber" },
+    { title: "Sertifikasi & Asesmen", href: "/layanan-aduan/sertifikasi-asesmen" },
+    { title: "Alat & Direktori Profesional", href: "/layanan-aduan/alat-direktori-profesional" },
   ],
   informasi: [
-    { title: "Berita", href: "/informasi/berita" },
-    { title: "Peringatan Keamanan", href: "/informasi/peringatan-keamanan" },
-    { title: "Panduan & Tips", href: "/informasi/panduan-tips" },
+    { title: "Berita Terkini", href: "/informasi-regulasi/berita" },
+    { title: "Publikasi", href: "/informasi-regulasi/publikasi" },
+    { title: "Edukasi & Imbauan Keamanan", href: "/informasi-regulasi/edukasi-imbauan-keamanan" },
+    { title: "Pusat Informasi Hukum (JDIH)", href: "/informasi-regulasi/jdih" },
+    { title: "Agenda & Penghargaan", href: "/informasi-regulasi/agenda-penghargaan" },
+  ],
+  karir: [
+    { title: "Penerimaan CPNS", href: "/karir/cpns" },
+    { title: "Penerimaan PPPK", href: "/karir/pppk" },
+    { title: "Penerimaan Poltek SSN", href: "/karir/poltek-ssn" },
+    { title: "Seleksi Jabatan Pimpinan (JPT)", href: "/karir/jpt" },
   ],
 };
 
@@ -145,6 +154,22 @@ const Footer = () => {
             <h3 className="font-semibold text-white mb-4">Informasi</h3>
             <ul className="space-y-2 mb-6">
               {footerLinks.informasi.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-slate-300 hover:text-blue-400 transition-colors"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-white mb-4">Karir</h3>
+            <ul className="space-y-2 mb-6">
+              {footerLinks.karir.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}

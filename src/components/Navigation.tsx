@@ -85,7 +85,7 @@ const navigationItems = [
     icon: Newspaper,
     children: [
       {
-        title: "Berita & Informasi Terkini",
+        title: "Berita Terkini",
         href: "/informasi-regulasi/berita",
         description: "Informasi kegiatan dan pernyataan resmi untuk media.",
       },
@@ -119,23 +119,23 @@ const navigationItems = [
     icon: Briefcase,
     children: [
       {
-        title: "Penerimaan CPNS ",
-        href: "/karir/CPNS", // Halaman baru
+        title: "Penerimaan CPNS",
+        href: "/karir/cpns",
         description: "Informasi seleksi CPNS.",
       },
       {
-        title: "Penerimaan PPPK ",
-        href: "/karir/pppk", // Halaman baru
+        title: "Penerimaan PPPK",
+        href: "/karir/pppk", 
         description: "Informasi seleksi PPPK.",
       },
       {
         title: "Penerimaan Poltek SSN",
-        href: "/karir/poltek-ssn", // Halaman baru
+        href: "/karir/poltek-ssn", 
         description: "Seleksi Penerimaan Taruna Baru Poltek SSN.",
       },
       {
         title: "Seleksi Jabatan Pimpinan (JPT)",
-        href: "/karir/jpt", // Halaman baru
+        href: "/karir/jpt", 
         description: "Informasi seleksi Jabatan Pimpinan Tinggi.",
       },
     ],
