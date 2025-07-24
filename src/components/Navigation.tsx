@@ -288,27 +288,44 @@ const Navigation = () => {
               </Link>
               {navigationItems.map((item) => (
                 <div key={item.title}>
-                  <div className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-foreground">
-                    <item.icon className="h-5 w-5" />
-                    <span>{item.title}</span>
-                  </div>
-                  <div className="ml-6 mt-2 flex flex-col space-y-1 border-l pl-4">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.title}
-                        to={child.href}
-                        className={cn(
-                          "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
-                          location.pathname === child.href
-                            ? "bg-accent text-accent-foreground"
-                            : "text-muted-foreground",
-                        )}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {child.title}
-                      </Link>
-                    ))}
-                  </div>
+                  {item.href ? (
+                    <Link
+                      to={item.href}
+                      className={cn(
+                        "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                        location.pathname === item.href &&
+                          "bg-accent text-accent-foreground",
+                      )}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <item.icon className="h-5 w-5" />
+                      <span>{item.title}</span>
+                    </Link>
+                  ) : (
+                    <>
+                      <div className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-foreground">
+                        <item.icon className="h-5 w-5" />
+                        <span>{item.title}</span>
+                      </div>
+                      <div className="ml-6 mt-2 flex flex-col space-y-1 border-l pl-4">
+                        {item.children?.map((child) => (
+                          <Link
+                            key={child.title}
+                            to={child.href}
+                            className={cn(
+                              "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
+                              location.pathname === child.href
+                                ? "bg-accent text-accent-foreground"
+                                : "text-muted-foreground",
+                            )}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {child.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
               ))}
               <Link
