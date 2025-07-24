@@ -15,22 +15,40 @@ import {
 const footerLinks = {
   profil: [
     { title: "Tentang BSSN", href: "/profil/tentang-bssn" },
-    { title: "Tugas, Fungsi, & Strategi", href: "/profil/tugas-fungsi-strategi" },
+    {
+      title: "Tugas, Fungsi, & Strategi",
+      href: "/profil/tugas-fungsi-strategi",
+    },
     { title: "Struktur & Pejabat", href: "/profil/struktur-pejabat" },
     { title: "Akuntabilitas & Kinerja", href: "/profil/akuntabilitas-kinerja" },
   ],
   layanan: [
-    { title: "Gov-CSIRT Indonesia", href: "/layanan-aduan/gov-csirt-indonesia" },
+    {
+      title: "Gov-CSIRT Indonesia",
+      href: "/layanan-aduan/gov-csirt-indonesia",
+    },
     { title: "Aduan Siber", href: "/layanan-aduan/aduan-siber" },
-    { title: "Sertifikasi & Asesmen", href: "/layanan-aduan/sertifikasi-asesmen" },
-    { title: "Alat & Direktori Profesional", href: "/layanan-aduan/alat-direktori-profesional" },
+    {
+      title: "Sertifikasi & Asesmen",
+      href: "/layanan-aduan/sertifikasi-asesmen",
+    },
+    {
+      title: "Alat & Direktori Profesional",
+      href: "/layanan-aduan/alat-direktori-profesional",
+    },
   ],
   informasi: [
     { title: "Berita Terkini", href: "/informasi-regulasi/berita" },
     { title: "Publikasi", href: "/informasi-regulasi/publikasi" },
-    { title: "Edukasi & Imbauan Keamanan", href: "/informasi-regulasi/edukasi-imbauan-keamanan" },
+    {
+      title: "Edukasi & Imbauan Keamanan",
+      href: "/informasi-regulasi/edukasi-imbauan-keamanan",
+    },
     { title: "Pusat Informasi Hukum (JDIH)", href: "/informasi-regulasi/jdih" },
-    { title: "Agenda & Penghargaan", href: "/informasi-regulasi/agenda-penghargaan" },
+    {
+      title: "Agenda & Penghargaan",
+      href: "/informasi-regulasi/agenda-penghargaan",
+    },
   ],
   karir: [
     { title: "Penerimaan CPNS", href: "/karir/cpns" },
