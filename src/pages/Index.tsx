@@ -133,6 +133,36 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Dashboard Section */}
+        <section className="py-20 bg-gradient-to-b from-slate-50 to-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center space-y-4 mb-12">
+              <Badge className="bg-blue-100 text-blue-700 border-blue-200">
+                <BarChart3 className="mr-2 h-4 w-4" />
+                Dashboard Keamanan Siber
+              </Badge>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Monitoring <span className="text-blue-600">Real-Time</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Pantau kondisi keamanan siber Indonesia secara langsung dengan
+                visualisasi data yang komprehensif dan mudah dipahami
+              </p>
+            </div>
+
+            <CyberSecurityDashboard />
+
+            <div className="text-center mt-8">
+              <Button asChild size="lg" variant="outline">
+                <Link to="/dashboard">
+                  Lihat Dashboard Lengkap
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
         <section className="py-20 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto px-4">
