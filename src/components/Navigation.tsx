@@ -27,6 +27,12 @@ import { cn } from "@/lib/utils";
 // =======================================================================
 const navigationItems = [
   {
+    title: "Dashboard",
+    icon: BarChart3,
+    href: "/dashboard",
+    description: "Visualisasi data keamanan siber real-time",
+  },
+  {
     title: "Profil",
     icon: Info,
     children: [
