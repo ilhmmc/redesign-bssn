@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, UserPlus } from "lucide-react";
+import { Download, UserPlus, UserRoundCheck } from "lucide-react";
 
 // Data diekstrak dari file HTML PPPK 2024
 const pengumumanData = [
@@ -117,8 +117,8 @@ const PenerimaanPPPK = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Badge className="bg-teal-100 text-teal-700 border-teal-200">
-                <UserPlus className="mr-2 h-4 w-4" />
-                Karir
+                <UserRoundCheck className="mr-2 h-4 w-4" />
+                Penerimaan PPPK
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                 Seleksi Penerimaan <span className="gradient-text-teal">PPPK BSSN 2024</span>

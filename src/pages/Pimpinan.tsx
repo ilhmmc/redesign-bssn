@@ -18,6 +18,7 @@ import {
   Settings,
   Building,
   TrendingUp,
+  CircleUser,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -165,7 +166,7 @@ const Pimpinan = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Badge className="bg-blue-100 text-blue-700 border-blue-200">
-                <Users className="mr-2 h-4 w-4" />
+                <CircleUser className="mr-2 h-4 w-4" />
                 Pimpinan BSSN
               </Badge>
 

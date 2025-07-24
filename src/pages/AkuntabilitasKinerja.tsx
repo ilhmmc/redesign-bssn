@@ -213,7 +213,7 @@ const AkuntabilitasKinerja = () => {
         <section className="bg-gradient-to-br from-government-50 via-background to-cyber-50 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <Badge className="bg-government-100 text-government-700 border-government-200">
+              <Badge className="bg-blue-100 text-blue-700 border-blue-200">
                 <BookOpen className="mr-2 h-4 w-4" />
                 Tata Kelola & Transparansi
               </Badge>

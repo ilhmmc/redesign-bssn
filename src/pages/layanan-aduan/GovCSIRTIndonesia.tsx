@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Shield,
+  ShieldCheck,
   Mail,
   MessageSquare,
   ExternalLink,
@@ -129,6 +130,7 @@ const GovCSIRTIndonesia = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Badge className="bg-government-100 text-government-700 border-government-200">
+                <ShieldCheck className="mr-2 h-4 w-4" />
                 Gov-CSIRT Indonesia
               </Badge>
 

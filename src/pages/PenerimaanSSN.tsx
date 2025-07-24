@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { UserPlus, ExternalLink, Eye } from "lucide-react";
+import { UserPlus, ExternalLink, Eye, School } from "lucide-react";
 
 const pengumumanData = [
   {
@@ -39,7 +39,7 @@ const PenerimaanSSN = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Badge className="bg-indigo-100 text-indigo-700 border-indigo-200">
-                <UserPlus className="mr-2 h-4 w-4" />
+                <School className="mr-2 h-4 w-4" />
                 Sekolah Kedinasan
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">

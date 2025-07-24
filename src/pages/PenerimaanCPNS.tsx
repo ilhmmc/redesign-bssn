@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, UserPlus } from "lucide-react";
+import { Download, UserPlus, UserRoundCheck } from "lucide-react";
 
 // Data lengkap diekstrak dari file HTML
 const pengumumanData = [
@@ -135,8 +135,8 @@ const PenerimaanCPNS = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Badge className="bg-green-100 text-green-700 border-green-200">
-                <UserPlus className="mr-2 h-4 w-4" />
-                Karir
+                <UserRoundCheck className="mr-2 h-4 w-4" />
+                Penerimaan CPNS
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                 Seleksi Penerimaan <span className="gradient-text-green">CPNS BSSN 2024</span>

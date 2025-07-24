@@ -88,7 +88,7 @@ const App = () => (
           <Route path="/karir/poltek-ssn" element={<PenerimaanSSN />} />
           <Route path="/karir/jpt" element={<SeleksiJPT />} />
           <Route path="/karir/jpt/madya" element={<SeleksiJPTMadya />} />
-          <Route path="/karir/jpt/pratama" element={<SeleksiJPTPratama />} />
+          {/* <Route path="/karir/jpt/pratama" element={<SeleksiJPTPratama />} /> */}
           <Route
             path="/profil/strategi-keamanan"
             element={<StrategiKeamanan />}

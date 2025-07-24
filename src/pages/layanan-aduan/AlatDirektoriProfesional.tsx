@@ -212,6 +212,7 @@ const AlatDirektoriProfesional = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Badge className="bg-government-100 text-government-700 border-government-200">
+                <Wrench className="mr-2 h-4 w-4" />
                 Ekosistem Keamanan Siber Nasional
               </Badge>
 

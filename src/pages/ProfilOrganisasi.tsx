@@ -117,7 +117,8 @@ const ProfilOrganisasi = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <div className="flex items-center justify-center space-x-2 mb-4">
-                <Badge className="bg-government-100 text-government-700 border-government-200">
+                <Badge className="bg-blue-100 text-blue-700 border-blue-200">
+                  <Users className="mr-2 h-4 w-4" />
                   Profil Organisasi
                 </Badge>
                 <Badge variant="outline">Est. 1946</Badge>

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { UserCheck, ArrowRight } from "lucide-react";
+import { UserCheck, ArrowRight, CircleUserRound } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Data menggunakan rute internal untuk navigasi dalam aplikasi
@@ -33,9 +33,9 @@ const SeleksiJPT = () => {
         <section className="bg-gradient-to-br from-red-50 via-background to-orange-50 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <Badge className="bg-green-100 text-green-700 border-green-200">
-                <UserCheck className="mr-2 h-4 w-4" />
-                Karir
+              <Badge className="bg-orange-100 text-orange-700 border-orange-200">
+                <CircleUserRound className="mr-2 h-4 w-4" />
+                Seleksi Jabatan
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                 Seleksi Jabatan Pimpinan Tinggi (JPT)
