@@ -71,10 +71,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route
-            path="/profil/tentang-bssn"
-            element={<ProfilOrganisasi />}
-          />
+          <Route path="/profil/tentang-bssn" element={<ProfilOrganisasi />} />
           <Route
             path="/perjanjian-kinerja/2024"
             element={<PerjanjianKinerja2024 />}
@@ -83,7 +80,10 @@ const App = () => (
             path="/perjanjian-kinerja/2023"
             element={<PerjanjianKinerja2023 />}
           />
-          <Route path="/profil/tugas-fungsi-strategi" element={<TugasFungsi />} />
+          <Route
+            path="/profil/tugas-fungsi-strategi"
+            element={<TugasFungsi />}
+          />
           <Route path="/karir/CPNS" element={<PenerimaanCPNS />} />
           <Route path="/karir/pppk" element={<PenerimaanPPPK />} />
           <Route path="/karir/poltek-ssn" element={<PenerimaanSSN />} />

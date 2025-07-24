@@ -22,7 +22,7 @@ import {
 import { cn } from "@/lib/utils";
 
 // =======================================================================
-// STRUKTUR NAVIGASI 
+// STRUKTUR NAVIGASI
 // =======================================================================
 const navigationItems = [
   {
@@ -126,8 +126,7 @@ const navigationItems = [
       {
         title: "Penerimaan PPPK ",
         href: "/karir/pppk", // Halaman baru
-        description:
-          "Informasi seleksi PPPK.",
+        description: "Informasi seleksi PPPK.",
       },
       {
         title: "Penerimaan Poltek SSN",

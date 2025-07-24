@@ -11,7 +11,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Lock, Users, AlertTriangle, ArrowRight, BarChart3 } from "lucide-react";
+import {
+  Shield,
+  Lock,
+  Users,
+  AlertTriangle,
+  ArrowRight,
+  BarChart3,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -211,9 +218,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Link to="/kontak">
-                  Hubungi Kami
-                  </Link>
+                  <Link to="/kontak">Hubungi Kami</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/tentang-bssn/profil-organisasi">

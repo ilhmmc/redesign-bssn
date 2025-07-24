@@ -22,50 +22,50 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-import { 
-  Shield, 
-  AlertTriangle, 
-  TrendingUp, 
-  Users, 
+import {
+  Shield,
+  AlertTriangle,
+  TrendingUp,
+  Users,
   Globe,
   Lock,
   Activity,
-  Target
+  Target,
 } from "lucide-react";
 
 // Sample data - dalam implementasi real, ini akan dari API
 const threatData = [
-  { month: 'Jan', malware: 1200, phishing: 800, ddos: 300, resolved: 2100 },
-  { month: 'Feb', malware: 1500, phishing: 950, ddos: 420, resolved: 2650 },
-  { month: 'Mar', malware: 1100, phishing: 1200, ddos: 380, resolved: 2480 },
-  { month: 'Apr', malware: 1800, phishing: 1100, ddos: 560, resolved: 3200 },
-  { month: 'May', malware: 1600, phishing: 1350, ddos: 480, resolved: 3180 },
-  { month: 'Jun', malware: 1400, phishing: 1150, ddos: 520, resolved: 2890 },
+  { month: "Jan", malware: 1200, phishing: 800, ddos: 300, resolved: 2100 },
+  { month: "Feb", malware: 1500, phishing: 950, ddos: 420, resolved: 2650 },
+  { month: "Mar", malware: 1100, phishing: 1200, ddos: 380, resolved: 2480 },
+  { month: "Apr", malware: 1800, phishing: 1100, ddos: 560, resolved: 3200 },
+  { month: "May", malware: 1600, phishing: 1350, ddos: 480, resolved: 3180 },
+  { month: "Jun", malware: 1400, phishing: 1150, ddos: 520, resolved: 2890 },
 ];
 
 const serviceUsageData = [
-  { name: 'Sertifikasi', value: 35, color: '#1e40af' },
-  { name: 'Konsultasi', value: 28, color: '#0891b2' },
-  { name: 'Pelatihan', value: 22, color: '#0d9488' },
-  { name: 'Monitoring', value: 15, color: '#059669' },
+  { name: "Sertifikasi", value: 35, color: "#1e40af" },
+  { name: "Konsultasi", value: 28, color: "#0891b2" },
+  { name: "Pelatihan", value: 22, color: "#0d9488" },
+  { name: "Monitoring", value: 15, color: "#059669" },
 ];
 
 const responseTimeData = [
-  { time: '00:00', critical: 2, high: 8, medium: 15, low: 25 },
-  { time: '04:00', critical: 1, high: 5, medium: 12, low: 20 },
-  { time: '08:00', critical: 4, high: 12, medium: 18, low: 30 },
-  { time: '12:00', critical: 3, high: 10, medium: 16, low: 28 },
-  { time: '16:00', critical: 5, high: 15, medium: 22, low: 35 },
-  { time: '20:00', critical: 2, high: 8, medium: 14, low: 26 },
+  { time: "00:00", critical: 2, high: 8, medium: 15, low: 25 },
+  { time: "04:00", critical: 1, high: 5, medium: 12, low: 20 },
+  { time: "08:00", critical: 4, high: 12, medium: 18, low: 30 },
+  { time: "12:00", critical: 3, high: 10, medium: 16, low: 28 },
+  { time: "16:00", critical: 5, high: 15, medium: 22, low: 35 },
+  { time: "20:00", critical: 2, high: 8, medium: 14, low: 26 },
 ];
 
 const regionalData = [
-  { region: 'Jawa', incidents: 450, protected: 320 },
-  { region: 'Sumatra', incidents: 280, protected: 180 },
-  { region: 'Kalimantan', incidents: 150, protected: 95 },
-  { region: 'Sulawesi', incidents: 120, protected: 85 },
-  { region: 'Papua', incidents: 80, protected: 45 },
-  { region: 'Bali & NT', incidents: 90, protected: 55 },
+  { region: "Jawa", incidents: 450, protected: 320 },
+  { region: "Sumatra", incidents: 280, protected: 180 },
+  { region: "Kalimantan", incidents: 150, protected: 95 },
+  { region: "Sulawesi", incidents: 120, protected: 85 },
+  { region: "Papua", incidents: 80, protected: 45 },
+  { region: "Bali & NT", incidents: 90, protected: 55 },
 ];
 
 const CyberSecurityDashboard = () => {
@@ -80,7 +80,7 @@ const CyberSecurityDashboard = () => {
       bgColor: "bg-red-50",
     },
     {
-      title: "Sistem Terproteksi", 
+      title: "Sistem Terproteksi",
       value: "1,847",
       change: "+8%",
       trend: "up",
@@ -121,11 +121,15 @@ const CyberSecurityDashboard = () => {
                     {stat.title}
                   </p>
                   <p className="text-2xl font-bold">{stat.value}</p>
-                  <p className={`text-xs ${stat.trend === 'up' ? 'text-green-600' : 'text-red-600'}`}>
+                  <p
+                    className={`text-xs ${stat.trend === "up" ? "text-green-600" : "text-red-600"}`}
+                  >
                     {stat.change} dari bulan lalu
                   </p>
                 </div>
-                <div className={`${stat.bgColor} ${stat.color} p-3 rounded-full`}>
+                <div
+                  className={`${stat.bgColor} ${stat.color} p-3 rounded-full`}
+                >
                   <stat.icon className="h-6 w-6" />
                 </div>
               </div>
@@ -297,22 +301,60 @@ const CyberSecurityDashboard = () => {
         <CardContent>
           <div className="space-y-4">
             {[
-              { time: "10:45", type: "threat", message: "Blocked 15 phishing attempts from suspicious IP", severity: "high" },
-              { time: "10:42", type: "alert", message: "New CVE-2024-XXX vulnerability detected in Java framework", severity: "critical" },
-              { time: "10:38", type: "success", message: "Successfully patched 25 systems in Jakarta region", severity: "low" },
-              { time: "10:35", type: "info", message: "Monthly security training completed by 150 participants", severity: "low" },
-              { time: "10:30", type: "threat", message: "DDoS attack mitigated on government portal", severity: "medium" },
+              {
+                time: "10:45",
+                type: "threat",
+                message: "Blocked 15 phishing attempts from suspicious IP",
+                severity: "high",
+              },
+              {
+                time: "10:42",
+                type: "alert",
+                message:
+                  "New CVE-2024-XXX vulnerability detected in Java framework",
+                severity: "critical",
+              },
+              {
+                time: "10:38",
+                type: "success",
+                message: "Successfully patched 25 systems in Jakarta region",
+                severity: "low",
+              },
+              {
+                time: "10:35",
+                type: "info",
+                message:
+                  "Monthly security training completed by 150 participants",
+                severity: "low",
+              },
+              {
+                time: "10:30",
+                type: "threat",
+                message: "DDoS attack mitigated on government portal",
+                severity: "medium",
+              },
             ].map((activity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-gray-50">
-                <div className={`w-2 h-2 rounded-full mt-2 ${
-                  activity.severity === 'critical' ? 'bg-red-500' :
-                  activity.severity === 'high' ? 'bg-orange-500' :
-                  activity.severity === 'medium' ? 'bg-yellow-500' : 'bg-green-500'
-                }`} />
+              <div
+                key={index}
+                className="flex items-start gap-3 p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  className={`w-2 h-2 rounded-full mt-2 ${
+                    activity.severity === "critical"
+                      ? "bg-red-500"
+                      : activity.severity === "high"
+                        ? "bg-orange-500"
+                        : activity.severity === "medium"
+                          ? "bg-yellow-500"
+                          : "bg-green-500"
+                  }`}
+                />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-medium">{activity.message}</p>
-                    <span className="text-xs text-muted-foreground">{activity.time}</span>
+                    <span className="text-xs text-muted-foreground">
+                      {activity.time}
+                    </span>
                   </div>
                 </div>
               </div>

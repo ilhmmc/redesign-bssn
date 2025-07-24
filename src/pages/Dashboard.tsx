@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/30">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-8">
         {/* Header Section */}
         <div className="mb-8">
@@ -23,10 +23,10 @@ const Dashboard = () => {
               Live Data
             </Badge>
           </div>
-          
+
           <p className="text-lg text-muted-foreground max-w-3xl">
-            Monitoring real-time kondisi keamanan siber Indonesia dengan visualisasi data 
-            yang komprehensif dan mudah dipahami.
+            Monitoring real-time kondisi keamanan siber Indonesia dengan
+            visualisasi data yang komprehensif dan mudah dipahami.
           </p>
         </div>
 
@@ -34,11 +34,15 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card className="border-l-4 border-l-blue-500">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Status Sistem</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Status Sistem
+              </CardTitle>
               <Shield className="h-4 w-4 text-blue-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-green-600">Operational</div>
+              <div className="text-2xl font-bold text-green-600">
+                Operational
+              </div>
               <p className="text-xs text-muted-foreground">
                 Semua sistem berjalan normal
               </p>
@@ -47,7 +51,9 @@ const Dashboard = () => {
 
           <Card className="border-l-4 border-l-orange-500">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Threat Level</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Threat Level
+              </CardTitle>
               <TrendingUp className="h-4 w-4 text-orange-500" />
             </CardHeader>
             <CardContent>
