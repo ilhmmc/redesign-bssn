@@ -109,10 +109,10 @@ const Index = () => {
                   size="lg"
                   className="bg-primary hover:bg-primary/90"
                 >
-                  <Link to="/layanan">Jelajahi Layanan</Link>
+                  <Link to="/layanan-aduan/aduan-siber">Layanan Pengaduan</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/tentang-bssn/profil-organisasi">
+                  <Link to="/profil/tentang-bssn">
                     Profil Organisasi
                   </Link>
                 </Button>
@@ -221,7 +221,7 @@ const Index = () => {
                   <Link to="/kontak">Hubungi Kami</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/tentang-bssn/profil-organisasi">
+                  <Link to="/profil/tentang-bssn">
                     Pelajari Tentang BSSN
                   </Link>
                 </Button>

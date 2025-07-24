@@ -363,32 +363,13 @@ const ProfilOrganisasi = () => {
                     <div>
                       <p className="font-medium">Media Sosial:</p>
                       <div className="text-muted-foreground text-sm space-y-1">
-                        <p>@bssn.ri (Instagram)</p>
+                        <p>@bssn_ri (Instagram)</p>
                         <p>@bssn_ri (Twitter)</p>
-                        <p>BSSN RI (Facebook)</p>
+                        <p>Badan Siber dan Sandi Negara (Facebook)</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-
-              <div className="text-center mt-12">
-                <div className="space-y-4">
-                  <p className="text-muted-foreground">
-                    Pelajari lebih lanjut tentang layanan dan program BSSN
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button
-                      asChild
-                      className="bg-government-600 hover:bg-government-700"
-                    >
-                      <Link to="/layanan">Jelajahi Layanan</Link>
-                    </Button>
-                    <Button asChild variant="outline">
-                      <Link to="/tentang-bssn">Kembali ke Tentang BSSN</Link>
-                    </Button>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

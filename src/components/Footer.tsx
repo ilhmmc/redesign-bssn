@@ -59,14 +59,14 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Facebook, href: "https://facebook.com/bssn.ri", label: "Facebook" },
+  { icon: Facebook, href: "https://facebook.com/badansiberdansandinegara", label: "Facebook" },
   { icon: Twitter, href: "https://twitter.com/bssn_ri", label: "Twitter" },
   {
     icon: Instagram,
-    href: "https://instagram.com/bssn.ri",
+    href: "https://instagram.com/bssn_ri",
     label: "Instagram",
   },
-  { icon: Youtube, href: "https://youtube.com/@bssnri", label: "YouTube" },
+  { icon: Youtube, href: "https://youtube.com/@badansiberdansandinegara_ri", label: "YouTube" },
 ];
 
 const Footer = () => {
