@@ -22,7 +22,7 @@ import {
 import { cn } from "@/lib/utils";
 
 // =======================================================================
-// STRUKTUR NAVIGASI 
+// STRUKTUR NAVIGASI
 // =======================================================================
 const navigationItems = [
   {
@@ -126,8 +126,7 @@ const navigationItems = [
       {
         title: "Penerimaan PPPK ",
         href: "/karir/pppk", // Halaman baru
-        description:
-          "Informasi seleksi PPPK.",
+        description: "Informasi seleksi PPPK.",
       },
       {
         title: "Penerimaan Poltek SSN",
@@ -187,35 +186,53 @@ const Navigation = () => {
             </NavigationMenuItem>
             {navigationItems.map((item) => (
               <NavigationMenuItem key={item.title}>
-                <NavigationMenuTrigger className="h-10">
-                  <item.icon className="mr-2 h-4 w-4" />
-                  {item.title}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {item.children.map((child) => (
-                      <li key={child.title}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={child.href}
-                            className={cn(
-                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                              location.pathname === child.href &&
-                                "bg-accent text-accent-foreground",
-                            )}
-                          >
-                            <div className="text-sm font-medium leading-none">
-                              {child.title}
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {child.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                {item.href ? (
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to={item.href}
+                      className={cn(
+                        "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                        location.pathname === item.href &&
+                          "bg-accent text-accent-foreground",
+                      )}
+                    >
+                      <item.icon className="mr-2 h-4 w-4" />
+                      {item.title}
+                    </Link>
+                  </NavigationMenuLink>
+                ) : (
+                  <>
+                    <NavigationMenuTrigger className="h-10">
+                      <item.icon className="mr-2 h-4 w-4" />
+                      {item.title}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                        {item.children?.map((child) => (
+                          <li key={child.title}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={child.href}
+                                className={cn(
+                                  "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                  location.pathname === child.href &&
+                                    "bg-accent text-accent-foreground",
+                                )}
+                              >
+                                <div className="text-sm font-medium leading-none">
+                                  {child.title}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                  {child.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </>
+                )}
               </NavigationMenuItem>
             ))}
             <NavigationMenuItem>
@@ -263,27 +280,44 @@ const Navigation = () => {
               </Link>
               {navigationItems.map((item) => (
                 <div key={item.title}>
-                  <div className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-foreground">
-                    <item.icon className="h-5 w-5" />
-                    <span>{item.title}</span>
-                  </div>
-                  <div className="ml-6 mt-2 flex flex-col space-y-1 border-l pl-4">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.title}
-                        to={child.href}
-                        className={cn(
-                          "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
-                          location.pathname === child.href
-                            ? "bg-accent text-accent-foreground"
-                            : "text-muted-foreground",
-                        )}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {child.title}
-                      </Link>
-                    ))}
-                  </div>
+                  {item.href ? (
+                    <Link
+                      to={item.href}
+                      className={cn(
+                        "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                        location.pathname === item.href &&
+                          "bg-accent text-accent-foreground",
+                      )}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <item.icon className="h-5 w-5" />
+                      <span>{item.title}</span>
+                    </Link>
+                  ) : (
+                    <>
+                      <div className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-foreground">
+                        <item.icon className="h-5 w-5" />
+                        <span>{item.title}</span>
+                      </div>
+                      <div className="ml-6 mt-2 flex flex-col space-y-1 border-l pl-4">
+                        {item.children?.map((child) => (
+                          <Link
+                            key={child.title}
+                            to={child.href}
+                            className={cn(
+                              "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
+                              location.pathname === child.href
+                                ? "bg-accent text-accent-foreground"
+                                : "text-muted-foreground",
+                            )}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {child.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
               ))}
               <Link

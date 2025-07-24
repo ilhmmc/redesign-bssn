@@ -14,10 +14,10 @@ import {
 
 const footerLinks = {
   profil: [
-    { title: "Tentang BSSN", href: "/tentang-bssn/profil-organisasi" },
-    { title: "Tugas, Fungsi, & Strategi", href: "/tentang-bssn/tugas-fungsi" },
-    { title: "Struktur & Pejabat", href: "/tentang-bssn/pimpinan" },
-    { title: "Akuntabilitas & Kinerja", href: "/tentang-bssn/pimpinan" },
+    { title: "Tentang BSSN", href: "/profil/tentang-bssn" },
+    { title: "Tugas, Fungsi, & Strategi", href: "/profil/tugas-fungsi-strategi" },
+    { title: "Struktur & Pejabat", href: "/profil/struktur-pejabat" },
+    { title: "Akuntabilitas & Kinerja", href: "/profil/akuntabilitas-kinerja" },
   ],
   layanan: [
     { title: "Keamanan Siber", href: "/layanan/keamanan-siber" },

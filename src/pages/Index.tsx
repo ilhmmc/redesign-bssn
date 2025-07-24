@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
+import CyberSecurityDashboard from "@/components/CyberSecurityDashboard";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,7 +11,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Lock, Users, AlertTriangle, ArrowRight } from "lucide-react";
+import {
+  Shield,
+  Lock,
+  Users,
+  AlertTriangle,
+  ArrowRight,
+  BarChart3,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -132,6 +140,27 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Dashboard Section */}
+        <section className="py-20 bg-gradient-to-b from-slate-50 to-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center space-y-4 mb-12">
+              <Badge className="bg-blue-100 text-blue-700 border-blue-200">
+                <BarChart3 className="mr-2 h-4 w-4" />
+                Dashboard Keamanan Siber
+              </Badge>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Monitoring <span className="text-blue-600">Real-Time</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Pantau kondisi keamanan siber Indonesia secara langsung dengan
+                visualisasi data yang komprehensif dan mudah dipahami
+              </p>
+            </div>
+
+            <CyberSecurityDashboard />
+          </div>
+        </section>
+
         {/* Services Section */}
         <section className="py-20 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto px-4">
@@ -189,9 +218,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Link to="/kontak">
-                  Hubungi Kami
-                  </Link>
+                  <Link to="/kontak">Hubungi Kami</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/tentang-bssn/profil-organisasi">

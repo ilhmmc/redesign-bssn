@@ -59,6 +59,7 @@ import PenerimaanSSN from "./pages/PenerimaanSSN";
 import SeleksiJPT from "./pages/SeleksiJPT";
 import SeleksiJPTMadya from "./pages/SeleksiJPTMadya";
 import SeleksiJPTPratama from "./pages/SeleksiJPTPratama";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -70,10 +71,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route
-            path="/profil/tentang-bssn"
-            element={<ProfilOrganisasi />}
-          />
+          <Route path="/profil/tentang-bssn" element={<ProfilOrganisasi />} />
           <Route
             path="/perjanjian-kinerja/2024"
             element={<PerjanjianKinerja2024 />}
@@ -82,7 +80,10 @@ const App = () => (
             path="/perjanjian-kinerja/2023"
             element={<PerjanjianKinerja2023 />}
           />
-          <Route path="/profil/tugas-fungsi-strategi" element={<TugasFungsi />} />
+          <Route
+            path="/profil/tugas-fungsi-strategi"
+            element={<TugasFungsi />}
+          />
           <Route path="/karir/CPNS" element={<PenerimaanCPNS />} />
           <Route path="/karir/pppk" element={<PenerimaanPPPK />} />
           <Route path="/karir/poltek-ssn" element={<PenerimaanSSN />} />
@@ -224,6 +225,7 @@ const App = () => (
             path="/layanan-aduan/alat-direktori-profesional"
             element={<AlatDirektoriProfesional />}
           />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
