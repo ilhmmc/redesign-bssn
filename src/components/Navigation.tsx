@@ -194,35 +194,53 @@ const Navigation = () => {
             </NavigationMenuItem>
             {navigationItems.map((item) => (
               <NavigationMenuItem key={item.title}>
-                <NavigationMenuTrigger className="h-10">
-                  <item.icon className="mr-2 h-4 w-4" />
-                  {item.title}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {item.children.map((child) => (
-                      <li key={child.title}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to={child.href}
-                            className={cn(
-                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                              location.pathname === child.href &&
-                                "bg-accent text-accent-foreground",
-                            )}
-                          >
-                            <div className="text-sm font-medium leading-none">
-                              {child.title}
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              {child.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                {item.href ? (
+                  <NavigationMenuLink asChild>
+                    <Link
+                      to={item.href}
+                      className={cn(
+                        "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                        location.pathname === item.href &&
+                          "bg-accent text-accent-foreground",
+                      )}
+                    >
+                      <item.icon className="mr-2 h-4 w-4" />
+                      {item.title}
+                    </Link>
+                  </NavigationMenuLink>
+                ) : (
+                  <>
+                    <NavigationMenuTrigger className="h-10">
+                      <item.icon className="mr-2 h-4 w-4" />
+                      {item.title}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                        {item.children?.map((child) => (
+                          <li key={child.title}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={child.href}
+                                className={cn(
+                                  "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                  location.pathname === child.href &&
+                                    "bg-accent text-accent-foreground",
+                                )}
+                              >
+                                <div className="text-sm font-medium leading-none">
+                                  {child.title}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                  {child.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </>
+                )}
               </NavigationMenuItem>
             ))}
             <NavigationMenuItem>
