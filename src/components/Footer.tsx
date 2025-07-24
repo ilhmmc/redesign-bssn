@@ -13,10 +13,11 @@ import {
 } from "lucide-react";
 
 const footerLinks = {
-  tentang: [
-    { title: "Profil Organisasi", href: "/tentang-bssn/profil-organisasi" },
-    { title: "Tugas & Fungsi", href: "/tentang-bssn/tugas-fungsi" },
-    { title: "Pimpinan", href: "/tentang-bssn/pimpinan" },
+  profil: [
+    { title: "Tentang BSSN", href: "/tentang-bssn/profil-organisasi" },
+    { title: "Tugas, Fungsi, & Strategi", href: "/tentang-bssn/tugas-fungsi" },
+    { title: "Struktur & Pejabat", href: "/tentang-bssn/pimpinan" },
+    { title: "Akuntabilitas & Kinerja", href: "/tentang-bssn/pimpinan" },
   ],
   layanan: [
     { title: "Keamanan Siber", href: "/layanan/keamanan-siber" },
@@ -109,9 +110,9 @@ const Footer = () => {
 
           {/* Links Sections */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Tentang BSSN</h3>
+            <h3 className="font-semibold text-white mb-4">Profil</h3>
             <ul className="space-y-2">
-              {footerLinks.tentang.map((link, index) => (
+              {footerLinks.profil.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}

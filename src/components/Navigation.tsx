@@ -31,22 +31,22 @@ const navigationItems = [
     children: [
       {
         title: "Tentang BSSN",
-        href: "/tentang-bssn/profil-organisasi",
+        href: "/profil/tentang-bssn",
         description: "Visi, Misi, Sejarah, dan informasi dasar lembaga.",
       },
       {
         title: "Struktur & Pejabat",
-        href: "/tentang-bssn/pimpinan",
+        href: "/profil/struktur-pejabat",
         description: "Bagan organisasi dan profil pimpinan BSSN.",
       },
       {
         title: "Tugas, Fungsi & Strategi",
-        href: "/tentang-bssn/tugas-fungsi",
+        href: "/profil/tugas-fungsi-strategi",
         description: "Tugas pokok, fungsi, dan arah kebijakan siber nasional.",
       },
       {
         title: "Akuntabilitas & Kinerja",
-        href: "/informasi-publik/kinerja", // Halaman baru
+        href: "/profil/akuntabilitas-kinerja",
         description: "Laporan kinerja, E-LHKPN, dan survei kepuasan.",
       },
     ],

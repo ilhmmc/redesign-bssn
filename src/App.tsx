@@ -71,7 +71,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route
-            path="/tentang-bssn/profil-organisasi"
+            path="/profil/tentang-bssn"
             element={<ProfilOrganisasi />}
           />
           <Route
@@ -82,7 +82,7 @@ const App = () => (
             path="/perjanjian-kinerja/2023"
             element={<PerjanjianKinerja2023 />}
           />
-          <Route path="/tentang-bssn/tugas-fungsi" element={<TugasFungsi />} />
+          <Route path="/profil/tugas-fungsi-strategi" element={<TugasFungsi />} />
           <Route path="/karir/CPNS" element={<PenerimaanCPNS />} />
           <Route path="/karir/pppk" element={<PenerimaanPPPK />} />
           <Route path="/karir/poltek-ssn" element={<PenerimaanSSN />} />
@@ -90,15 +90,15 @@ const App = () => (
           <Route path="/karir/jpt/madya" element={<SeleksiJPTMadya />} />
           <Route path="/karir/jpt/pratama" element={<SeleksiJPTPratama />} />
           <Route
-            path="/tentang-bssn/strategi-keamanan"
+            path="/profil/strategi-keamanan"
             element={<StrategiKeamanan />}
           />
-          <Route path="/tentang-bssn/pimpinan" element={<Pimpinan />} />
+          <Route path="/profil/struktur-pejabat" element={<Pimpinan />} />
           <Route path="/rencana-strategis" element={<RencanaStrategis />} />
           <Route path="/perjanjian-kinerja" element={<PerjanjianKinerja />} />
           <Route path="/laporan-kinerja" element={<LaporanKinerja />} />
           <Route
-            path="/informasi-publik/kinerja"
+            path="/profil/akuntabilitas-kinerja"
             element={<AkuntabilitasKinerja />}
           />
           <Route path="/kontak" element={<Kontak />} />
