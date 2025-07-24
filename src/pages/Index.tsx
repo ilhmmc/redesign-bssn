@@ -151,15 +151,6 @@ const Index = () => {
             </div>
 
             <CyberSecurityDashboard />
-
-            <div className="text-center mt-8">
-              <Button asChild size="lg" variant="outline">
-                <Link to="/dashboard">
-                  Lihat Dashboard Lengkap
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
           </div>
         </section>
 
