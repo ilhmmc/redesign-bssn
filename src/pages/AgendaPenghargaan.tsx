@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import {
   Calendar,
+  Scale,
   Search,
   Filter,
   Clock,
@@ -230,6 +231,9 @@ const AgendaPenghargaan = () => {
         {/* Header */}
         <div className="flex justify-center">
           <div className="mb-8 text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-government-100 rounded-full mb-6">
+              <Award className="w-8 h-8 text-government-600" />
+            </div>
             <h1 className="text-4xl font-bold text-foreground mb-2">
               Agenda & Penghargaan BSSN
             </h1>
