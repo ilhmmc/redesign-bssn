@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
+import CyberSecurityDashboard from "@/components/CyberSecurityDashboard";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Lock, Users, AlertTriangle, ArrowRight } from "lucide-react";
+import { Shield, Lock, Users, AlertTriangle, ArrowRight, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
