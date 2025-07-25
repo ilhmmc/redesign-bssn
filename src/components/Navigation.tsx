@@ -142,6 +142,12 @@ const navigationItems = [
   },
 ];
 
+// Helper function to check if a parent menu should be active
+const isParentMenuActive = (item: any, currentPath: string) => {
+  if (!item.children) return false;
+  return item.children.some((child: any) => currentPath.startsWith(child.href));
+};
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
