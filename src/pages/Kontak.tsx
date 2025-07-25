@@ -723,7 +723,9 @@ const Kontak = () => {
                       Tim Tanggap Insiden Siber Sektor Administrasi Pemerintahan
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/layanan-aduan/gov-csirt-indonesia">Pelajari</Link>
+                      <Link to="/layanan-aduan/gov-csirt-indonesia">
+                        Pelajari
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
