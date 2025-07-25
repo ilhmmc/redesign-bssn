@@ -393,14 +393,13 @@ const JDIH = () => {
                 <div>
                   <strong>Alamat:</strong>
                   <p className="text-muted-foreground">
-                    Jl. Raya Muchtar No.70, Bojongsari Lama, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
+                    Jl. Raya Muchtar No.70, Bojongsari Lama, Kec. Bojongsari,
+                    Kota Depok, Jawa Barat 16516
                   </p>
                 </div>
                 <div>
                   <strong>Email:</strong>
-                  <p className="text-muted-foreground">
-                    jdih@bssn.go.id
-                  </p>
+                  <p className="text-muted-foreground">jdih@bssn.go.id</p>
                 </div>
                 <div>
                   <strong>Telepon:</strong>

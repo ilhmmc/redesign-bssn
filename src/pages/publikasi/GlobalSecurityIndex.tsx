@@ -339,7 +339,10 @@ const GlobalSecurityIndex = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-2 lg:ml-6">
-                    <Badge variant="secondary" className="flex items-center gap-1 w-fit">
+                    <Badge
+                      variant="secondary"
+                      className="flex items-center gap-1 w-fit"
+                    >
                       <BarChart3 className="w-3 h-3" />
                       {report.pages} halaman
                     </Badge>
