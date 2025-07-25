@@ -294,7 +294,7 @@ const Publikasi = () => {
                       Hubungi Kami
                     </Button>
                   </Link>
-                  <Link to="/informasi-regulasi/panduan-tips">
+                  <Link to="/informasi-regulasi/publikasi/panduan-keamanan">
                     <Button variant="outline" size="lg">
                       Lihat Panduan
                     </Button>
