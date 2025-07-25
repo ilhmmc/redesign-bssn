@@ -125,17 +125,17 @@ const navigationItems = [
       },
       {
         title: "Penerimaan PPPK",
-        href: "/karir/pppk", 
+        href: "/karir/pppk",
         description: "Informasi seleksi PPPK.",
       },
       {
         title: "Penerimaan Poltek SSN",
-        href: "/karir/poltek-ssn", 
+        href: "/karir/poltek-ssn",
         description: "Seleksi Penerimaan Taruna Baru Poltek SSN.",
       },
       {
         title: "Seleksi Jabatan Pimpinan (JPT)",
-        href: "/karir/jpt", 
+        href: "/karir/jpt",
         description: "Informasi seleksi Jabatan Pimpinan Tinggi.",
       },
     ],
@@ -212,7 +212,7 @@ const Navigation = () => {
                       className={cn(
                         "h-10",
                         isParentMenuActive(item, location.pathname) &&
-                          "bg-accent text-accent-foreground"
+                          "bg-accent text-accent-foreground",
                       )}
                     >
                       <item.icon className="mr-2 h-4 w-4" />
@@ -307,12 +307,14 @@ const Navigation = () => {
                     </Link>
                   ) : (
                     <>
-                      <div className={cn(
-                        "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium",
-                        isParentMenuActive(item, location.pathname)
-                          ? "bg-accent text-accent-foreground"
-                          : "text-foreground"
-                      )}>
+                      <div
+                        className={cn(
+                          "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium",
+                          isParentMenuActive(item, location.pathname)
+                            ? "bg-accent text-accent-foreground"
+                            : "text-foreground",
+                        )}
+                      >
                         <item.icon className="h-5 w-5" />
                         <span>{item.title}</span>
                       </div>
