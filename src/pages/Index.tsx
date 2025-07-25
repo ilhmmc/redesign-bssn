@@ -504,7 +504,7 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="relative max-w-2xl mx-auto">
+              <div className="relative max-w-4xl mx-auto">
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-center space-x-4 mb-6">
