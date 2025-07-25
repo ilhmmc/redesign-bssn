@@ -506,6 +506,14 @@ const Index = () => {
 
               <div className="relative max-w-4xl mx-auto">
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                  {/* YouTube Channel Image */}
+                  <div className="relative h-48 md:h-64 overflow-hidden">
+                    <img
+                      src="/youtube/youtube.png"
+                      alt="Channel YouTube BSSN"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <CardContent className="p-6">
                     <div className="flex items-center justify-center space-x-4 mb-6">
                       <div className="bg-red-600 p-3 rounded-full">
