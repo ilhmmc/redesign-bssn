@@ -339,7 +339,11 @@ const Navigation = () => {
               ))}
               <Link
                 to="/kontak"
-                className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                className={cn(
+                  "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                  location.pathname === "/kontak" &&
+                    "bg-accent text-accent-foreground",
+                )}
                 onClick={() => setIsOpen(false)}
               >
                 <Contact className="h-5 w-5" />
