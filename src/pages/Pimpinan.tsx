@@ -27,7 +27,7 @@ const Pimpinan = () => {
   const [imageErrors, setImageErrors] = useState(new Set());
 
   const handleImageError = (leaderId) => {
-    setImageErrors(prev => new Set(prev).add(leaderId));
+    setImageErrors((prev) => new Set(prev).add(leaderId));
   };
   const leadership = [
     {
@@ -477,12 +477,10 @@ const Pimpinan = () => {
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700"
                 >
-                  <Link to="/tentang-bssn/profil-organisasi">
-                    Profil Organisasi
-                  </Link>
+                  <Link to="/profil/tentang-bssn">Profil Organisasi</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/tentang-bssn/tugas-fungsi">Tugas & Fungsi</Link>
+                  <Link to="/profil/tugas-fungsi-strategi">Tugas & Fungsi</Link>
                 </Button>
               </div>
             </div>

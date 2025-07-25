@@ -344,15 +344,10 @@ const JDIH = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-2 lg:ml-6">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex items-center gap-2"
-                        onClick={() => window.open(doc.downloadUrl, "_blank")}
-                      >
-                        <Download className="w-4 h-4" />
-                        Unduh PDF
-                      </Button>
+                      <Badge variant="secondary" className="w-fit">
+                        <FileText className="w-3 h-3 mr-1" />
+                        Dokumen PDF
+                      </Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -398,14 +393,13 @@ const JDIH = () => {
                 <div>
                   <strong>Alamat:</strong>
                   <p className="text-muted-foreground">
-                    Jl. Raya Muchtar No.70, Bojongsari Lama, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
+                    Jl. Raya Muchtar No.70, Bojongsari Lama, Kec. Bojongsari,
+                    Kota Depok, Jawa Barat 16516
                   </p>
                 </div>
                 <div>
                   <strong>Email:</strong>
-                  <p className="text-muted-foreground">
-                    jdih@bssn.go.id
-                  </p>
+                  <p className="text-muted-foreground">jdih@bssn.go.id</p>
                 </div>
                 <div>
                   <strong>Telepon:</strong>

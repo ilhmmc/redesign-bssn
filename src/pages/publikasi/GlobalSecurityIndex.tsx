@@ -339,15 +339,16 @@ const GlobalSecurityIndex = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-2 lg:ml-6">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex items-center gap-2"
-                      onClick={() => window.open(report.downloadUrl, "_blank")}
+                    <Badge
+                      variant="secondary"
+                      className="flex items-center gap-1 w-fit"
                     >
-                      <Download className="w-4 h-4" />
-                      Unduh Laporan
-                    </Button>
+                      <BarChart3 className="w-3 h-3" />
+                      {report.pages} halaman
+                    </Badge>
+                    <Badge variant="outline" className="w-fit">
+                      {report.size}
+                    </Badge>
                   </div>
                 </div>
               </CardContent>

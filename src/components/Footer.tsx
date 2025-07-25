@@ -59,14 +59,22 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Facebook, href: "https://facebook.com/badansiberdansandinegara", label: "Facebook" },
+  {
+    icon: Facebook,
+    href: "https://facebook.com/badansiberdansandinegara",
+    label: "Facebook",
+  },
   { icon: Twitter, href: "https://twitter.com/bssn_ri", label: "Twitter" },
   {
     icon: Instagram,
     href: "https://instagram.com/bssn_ri",
     label: "Instagram",
   },
-  { icon: Youtube, href: "https://youtube.com/@badansiberdansandinegara_ri", label: "YouTube" },
+  {
+    icon: Youtube,
+    href: "https://youtube.com/@badansiberdansandinegara_ri",
+    label: "YouTube",
+  },
 ];
 
 const Footer = () => {
@@ -225,7 +233,7 @@ const Footer = () => {
                 asChild
                 className="border-slate-700 text-slate-300 hover:bg-slate-800"
               >
-                <Link to="/lapor">
+                <Link to="/layanan-aduan/aduan-siber">
                   Lapor Insiden
                   <ExternalLink className="h-4 w-4 ml-2" />
                 </Link>
@@ -244,16 +252,10 @@ const Footer = () => {
             </div>
             <div className="flex space-x-4">
               <Link
-                to="/kebijakan-privasi"
+                to="/kontak"
                 className="text-xs text-slate-400 hover:text-blue-400 transition-colors"
               >
-                Kebijakan Privasi
-              </Link>
-              <Link
-                to="/syarat-ketentuan"
-                className="text-xs text-slate-400 hover:text-blue-400 transition-colors"
-              >
-                Syarat & Ketentuan
+                Hubungi Kami
               </Link>
             </div>
           </div>
