@@ -68,7 +68,7 @@ const HeroCarousel = () => {
 
     const interval = setInterval(() => {
       scrollNext();
-    }, 3000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [api, isPlaying, scrollNext]);
