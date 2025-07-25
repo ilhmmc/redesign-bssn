@@ -1,0 +1,76 @@
+<div className="relative max-w-4xl mx-auto">
+  <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+    <CardContent className="p-0">
+      {/* YouTube Channel Image */}
+      <div className="relative h-48 md:h-64 overflow-hidden">
+        <img 
+          src="/youtube/youtube.png" 
+          alt="Channel YouTube BSSN" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute bottom-4 left-4 right-4">
+          <div className="flex items-center space-x-4">
+            <div className="bg-red-600 p-3 rounded-full">
+              <Globe className="h-8 w-8 text-white" />
+            </div>
+            <div className="text-left text-white">
+              <h3 className="text-xl font-bold">
+                Badan Siber dan Sandi Negara RI
+              </h3>
+              <p className="text-white/90">
+                Channel YouTube Resmi BSSN
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-center">
+          <div>
+            <div className="text-2xl font-bold text-red-600">
+              100+
+            </div>
+            <div className="text-sm text-muted-foreground">
+              Video
+            </div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-red-600">
+              10K+
+            </div>
+            <div className="text-sm text-muted-foreground">
+              Subscriber
+            </div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-red-600">
+              500K+
+            </div>
+            <div className="text-sm text-muted-foreground">
+              Views
+            </div>
+          </div>
+        </div>
+
+        <Button 
+          asChild 
+          size="lg" 
+          className="w-full bg-red-600 hover:bg-red-700 text-white"
+        >
+          <a 
+            href="https://www.youtube.com/@badansiberdansandinegara_ri" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2"
+          >
+            <Globe className="h-5 w-5" />
+            Kunjungi Channel YouTube
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </Button>
+      </div>
+    </CardContent>
+  </Card>
+</div>
