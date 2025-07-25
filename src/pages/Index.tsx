@@ -462,29 +462,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-50 to-cyan-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h2 className="text-3xl font-bold">
-                Butuh Bantuan Keamanan Siber?
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Tim ahli BSSN siap membantu Anda dengan layanan konsultasi dan
-                dukungan teknis untuk mengatasi tantangan keamanan siber
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Link to="/kontak">Hubungi Kami</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link to="/profil/tentang-bssn">Pelajari Tentang BSSN</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* YouTube Channel Section */}
         <section className="py-20 bg-gradient-to-b from-background to-slate-50">
           <div className="container mx-auto px-4">
@@ -507,7 +484,7 @@ const Index = () => {
               <div className="relative max-w-4xl mx-auto">
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                   {/* YouTube Channel Image */}
-                  <div className="relative h-48 md:h-64 overflow-hidden">
+                  <div className="relative h-48 md:h-96 overflow-hidden">
                     <img
                       src="/youtube/youtube.png"
                       alt="Channel YouTube BSSN"
@@ -532,7 +509,7 @@ const Index = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-center">
                       <div>
                         <div className="text-2xl font-bold text-red-600">
-                          100+
+                          600+
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Video
@@ -540,7 +517,7 @@ const Index = () => {
                       </div>
                       <div>
                         <div className="text-2xl font-bold text-red-600">
-                          10K+
+                          19K+
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Subscriber
@@ -548,7 +525,7 @@ const Index = () => {
                       </div>
                       <div>
                         <div className="text-2xl font-bold text-red-600">
-                          500K+
+                          1,3M+
                         </div>
                         <div className="text-sm text-muted-foreground">
                           Views
@@ -606,6 +583,29 @@ const Index = () => {
                     </p>
                   </CardContent>
                 </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-50 to-cyan-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h2 className="text-3xl font-bold">
+                Butuh Bantuan Keamanan Siber?
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Tim ahli BSSN siap membantu Anda dengan layanan konsultasi dan
+                dukungan teknis untuk mengatasi tantangan keamanan siber
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Link to="/kontak">Hubungi Kami</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/profil/tentang-bssn">Pelajari Tentang BSSN</Link>
+                </Button>
               </div>
             </div>
           </div>
