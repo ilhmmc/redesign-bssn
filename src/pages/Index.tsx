@@ -477,6 +477,111 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* YouTube Channel Section */}
+        <section className="py-20 bg-gradient-to-b from-background to-slate-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <div className="space-y-4">
+                <Badge className="bg-red-100 text-red-700 border-red-200">
+                  <Globe className="mr-2 h-4 w-4" />
+                  Channel YouTube BSSN
+                </Badge>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                  Ikuti <span className="text-red-600">Channel YouTube</span> Kami
+                </h2>
+                <p className="text-xl text-muted-foreground">
+                  Dapatkan informasi terbaru, edukasi keamanan siber, dan konten edukatif
+                  lainnya melalui channel YouTube resmi BSSN
+                </p>
+              </div>
+
+              <div className="relative max-w-2xl mx-auto">
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-center space-x-4 mb-6">
+                      <div className="bg-red-600 p-3 rounded-full">
+                        <Globe className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="text-left">
+                        <h3 className="text-xl font-bold">
+                          Badan Siber dan Sandi Negara RI
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Channel YouTube Resmi BSSN
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-red-600">100+</div>
+                        <div className="text-sm text-muted-foreground">Video</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-red-600">10K+</div>
+                        <div className="text-sm text-muted-foreground">Subscriber</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-red-600">500K+</div>
+                        <div className="text-sm text-muted-foreground">Views</div>
+                      </div>
+                    </div>
+
+                    <Button
+                      asChild
+                      size="lg"
+                      className="w-full bg-red-600 hover:bg-red-700 text-white"
+                    >
+                      <a
+                        href="https://www.youtube.com/@badansiberdansandinegara_ri"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <Globe className="h-5 w-5" />
+                        Kunjungi Channel YouTube
+                        <ArrowRight className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-12">
+                <Card className="text-center">
+                  <CardContent className="p-6">
+                    <BookOpen className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+                    <h4 className="font-semibold mb-2">Edukasi Keamanan</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Video edukasi dan tips keamanan siber untuk masyarakat
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center">
+                  <CardContent className="p-6">
+                    <Globe className="h-8 w-8 text-green-600 mx-auto mb-4" />
+                    <h4 className="font-semibold mb-2">Berita Terkini</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Update terbaru tentang keamanan siber dan kegiatan BSSN
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center">
+                  <CardContent className="p-6">
+                    <Users className="h-8 w-8 text-purple-600 mx-auto mb-4" />
+                    <h4 className="font-semibold mb-2">Webinar & Event</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Liputan webinar, seminar, dan acara keamanan siber
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
