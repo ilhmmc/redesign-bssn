@@ -717,13 +717,13 @@ const Kontak = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <Card className="text-center group hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
-                    <Headphones className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Konsultasi</h3>
+                    <Shield className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Gov-CSIRT Indonesia</h3>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Layanan konsultasi keamanan siber
+                      Tim Tanggap Insiden Siber Sektor Administrasi Pemerintahan
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/layanan/konsultasi">Pelajari</Link>
+                      <Link to="/layanan-aduan/gov-csirt-indonesia">Pelajari</Link>
                     </Button>
                   </CardContent>
                 </Card>
