@@ -225,7 +225,7 @@ const Footer = () => {
                 asChild
                 className="border-slate-700 text-slate-300 hover:bg-slate-800"
               >
-                <Link to="/lapor">
+                <Link to="/layanan-aduan/aduan-siber">
                   Lapor Insiden
                   <ExternalLink className="h-4 w-4 ml-2" />
                 </Link>
