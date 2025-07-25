@@ -20,6 +20,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
   Phone,
   Mail,
   MapPin,
@@ -30,10 +37,48 @@ import {
   Building,
   Globe,
   Headphones,
+  CheckCircle,
+  XCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  organization: string;
+  reportType: string;
+  subject: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  organization?: string;
+  reportType?: string;
+  subject?: string;
+  message?: string;
+}
 
 const Kontak = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    organization: '',
+    reportType: '',
+    subject: '',
+    message: '',
+  });
+
+  const [formErrors, setFormErrors] = useState<FormErrors>({});
+  const [showModal, setShowModal] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const contactInfo = {
     name: "BADAN SIBER DAN SANDI NEGARA",
     address: "Jalan Raya Muchtar 70, Bojong Sari, Depok, Jawa Barat – 16516",
@@ -93,6 +138,113 @@ const Kontak = () => {
       red: "bg-red-100 text-red-700 border-red-200",
     };
     return colors[color as keyof typeof colors] || colors.blue;
+  };
+
+  const validateForm = (): boolean => {
+    const errors: FormErrors = {};
+    let isValid = true;
+
+    // Validate name
+    if (!formData.name.trim()) {
+      errors.name = 'Nama lengkap harus diisi';
+      isValid = false;
+    } else if (formData.name.trim().length < 2) {
+      errors.name = 'Nama harus minimal 2 karakter';
+      isValid = false;
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      errors.email = 'Email harus diisi';
+      isValid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = 'Format email tidak valid';
+      isValid = false;
+    }
+
+    // Validate phone
+    const phoneRegex = /^(\+62|62|0)[\s\-]?\d{3,4}[\s\-]?\d{3,4}[\s\-]?\d{3,4}$/;
+    if (!formData.phone.trim()) {
+      errors.phone = 'Nomor telepon harus diisi';
+      isValid = false;
+    } else if (!phoneRegex.test(formData.phone.replace(/[\s\-]/g, ''))) {
+      errors.phone = 'Format nomor telepon tidak valid';
+      isValid = false;
+    }
+
+    // Validate organization
+    if (!formData.organization.trim()) {
+      errors.organization = 'Organisasi/Instansi harus diisi';
+      isValid = false;
+    }
+
+    // Validate report type
+    if (!formData.reportType) {
+      errors.reportType = 'Jenis laporan harus dipilih';
+      isValid = false;
+    }
+
+    // Validate subject
+    if (!formData.subject.trim()) {
+      errors.subject = 'Subjek harus diisi';
+      isValid = false;
+    } else if (formData.subject.trim().length < 5) {
+      errors.subject = 'Subjek harus minimal 5 karakter';
+      isValid = false;
+    }
+
+    // Validate message
+    if (!formData.message.trim()) {
+      errors.message = 'Deskripsi detail harus diisi';
+      isValid = false;
+    } else if (formData.message.trim().length < 20) {
+      errors.message = 'Deskripsi harus minimal 20 karakter';
+      isValid = false;
+    }
+
+    setFormErrors(errors);
+    return isValid;
+  };
+
+  const handleInputChange = (field: keyof FormData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (formErrors[field]) {
+      setFormErrors(prev => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    if (validateForm()) {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setSubmitStatus('success');
+      setShowModal(true);
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        organization: '',
+        reportType: '',
+        subject: '',
+        message: '',
+      });
+    } else {
+      setSubmitStatus('error');
+      setShowModal(true);
+    }
+
+    setIsSubmitting(false);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSubmitStatus(null);
   };
 
   return (
@@ -338,99 +490,174 @@ const Kontak = () => {
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="name">Nama Lengkap</Label>
-                          <Input
-                            id="name"
-                            placeholder="Masukkan nama lengkap"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="email">Email</Label>
-                          <Input
-                            id="email"
-                            type="email"
-                            placeholder="nama@contoh.com"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="phone">Nomor Telepon</Label>
-                          <Input
-                            id="phone"
-                            type="tel"
-                            placeholder="+62 xxx-xxxx-xxxx"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="organization">
-                            Organisasi/Instansi
-                          </Label>
-                          <Input
-                            id="organization"
-                            placeholder="Nama organisasi"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="report-type">Jenis Laporan</Label>
-                        <Select>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Pilih jenis laporan" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {reportTypes.map((type, index) => (
-                              <SelectItem
-                                key={index}
-                                value={type.toLowerCase().replace(/ /g, "-")}
-                              >
-                                {type}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="subject">Subjek</Label>
-                        <Input
-                          id="subject"
-                          placeholder="Ringkasan singkat masalah atau pertanyaan"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="message">Deskripsi Detail</Label>
-                        <Textarea
-                          id="message"
-                          placeholder="Jelaskan secara detail masalah, insiden, atau pertanyaan Anda..."
-                          rows={6}
-                        />
-                      </div>
-
-                      <div className="space-y-4">
-                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                          <div className="flex items-start space-x-3">
-                            <AlertTriangle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                            <div className="text-sm text-blue-700">
-                              <strong>Untuk Insiden Darurat:</strong> Jika ini
-                              adalah insiden keamanan siber yang sedang terjadi,
-                              segera hubungi hotline darurat{" "}
-                              <strong>{contactInfo.emergencyHotline}</strong>{" "}
-                              untuk respons cepat.
-                            </div>
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="space-y-2">
+                            <Label htmlFor="name">Nama Lengkap</Label>
+                            <Input
+                              id="name"
+                              value={formData.name}
+                              onChange={(e) => handleInputChange('name', e.target.value)}
+                              placeholder="Masukkan nama lengkap"
+                              className={formErrors.name ? 'border-red-500' : ''}
+                            />
+                            {formErrors.name && (
+                              <p className="text-sm text-red-600 flex items-center">
+                                <XCircle className="h-4 w-4 mr-1" />
+                                {formErrors.name}
+                              </p>
+                            )}
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="email">Email</Label>
+                            <Input
+                              id="email"
+                              type="email"
+                              value={formData.email}
+                              onChange={(e) => handleInputChange('email', e.target.value)}
+                              placeholder="nama@contoh.com"
+                              className={formErrors.email ? 'border-red-500' : ''}
+                            />
+                            {formErrors.email && (
+                              <p className="text-sm text-red-600 flex items-center">
+                                <XCircle className="h-4 w-4 mr-1" />
+                                {formErrors.email}
+                              </p>
+                            )}
                           </div>
                         </div>
 
-                        <Button className="w-full bg-orange-600 hover:bg-orange-700">
-                          <Send className="h-4 w-4 mr-2" />
-                          Kirim Laporan
-                        </Button>
-                      </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="space-y-2">
+                            <Label htmlFor="phone">Nomor Telepon</Label>
+                            <Input
+                              id="phone"
+                              type="tel"
+                              value={formData.phone}
+                              onChange={(e) => handleInputChange('phone', e.target.value)}
+                              placeholder="+62 xxx-xxxx-xxxx"
+                              className={formErrors.phone ? 'border-red-500' : ''}
+                            />
+                            {formErrors.phone && (
+                              <p className="text-sm text-red-600 flex items-center">
+                                <XCircle className="h-4 w-4 mr-1" />
+                                {formErrors.phone}
+                              </p>
+                            )}
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="organization">
+                              Organisasi/Instansi
+                            </Label>
+                            <Input
+                              id="organization"
+                              value={formData.organization}
+                              onChange={(e) => handleInputChange('organization', e.target.value)}
+                              placeholder="Nama organisasi"
+                              className={formErrors.organization ? 'border-red-500' : ''}
+                            />
+                            {formErrors.organization && (
+                              <p className="text-sm text-red-600 flex items-center">
+                                <XCircle className="h-4 w-4 mr-1" />
+                                {formErrors.organization}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <Label htmlFor="report-type">Jenis Laporan</Label>
+                          <Select value={formData.reportType} onValueChange={(value) => handleInputChange('reportType', value)}>
+                            <SelectTrigger className={formErrors.reportType ? 'border-red-500' : ''}>
+                              <SelectValue placeholder="Pilih jenis laporan" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {reportTypes.map((type, index) => (
+                                <SelectItem
+                                  key={index}
+                                  value={type.toLowerCase().replace(/ /g, "-")}
+                                >
+                                  {type}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          {formErrors.reportType && (
+                            <p className="text-sm text-red-600 flex items-center">
+                              <XCircle className="h-4 w-4 mr-1" />
+                              {formErrors.reportType}
+                            </p>
+                          )}
+                        </div>
+
+                        <div className="space-y-2">
+                          <Label htmlFor="subject">Subjek</Label>
+                          <Input
+                            id="subject"
+                            value={formData.subject}
+                            onChange={(e) => handleInputChange('subject', e.target.value)}
+                            placeholder="Ringkasan singkat masalah atau pertanyaan"
+                            className={formErrors.subject ? 'border-red-500' : ''}
+                          />
+                          {formErrors.subject && (
+                            <p className="text-sm text-red-600 flex items-center">
+                              <XCircle className="h-4 w-4 mr-1" />
+                              {formErrors.subject}
+                            </p>
+                          )}
+                        </div>
+
+                        <div className="space-y-2">
+                          <Label htmlFor="message">Deskripsi Detail</Label>
+                          <Textarea
+                            id="message"
+                            value={formData.message}
+                            onChange={(e) => handleInputChange('message', e.target.value)}
+                            placeholder="Jelaskan secara detail masalah, insiden, atau pertanyaan Anda..."
+                            rows={6}
+                            className={formErrors.message ? 'border-red-500' : ''}
+                          />
+                          {formErrors.message && (
+                            <p className="text-sm text-red-600 flex items-center">
+                              <XCircle className="h-4 w-4 mr-1" />
+                              {formErrors.message}
+                            </p>
+                          )}
+                        </div>
+
+                        <div className="space-y-4">
+                          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div className="flex items-start space-x-3">
+                              <AlertTriangle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                              <div className="text-sm text-blue-700">
+                                <strong>Untuk Insiden Darurat:</strong> Jika ini
+                                adalah insiden keamanan siber yang sedang terjadi,
+                                segera hubungi hotline darurat{" "}
+                                <strong>{contactInfo.emergencyHotline}</strong>{" "}
+                                untuk respons cepat.
+                              </div>
+                            </div>
+                          </div>
+
+                          <Button
+                            type="submit"
+                            className="w-full bg-orange-600 hover:bg-orange-700"
+                            disabled={isSubmitting}
+                          >
+                            {isSubmitting ? (
+                              <>
+                                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                                Mengirim...
+                              </>
+                            ) : (
+                              <>
+                                <Send className="h-4 w-4 mr-2" />
+                                Kirim Laporan
+                              </>
+                            )}
+                          </Button>
+                        </div>
+                      </form>
                     </CardContent>
                   </Card>
                 </div>
@@ -494,6 +721,75 @@ const Kontak = () => {
       </main>
 
       <Footer />
+
+      {/* Success/Error Modal */}
+      <Dialog open={showModal} onOpenChange={closeModal}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center space-x-2">
+              {submitStatus === 'success' ? (
+                <>
+                  <CheckCircle className="h-6 w-6 text-green-600" />
+                  <span>Laporan Berhasil Dikirim</span>
+                </>
+              ) : (
+                <>
+                  <XCircle className="h-6 w-6 text-red-600" />
+                  <span>Laporan Gagal Dikirim</span>
+                </>
+              )}
+            </DialogTitle>
+            <DialogDescription>
+              {submitStatus === 'success' ? (
+                <div className="space-y-3">
+                  <p>Laporan Anda telah berhasil dikirim ke tim BSSN. Kami akan segera menindaklanjuti laporan Anda.</p>
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                    <p className="text-sm text-green-700">
+                      <strong>Langkah Selanjutnya:</strong>
+                    </p>
+                    <ul className="text-sm text-green-600 mt-1 space-y-1">
+                      <li>• Tim kami akan meninjau laporan dalam 1x24 jam</li>
+                      <li>• Anda akan menerima konfirmasi melalui email</li>
+                      <li>• Untuk insiden mendesak, hubungi {contactInfo.emergencyHotline}</li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  <p>Terdapat kesalahan dalam pengisian formulir. Mohon periksa kembali data yang Anda masukkan:</p>
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                    <p className="text-sm text-red-700 font-medium mb-2">Kesalahan yang ditemukan:</p>
+                    <ul className="text-sm text-red-600 space-y-1">
+                      {Object.entries(formErrors).map(([field, error]) => (
+                        <li key={field} className="flex items-center">
+                          <XCircle className="h-3 w-3 mr-1 flex-shrink-0" />
+                          <span className="capitalize">
+                            {field === 'reportType' ? 'Jenis Laporan' :
+                             field === 'name' ? 'Nama Lengkap' :
+                             field === 'email' ? 'Email' :
+                             field === 'phone' ? 'Nomor Telepon' :
+                             field === 'organization' ? 'Organisasi/Instansi' :
+                             field === 'subject' ? 'Subjek' :
+                             field === 'message' ? 'Deskripsi Detail' : field}
+                          </span>: {error}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-end">
+            <Button
+              onClick={closeModal}
+              className={submitStatus === 'success' ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700'}
+            >
+              {submitStatus === 'success' ? 'Tutup' : 'Perbaiki Form'}
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
