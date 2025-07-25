@@ -18,6 +18,7 @@ import {
   Shrink,
   ShieldAlert,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AduanSiber = () => {
   return (
@@ -446,9 +447,15 @@ const AduanSiber = () => {
                   Pilih kanal yang paling sesuai dengan kebutuhan Anda untuk
                   melaporkan insiden keamanan siber
                 </p>
-                <Button size="lg" className="bg-red-600 hover:bg-red-700">
-                  <AlertTriangle className="h-5 w-5 mr-2" />
-                  Buat Laporan Aduan Siber
+                <Button
+                  size="lg"
+                  className="bg-red-600 hover:bg-red-700"
+                  asChild
+                >
+                  <Link to="/kontak#report-form">
+                    <AlertTriangle className="h-5 w-5 mr-2" />
+                    Buat Laporan Aduan Siber
+                  </Link>
                 </Button>
               </div>
             </div>

@@ -36,7 +36,7 @@ import {
   Send,
   Building,
   Globe,
-  Headphones,
+  Shield,
   CheckCircle,
   XCircle,
 } from "lucide-react";
@@ -472,7 +472,7 @@ const Kontak = () => {
                 </div>
 
                 {/* Report Form */}
-                <div className="space-y-8">
+                <div id="report-form" className="space-y-8">
                   <div>
                     <h2 className="text-3xl font-bold mb-4">Buat Laporan</h2>
                     <p className="text-muted-foreground">
@@ -717,13 +717,15 @@ const Kontak = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <Card className="text-center group hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
-                    <Headphones className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Konsultasi</h3>
+                    <Shield className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Gov-CSIRT Indonesia</h3>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Layanan konsultasi keamanan siber
+                      Tim Tanggap Insiden Siber Sektor Administrasi Pemerintahan
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/layanan/konsultasi">Pelajari</Link>
+                      <Link to="/layanan-aduan/gov-csirt-indonesia">
+                        Pelajari
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -731,12 +733,12 @@ const Kontak = () => {
                 <Card className="text-center group hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <Globe className="h-8 w-8 text-green-600 mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Informasi</h3>
+                    <h3 className="font-semibold mb-2">Berita & Informasi</h3>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Berita dan panduan keamanan siber
+                      Berita dan edukasi keamanan siber
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/informasi">Baca</Link>
+                      <Link to="/informasi-regulasi/berita">Baca</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -749,7 +751,7 @@ const Kontak = () => {
                       Profil dan struktur organisasi
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/tentang-bssn/profil-organisasi">Jelajahi</Link>
+                      <Link to="/profil/tentang-bssn">Jelajahi</Link>
                     </Button>
                   </CardContent>
                 </Card>
