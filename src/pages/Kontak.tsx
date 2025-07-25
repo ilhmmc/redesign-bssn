@@ -36,7 +36,7 @@ import {
   Send,
   Building,
   Globe,
-  Headphones,
+  Shield,
   CheckCircle,
   XCircle,
 } from "lucide-react";
