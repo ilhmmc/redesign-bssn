@@ -472,7 +472,7 @@ const Kontak = () => {
                 </div>
 
                 {/* Report Form */}
-                <div className="space-y-8">
+                <div id="report-form" className="space-y-8">
                   <div>
                     <h2 className="text-3xl font-bold mb-4">Buat Laporan</h2>
                     <p className="text-muted-foreground">
