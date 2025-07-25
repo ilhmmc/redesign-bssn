@@ -149,7 +149,7 @@ const Kontak = () => {
       errors.name = 'Nama lengkap harus diisi';
       isValid = false;
     } else if (formData.name.trim().length < 2) {
-      errors.name = 'Nama harus minimal 2 karakter';
+      errors.name = 'Nama minimal harus 2 karakter';
       isValid = false;
     }
 
@@ -198,8 +198,8 @@ const Kontak = () => {
     if (!formData.message.trim()) {
       errors.message = 'Deskripsi detail harus diisi';
       isValid = false;
-    } else if (formData.message.trim().length < 20) {
-      errors.message = 'Deskripsi harus minimal 20 karakter';
+    } else if (formData.message.trim().length < 10) {
+      errors.message = 'Deskripsi harus minimal 10 karakter';
       isValid = false;
     }
 
