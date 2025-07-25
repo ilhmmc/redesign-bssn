@@ -244,16 +244,10 @@ const Footer = () => {
             </div>
             <div className="flex space-x-4">
               <Link
-                to="/kebijakan-privasi"
+                to="/kontak"
                 className="text-xs text-slate-400 hover:text-blue-400 transition-colors"
               >
-                Kebijakan Privasi
-              </Link>
-              <Link
-                to="/syarat-ketentuan"
-                className="text-xs text-slate-400 hover:text-blue-400 transition-colors"
-              >
-                Syarat & Ketentuan
+                Hubungi Kami
               </Link>
             </div>
           </div>
