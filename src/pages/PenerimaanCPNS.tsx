@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, UserPlus, UserRoundCheck } from "lucide-react";
+import { Download, Eye, UserPlus, UserRoundCheck } from "lucide-react";
 
 // Data lengkap diekstrak dari file HTML
 const pengumumanData = [
@@ -164,7 +164,7 @@ const PenerimaanCPNS = () => {
                       <TableHead className="w-[50px]">No</TableHead>
                       <TableHead className="w-[150px]">Tanggal</TableHead>
                       <TableHead>Tentang</TableHead>
-                      <TableHead className="text-center w-[100px]">Aksi</TableHead>
+                      <TableHead className="text-center w-[100px]">Lihat</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -176,7 +176,7 @@ const PenerimaanCPNS = () => {
                         <TableCell className="text-center">
                           <Button asChild variant="ghost" size="icon">
                             <a href={item.link} target="_blank" rel="noopener noreferrer">
-                              <Download className="h-4 w-4" />
+                              <Eye className="h-4 w-4" />
                             </a>
                           </Button>
                         </TableCell>

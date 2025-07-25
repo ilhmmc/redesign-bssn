@@ -443,7 +443,7 @@ const Pimpinan = () => {
                 <Card className="text-center">
                   <CardContent className="p-6">
                     <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                    <div className="text-2xl font-bold">25+</div>
+                    <div className="text-2xl font-bold">40+</div>
                     <div className="text-sm text-muted-foreground">
                       Tahun Pengalaman Rata-rata
                     </div>

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Briefcase, Download } from "lucide-react";
+import { Briefcase, Download, Eye } from "lucide-react";
 
 const SeleksiJPTPratama = () => {
   const jabatan =
@@ -148,8 +148,8 @@ const SeleksiJPTPratama = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Download className="mr-2 h-4 w-4" />
-                          Unduh
+                          <Eye className="mr-2 h-4 w-4" />
+                          Lihat
                         </a>
                       </Button>
                     </li>
