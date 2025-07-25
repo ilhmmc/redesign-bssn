@@ -125,22 +125,28 @@ const navigationItems = [
       },
       {
         title: "Penerimaan PPPK",
-        href: "/karir/pppk", 
+        href: "/karir/pppk",
         description: "Informasi seleksi PPPK.",
       },
       {
         title: "Penerimaan Poltek SSN",
-        href: "/karir/poltek-ssn", 
+        href: "/karir/poltek-ssn",
         description: "Seleksi Penerimaan Taruna Baru Poltek SSN.",
       },
       {
         title: "Seleksi Jabatan Pimpinan (JPT)",
-        href: "/karir/jpt", 
+        href: "/karir/jpt",
         description: "Informasi seleksi Jabatan Pimpinan Tinggi.",
       },
     ],
   },
 ];
+
+// Helper function to check if a parent menu should be active
+const isParentMenuActive = (item: any, currentPath: string) => {
+  if (!item.children) return false;
+  return item.children.some((child: any) => currentPath.startsWith(child.href));
+};
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -202,7 +208,13 @@ const Navigation = () => {
                   </NavigationMenuLink>
                 ) : (
                   <>
-                    <NavigationMenuTrigger className="h-10">
+                    <NavigationMenuTrigger
+                      className={cn(
+                        "h-10",
+                        isParentMenuActive(item, location.pathname) &&
+                          "bg-accent text-accent-foreground",
+                      )}
+                    >
                       <item.icon className="mr-2 h-4 w-4" />
                       {item.title}
                     </NavigationMenuTrigger>
@@ -295,7 +307,14 @@ const Navigation = () => {
                     </Link>
                   ) : (
                     <>
-                      <div className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-foreground">
+                      <div
+                        className={cn(
+                          "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium",
+                          isParentMenuActive(item, location.pathname)
+                            ? "bg-accent text-accent-foreground"
+                            : "text-foreground",
+                        )}
+                      >
                         <item.icon className="h-5 w-5" />
                         <span>{item.title}</span>
                       </div>
@@ -322,7 +341,11 @@ const Navigation = () => {
               ))}
               <Link
                 to="/kontak"
-                className="flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+                className={cn(
+                  "flex items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                  location.pathname === "/kontak" &&
+                    "bg-accent text-accent-foreground",
+                )}
                 onClick={() => setIsOpen(false)}
               >
                 <Contact className="h-5 w-5" />

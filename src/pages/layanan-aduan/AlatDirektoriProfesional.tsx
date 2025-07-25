@@ -227,18 +227,6 @@ const AlatDirektoriProfesional = () => {
                 kompetensi keamanan informasi nasional
               </p>
 
-              {/* Search Bar */}
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-                  <Input
-                    placeholder="Cari tools, auditor, konsultan, atau lembaga..."
-                    className="pl-10 h-12 text-lg"
-                  />
-                  <Button className="absolute right-2 top-1 h-10">Cari</Button>
-                </div>
-              </div>
-
               {/* Statistics Row */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
                 {statistics.map((stat, index) => (
