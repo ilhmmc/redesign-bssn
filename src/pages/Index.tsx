@@ -104,21 +104,24 @@ const Index = () => {
     // Layanan & Aduan
     {
       title: "Keamanan Siber",
-      description: "Monitoring dan proteksi 24/7 untuk infrastruktur digital Indonesia",
+      description:
+        "Monitoring dan proteksi 24/7 untuk infrastruktur digital Indonesia",
       href: "/layanan/keamanan-siber",
       category: "Layanan",
       icon: Shield,
     },
     {
       title: "Sertifikasi",
-      description: "Program sertifikasi keamanan informasi standar nasional dan internasional",
+      description:
+        "Program sertifikasi keamanan informasi standar nasional dan internasional",
       href: "/layanan/sertifikasi",
       category: "Layanan",
       icon: Award,
     },
     {
       title: "Konsultasi",
-      description: "Layanan konsultasi keamanan siber untuk institusi dan perusahaan",
+      description:
+        "Layanan konsultasi keamanan siber untuk institusi dan perusahaan",
       href: "/layanan/konsultasi",
       category: "Layanan",
       icon: HelpCircle,
@@ -259,17 +262,18 @@ const Index = () => {
 
   const filteredServices = useMemo(() => {
     if (!searchQuery) return allServices;
-    
-    return allServices.filter(service =>
-      service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+
+    return allServices.filter(
+      (service) =>
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchQuery.toLowerCase()),
     );
   }, [searchQuery]);
 
   const serviceCategories = useMemo(() => {
     const categories = {};
-    filteredServices.forEach(service => {
+    filteredServices.forEach((service) => {
       if (!categories[service.category]) {
         categories[service.category] = [];
       }
@@ -320,9 +324,7 @@ const Index = () => {
                   <Link to="/layanan-aduan/aduan-siber">Layanan Pengaduan</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/profil/tentang-bssn">
-                    Profil Organisasi
-                  </Link>
+                  <Link to="/profil/tentang-bssn">Profil Organisasi</Link>
                 </Button>
               </div>
 
@@ -413,8 +415,12 @@ const Index = () => {
                           <div className="flex items-start gap-3">
                             <service.icon className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                             <div className="flex-1">
-                              <CardTitle className="text-lg">{service.title}</CardTitle>
-                              <CardDescription className="mt-2">{service.description}</CardDescription>
+                              <CardTitle className="text-lg">
+                                {service.title}
+                              </CardTitle>
+                              <CardDescription className="mt-2">
+                                {service.description}
+                              </CardDescription>
                             </div>
                           </div>
                         </CardHeader>
@@ -444,9 +450,12 @@ const Index = () => {
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
                 <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Layanan tidak ditemukan</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  Layanan tidak ditemukan
+                </h3>
                 <p className="text-muted-foreground">
-                  Coba gunakan kata kunci yang berbeda atau hapus pencarian untuk melihat semua layanan.
+                  Coba gunakan kata kunci yang berbeda atau hapus pencarian
+                  untuk melihat semua layanan.
                 </p>
               </div>
             )}
@@ -469,9 +478,7 @@ const Index = () => {
                   <Link to="/kontak">Hubungi Kami</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/profil/tentang-bssn">
-                    Pelajari Tentang BSSN
-                  </Link>
+                  <Link to="/profil/tentang-bssn">Pelajari Tentang BSSN</Link>
                 </Button>
               </div>
             </div>
@@ -488,11 +495,12 @@ const Index = () => {
                   Channel YouTube BSSN
                 </Badge>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                  Ikuti <span className="text-red-600">Channel YouTube</span> Kami
+                  Ikuti <span className="text-red-600">Channel YouTube</span>{" "}
+                  Kami
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  Dapatkan informasi terbaru, edukasi keamanan siber, dan konten edukatif
-                  lainnya melalui channel YouTube resmi BSSN
+                  Dapatkan informasi terbaru, edukasi keamanan siber, dan konten
+                  edukatif lainnya melalui channel YouTube resmi BSSN
                 </p>
               </div>
 
@@ -515,16 +523,28 @@ const Index = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-center">
                       <div>
-                        <div className="text-2xl font-bold text-red-600">100+</div>
-                        <div className="text-sm text-muted-foreground">Video</div>
+                        <div className="text-2xl font-bold text-red-600">
+                          100+
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Video
+                        </div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-red-600">10K+</div>
-                        <div className="text-sm text-muted-foreground">Subscriber</div>
+                        <div className="text-2xl font-bold text-red-600">
+                          10K+
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Subscriber
+                        </div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-red-600">500K+</div>
-                        <div className="text-sm text-muted-foreground">Views</div>
+                        <div className="text-2xl font-bold text-red-600">
+                          500K+
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          Views
+                        </div>
                       </div>
                     </div>
 
