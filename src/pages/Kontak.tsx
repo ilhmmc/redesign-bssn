@@ -731,12 +731,12 @@ const Kontak = () => {
                 <Card className="text-center group hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <Globe className="h-8 w-8 text-green-600 mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Informasi</h3>
+                    <h3 className="font-semibold mb-2">Berita & Informasi</h3>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Berita dan panduan keamanan siber
+                      Berita dan edukasi keamanan siber
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/informasi">Baca</Link>
+                      <Link to="/informasi-regulasi/berita">Baca</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -749,7 +749,7 @@ const Kontak = () => {
                       Profil dan struktur organisasi
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/tentang-bssn/profil-organisasi">Jelajahi</Link>
+                      <Link to="/profil/tentang-bssn">Jelajahi</Link>
                     </Button>
                   </CardContent>
                 </Card>
