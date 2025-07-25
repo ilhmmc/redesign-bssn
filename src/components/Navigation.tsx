@@ -208,7 +208,13 @@ const Navigation = () => {
                   </NavigationMenuLink>
                 ) : (
                   <>
-                    <NavigationMenuTrigger className="h-10">
+                    <NavigationMenuTrigger
+                      className={cn(
+                        "h-10",
+                        isParentMenuActive(item, location.pathname) &&
+                          "bg-accent text-accent-foreground"
+                      )}
+                    >
                       <item.icon className="mr-2 h-4 w-4" />
                       {item.title}
                     </NavigationMenuTrigger>
